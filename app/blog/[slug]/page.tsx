@@ -125,15 +125,16 @@ Cheia este consecvența și autenticitatea. Clienții din Constanța vor să vad
 ]
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = posts.find((p) => p.slug === params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = posts.find((p) => p.slug === slug)
   if (!post) return {}
 
   return {
@@ -149,8 +150,9 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = posts.find((p) => p.slug === params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = posts.find((p) => p.slug === slug)
   if (!post) notFound()
 
   const paragraphs = post.content.split('\n\n')
