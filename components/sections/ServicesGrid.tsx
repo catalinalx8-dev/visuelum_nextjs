@@ -81,7 +81,7 @@ export function ServicesGrid() {
               }}
               transition={{ duration: 0.6 }}
             >
-              <Link href={service.href} className="group service-card flex flex-col h-full block">
+              <Link href={service.href} className="group service-card flex flex-col h-full">
                 <div className="mb-5">
                   <div className="inline-flex p-3 bg-gold/10 text-gold mb-4 group-hover:bg-gold group-hover:text-white transition-colors duration-200">
                     <service.icon className="h-6 w-6" />

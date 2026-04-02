@@ -178,7 +178,7 @@ export function Header() {
             ))}
             <div className="mt-6">
               <Link href="/contact" className="btn-primary w-full justify-center">
-                Audit Gratuit Gratuit
+                Audit Gratuit
               </Link>
             </div>
             <div className="mt-4 text-center">

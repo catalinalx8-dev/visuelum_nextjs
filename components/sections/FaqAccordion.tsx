@@ -40,7 +40,7 @@ export function FaqAccordion({
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Eyebrow color={bgLight ? 'gold' : 'gold'} className="mb-4">{eyebrow}</Eyebrow>
+          <Eyebrow color={bgLight ? 'gold' : 'cream'} className="mb-4">{eyebrow}</Eyebrow>
           <h2 className={cn('font-head font-extrabold text-h2', bgLight ? 'text-navy' : 'text-cream')}>
             {title}
           </h2>
