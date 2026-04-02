@@ -16,6 +16,7 @@ const config: Config = {
         stone: '#e8e4db',
         ink: '#0f0f0d',
         muted: { DEFAULT: '#7a756b', l: '#b0aa9f' },
+        green: '#2a6b47',
       },
       fontFamily: {
         head: ['var(--font-syne)', 'sans-serif'],
