@@ -123,16 +123,17 @@ export default function ServiciiPage() {
       />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
+      <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-14 sm:pb-16">
         <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 gold-glow opacity-50" />
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
-          <p className="eyebrow mb-6">Servicii complete</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-6">
+          <p className="eyebrow mb-5 sm:mb-6">Servicii complete</p>
+          <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">
             Tot ce are nevoie afacerea ta.
             <br />
             <span className="text-gold">Un singur abonament.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl mx-auto mb-10">
+          <p className="font-body italic text-muted-l text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
             De la website gratuit până la fotografie profesională și Google Ads — totul gestionat de o singură echipă,
             pe o singură factură.
           </p>
@@ -185,16 +186,17 @@ export default function ServiciiPage() {
                 key={service.href}
                 href={service.href}
                 className="group service-card block"
+                aria-label={`${service.title} — ${service.highlight}`}
               >
                 <div className="inline-flex p-3 bg-gold/10 text-gold mb-5 group-hover:bg-gold group-hover:text-white transition-colors duration-200">
-                  <service.icon className="h-6 w-6" />
+                  <service.icon className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <p className="font-mono text-xs uppercase tracking-widest text-gold mb-2">
                   {service.highlight}
                 </p>
-                <h2 className="font-head font-bold text-h3 text-navy mb-3">{service.title}</h2>
+                <h3 className="font-head font-bold text-h3 text-navy mb-3">{service.title}</h3>
                 <p className="font-body text-muted text-sm leading-relaxed mb-5">{service.desc}</p>
-                <ul className="space-y-1.5 mb-6">
+                <ul className="space-y-1.5 mb-6" aria-label={`Beneficii ${service.title}`}>
                   {service.benefits.map((b) => (
                     <li key={b} className="flex items-center gap-2">
                       <CheckCircle2 className="h-3.5 w-3.5 text-gold flex-shrink-0" aria-hidden="true" />
@@ -203,7 +205,7 @@ export default function ServiciiPage() {
                   ))}
                 </ul>
                 <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
-                  Detalii complete <ArrowRight className="h-3 w-3" />
+                  Detalii complete <ArrowRight className="h-3 w-3" aria-hidden="true" />
                 </div>
               </Link>
             ))}

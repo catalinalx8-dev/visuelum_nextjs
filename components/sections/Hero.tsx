@@ -27,7 +27,7 @@ export function Hero() {
           initial="initial"
           animate="animate"
           transition={{ staggerChildren: 0.1 }}
-          className="max-w-4xl"
+          className="max-w-4xl text-center sm:text-left"
         >
           <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
             <Eyebrow color="gold" className="mb-8">
@@ -49,7 +49,7 @@ export function Hero() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="font-body italic text-muted-l text-lg lg:text-xl leading-relaxed max-w-2xl mb-10"
+            className="font-body italic text-muted-l text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mb-10 mx-auto sm:mx-0"
           >
             Există mii de afaceri bune în România care nu există online. Noi le facem vizibile —
             cu website gratuit, social media activ și Google optimizat, contra unui singur abonament lunar.
@@ -58,12 +58,12 @@ export function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-12"
           >
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-primary w-full sm:w-auto justify-center">
               Solicită Audit Gratuit
             </Link>
-            <Link href="/pachete" className="btn-cream-ghost">
+            <Link href="/pachete" className="btn-cream-ghost w-full sm:w-auto justify-center">
               Vezi Pachete & Prețuri
             </Link>
           </motion.div>
@@ -71,7 +71,7 @@ export function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-8"
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-8"
           >
             {[
               'Website gratuit inclus',

@@ -42,16 +42,17 @@ export default function IndustriiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }} />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-20">
+      <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20">
         <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 gold-glow opacity-50" />
         <div className="container-site relative z-10 max-w-4xl mx-auto text-center">
-          <p className="eyebrow mb-6">Industrii</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-6">
+          <p className="eyebrow mb-5 sm:mb-6">Industrii</p>
+          <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">
             Strategie digitală adaptată
             <br />
             <span className="text-gold">industriei tale.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl mx-auto mb-10">
+          <p className="font-body italic text-muted-l text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
             Fiecare industrie are provocări unice. Soluțiile noastre sunt create specific pentru afacerea ta — nu șabloane generice.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
@@ -82,32 +83,41 @@ export default function IndustriiPage() {
               <Link
                 key={industry.slug}
                 href={`/industrii/${industry.slug}`}
-                className="group bg-white border border-stone p-8 hover:border-gold/40 hover:shadow-lg hover:shadow-navy/5 transition-all duration-300 block"
+                className="group bg-white border border-stone hover:border-gold/50 hover:shadow-xl hover:shadow-navy/8 hover:-translate-y-0.5 transition-all duration-300 block overflow-hidden"
               >
-                <div className="flex items-start gap-4 mb-5">
-                  <span className="text-4xl leading-none flex-shrink-0">{industry.emoji}</span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <h2 className="font-head font-bold text-navy text-xl group-hover:text-gold transition-colors">
-                        {industry.title}
-                      </h2>
-                      <ArrowRight className="h-4 w-4 text-muted-l group-hover:text-gold group-hover:translate-x-1 transition-all flex-shrink-0" />
-                    </div>
-                    <p className="font-body text-muted text-sm leading-relaxed">{industry.shortDesc}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 pt-4 border-t border-stone mb-4">
-                  <CheckCircle className="h-4 w-4 text-gold flex-shrink-0" />
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-gold font-semibold">
-                    {industry.highlight}
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {industry.services.map((service) => (
-                    <span key={service} className="font-mono text-xs uppercase tracking-wider text-muted bg-parchment border border-stone px-3 py-1">
-                      {service}
+                {/* Gold top accent on hover */}
+                <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <div className="p-8">
+                  <div className="flex items-start gap-4 mb-5">
+                    <span
+                      className="text-3xl leading-none flex-shrink-0 w-14 h-14 flex items-center justify-center bg-gold/8 group-hover:bg-gold/15 transition-colors duration-200 rounded-sm"
+                      aria-hidden="true"
+                    >
+                      {industry.emoji}
                     </span>
-                  ))}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <h3 className="font-head font-bold text-navy text-xl group-hover:text-gold transition-colors">
+                          {industry.title}
+                        </h3>
+                        <ArrowRight className="h-4 w-4 text-muted-l group-hover:text-gold group-hover:translate-x-1 transition-all flex-shrink-0" />
+                      </div>
+                      <p className="font-body text-muted text-sm leading-relaxed">{industry.shortDesc}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 pt-4 border-t border-stone mb-4">
+                    <CheckCircle className="h-4 w-4 text-gold flex-shrink-0" aria-hidden="true" />
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-gold font-semibold">
+                      {industry.highlight}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {industry.services.map((service) => (
+                      <span key={service} className="font-mono text-xs uppercase tracking-wider text-muted bg-parchment border border-stone px-3 py-1 group-hover:border-gold/20 transition-colors">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Link>
             ))}
