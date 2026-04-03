@@ -111,7 +111,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
       }}
       transition={{ duration: 0.6 }}
       className={cn(
-        'flex flex-col border-2 rounded-2xl overflow-hidden transition-all duration-300 h-full',
+        'flex flex-col border-2 rounded-2xl transition-all duration-300 h-full',
         plan.featured ? 'border-gold shadow-2xl shadow-gold/20' : 'border-stone'
       )}
     >
