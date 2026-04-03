@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
@@ -13,6 +14,8 @@ const posts = [
     date: '2025-01-15',
     readTime: '8 min',
     category: 'SEO Local',
+    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07d?w=1400&q=80',
+    imageAlt: 'Optimizare Google Business Profile — SEO local pentru afaceri din Constanța',
     content: `
 Google Business Profile (fost Google My Business) este cel mai important instrument de marketing local gratuit disponibil în 2025. Dacă afacerea ta nu apare optimizat pe Google Maps, pierzi clienți în fiecare zi.
 
@@ -49,6 +52,8 @@ Aplicând acești pași, afacerea ta poate apărea în "Local Pack" — primele 
     date: '2025-01-08',
     readTime: '7 min',
     category: 'Website',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1400&q=80',
+    imageAlt: 'Website pentru restaurant — design profesional și meniu digital online',
     content: `
 Un website profesional pentru un restaurant poate costa între 500 RON și 15.000 RON, în funcție de complexitate. Dar există o alternativă: 0 RON investiție inițială, cu un abonament lunar de administrare.
 
@@ -87,6 +92,8 @@ Pentru un restaurant din Constanța, investiția în website se recuperează rap
     date: '2025-01-02',
     readTime: '9 min',
     category: 'Social Media',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1400&q=80',
+    imageAlt: 'Social media marketing pentru afaceri locale — Instagram, Facebook și TikTok',
     content: `
 Social media nu mai este opțional pentru afacerile locale. Dacă nu ești prezent și activ pe Instagram, Facebook sau TikTok, concurența ta deja câștigă clienții pe care tu îi pierzi.
 
@@ -160,7 +167,17 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src={post.image}
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 max-w-3xl mx-auto">
           <Link
             href="/blog"
@@ -182,6 +199,16 @@ export default async function BlogPostPage({ params }: Props) {
 
       <section className="bg-cream py-20">
         <div className="container-site max-w-3xl mx-auto">
+          <div className="relative h-72 mb-12 overflow-hidden rounded-xl">
+            <Image
+              src={post.image}
+              alt={post.imageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              loading="lazy"
+            />
+          </div>
           <article className="prose-custom">
             {paragraphs.map((paragraph, i) => {
               if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
