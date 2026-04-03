@@ -89,10 +89,12 @@ export default function PachetePage() {
       </section>
 
       {/* Comparison table */}
-      <section className="bg-cream py-16 lg:py-20 overflow-x-auto">
+      <section className="bg-cream py-16 lg:py-20">
         <div className="container-site">
           <h2 className="font-head font-extrabold text-h2 text-navy text-center mb-12">Comparație completă</h2>
-          <table className="w-full border-collapse min-w-[640px]">
+          <div className="overflow-x-auto -mx-4 sm:mx-0">
+            <div className="min-w-[640px] px-4 sm:px-0">
+          <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-navy">
                 <th className="text-left py-4 px-4 font-mono text-xs uppercase tracking-widest text-muted">Serviciu</th>
@@ -127,6 +129,9 @@ export default function PachetePage() {
               ))}
             </tbody>
           </table>
+            </div>
+          </div>
+          <p className="text-center font-mono text-xs text-muted-l mt-4 sm:hidden">← Derulează pentru a vedea toate pachetele →</p>
         </div>
       </section>
 
