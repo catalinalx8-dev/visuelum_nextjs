@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
-import { Syne, Libre_Baskerville, JetBrains_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Libre_Baskerville, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Header } from '@/components/layout/Header'
@@ -12,10 +12,10 @@ import { siteConfig } from '@/lib/config'
 import { localBusinessSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
 
-const fontSyne = Syne({
+const fontInter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-syne',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -34,6 +34,12 @@ const fontJetbrains = JetBrains_Mono({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1a1a2e',
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -44,20 +50,23 @@ export const metadata: Metadata = {
   keywords: [
     'marketing digital Constanța',
     'agenție marketing digital',
+    'website profesional Constanța',
     'website gratuit Constanța',
     'social media Constanța',
     'SEO local Constanța',
     'Google Ads Constanța',
     'fotografie profesionala Constanta',
     'branding Constanța',
+    'agenție publicitate Constanța',
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  formatDetection: { telephone: true, email: true, address: true },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
     type: 'website',
@@ -71,7 +80,7 @@ export const metadata: Metadata = {
         url: '/og-default.jpg',
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${siteConfig.name} — Agenție Marketing Digital Constanța`,
       },
     ],
   },
@@ -96,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ro"
-      className={`${fontSyne.variable} ${fontLibre.variable} ${fontJetbrains.variable}`}
+      className={`${fontInter.variable} ${fontLibre.variable} ${fontJetbrains.variable}`}
     >
       <head>
         <script
