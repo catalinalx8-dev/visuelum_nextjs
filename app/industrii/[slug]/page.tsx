@@ -5,7 +5,7 @@ import { CheckCircle, ArrowRight, TrendingUp, Users, Star, Phone } from 'lucide-
 import { CtaSection } from '@/components/sections/CtaSection'
 import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
-import { industries } from '../page'
+import { industries } from '@/lib/industries'
 
 // ----- Rich content per industry -----
 const industryContent: Record<string, {
@@ -269,7 +269,7 @@ const industryContent: Record<string, {
     heroSubtitle: 'Clienții care au nevoie de un avocat caută pe Google. Primul cabinet care apare în rezultate primește apelul. SEO local este investiția cu cel mai mare ROI pentru avocați.',
     painPoints: [
       'Clienții noi vin exclusiv din recomandări, fără canal digital scalabil',
-      'Website-ul vechi sau absent nu inspiră ncredere profesională',
+      'Website-ul vechi sau absent nu inspiră încredere profesională',
       'Competitorii mai tineri cu prezență online câștigă clienți care anterior mergeau la tine',
       'Nu știi cum să te promovezi în conformitate cu reglementările deontologice',
       'Nu ești vizibil când cineva caută "avocat drept penal Constanța"',

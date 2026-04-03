@@ -174,7 +174,6 @@ export function Header() {
                     pathname === link.href ? 'text-gold' : 'text-cream/80 hover:text-gold-l'
                   )}
                   onClick={() => setMobileOpen(false)}
-                  style={{ animationDelay: `${i * 50}ms` }}
                 >
                   <span className="font-head font-bold text-2xl tracking-tight">
                     {link.label}
