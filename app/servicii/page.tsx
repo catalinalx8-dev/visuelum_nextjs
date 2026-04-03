@@ -1,58 +1,111 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Globe, Smartphone, Search, Camera, Target, Palette, ArrowRight } from 'lucide-react'
+import { Globe, Smartphone, Search, Camera, Target, Palette, ArrowRight, CheckCircle2, Zap, Users, BarChart2 } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Servicii de Marketing Digital — Website, SEO, Social Media, Foto',
-  description: 'Servicii complete de marketing digital pentru afaceri locale din Constanța: website profesional, social media, SEO local, fotografie, Google Ads și branding.',
+  title: 'Servicii de Marketing Digital — Website, SEO, Social Media, Foto | Visuelum',
+  description: 'Servicii complete de marketing digital pentru afaceri locale din Constanța: website profesional gratuit, social media management, SEO local, fotografie profesională, Google Ads și branding. Un singur abonament, o singură echipă.',
   alternates: { canonical: `${siteConfig.url}/servicii` },
 }
+
+const industryLabels = [
+  'Restaurante', 'Saloane & Barber', 'Clinici', 'Pensiuni & Cazare',
+  'Fitness', 'Retail', 'Imobiliare', 'Juridic', 'Educație', 'Construcții',
+]
 
 const services = [
   {
     icon: Globe,
     title: 'Website Profesional',
-    desc: 'Creat gratuit în abonament. Design profesional, mobil-optimizat, live în 14 zile.',
+    desc: 'Website-ul afacerii tale creat gratuit — fără niciun cost inițial. Design personalizat, mobil-optimizat (Google Mobile First), viteză maximă și SEO din fundație. Livrat în 14 zile calendaristice. Inclus în abonamentul lunar: mentenanță, backup automat, SSL și uptime monitorizat.',
     href: '/servicii/website',
     highlight: '0 RON investiție inițială',
+    benefits: ['Design personalizat', 'Mobile-first', 'SEO din fundație', 'Live în 14 zile'],
   },
   {
     icon: Smartphone,
     title: 'Social Media Complet',
-    desc: 'Postări zilnice, stories, copywriting, publicare — noi facem totul. Brandul tău, vocea ta.',
+    desc: 'Gestionăm complet prezența ta pe Instagram, Facebook și TikTok. Postări zilnice, stories, copywriting adaptat brandului tău, publicare programată și răspuns la comentarii. Faceless — brandul tău strălucește, noi rămânem în umbră.',
     href: '/servicii/social-media',
     highlight: 'Faceless — brandul tău',
+    benefits: ['Postări zilnice', 'Stories + Reels', 'Copywriting inclus', '3 platforme simultan'],
   },
   {
     icon: Search,
     title: 'SEO & Google Local',
-    desc: 'Google Business activ, optimizare tehnică, cuvinte cheie locale, AIO optimization.',
+    desc: 'Apari primul în căutările locale Google și Google Maps. Optimizăm Google Business Profile, construim autoritate locală prin conținut relevant, audit tehnic complet și monitorizare continuă a pozițiilor. SEO creat pentru AIO (AI Overview) și voice search.',
     href: '/servicii/seo',
     highlight: 'Apari primul pe Maps',
+    benefits: ['Google Business activ', 'Audit tehnic SEO', 'AIO optimization', 'Raport lunar poziții'],
   },
   {
     icon: Camera,
     title: 'Fotografie & Video',
-    desc: 'Sony A7 II, lumină naturală, editare Lightroom profesională. Livrare în 48 ore.',
+    desc: 'Fotografii profesionale la locația ta cu Sony A7 II. Lumină naturală, editare Lightroom completă, livrare în 48 de ore. Video Reels și TikTok filmate și editate de echipa noastră. Nu stock photo — conținut real, autentic, care vinde.',
     href: '/servicii/foto-video',
     highlight: 'Sony A7 II · 48h livrare',
+    benefits: ['Sony A7 II', 'Editare Lightroom', 'Livrare 48h', 'Reels & TikTok'],
   },
   {
     icon: Target,
     title: 'Google Ads & Meta Ads',
-    desc: 'Campanii PPC complete. Bugetul clientului se plătește direct în platforme, noi administrăm.',
+    desc: 'Campanii PPC complete administrate de noi: Google Search, Google Display, Meta (Facebook + Instagram) Ads. Bugetul de publicitate se plătește direct în platforme — transparent, fără comisioane ascunse. Optimizare zilnică pentru CPC minim și conversii maxime.',
     href: '/servicii/google-ads',
     highlight: 'Clienți în câteva zile',
+    benefits: ['Google Search Ads', 'Meta Ads', 'Optimizare zilnică', 'Buget transparent'],
   },
   {
     icon: Palette,
     title: 'Branding & Design',
-    desc: 'Identitate vizuală completă: logo, culori, fonturi, materiale grafice, print.',
+    desc: 'Identitate vizuală completă: logo profesional, paletă de culori, tipografie, manual de brand, materiale grafice pentru print și digital. Brandingul tău creat să inspire încredere și să fie memorabil — de la prima impresie.',
     href: '/servicii/branding',
     highlight: 'Identitate profesională',
+    benefits: ['Logo profesional', 'Manual de brand', 'Materiale print', 'Design digital'],
+  },
+]
+
+const advantages = [
+  {
+    icon: Zap,
+    title: 'Un singur abonament',
+    desc: 'Nu 3-4 agenții diferite pentru site, social, foto și reclame. O singură echipă, o singură factură, zero confuzie.',
+  },
+  {
+    icon: Users,
+    title: 'Dedicat afacerilor locale',
+    desc: 'Cunoaștem piața din Dobrogea. Strategii adaptate realității locale — nu template-uri generice copy-paste.',
+  },
+  {
+    icon: BarChart2,
+    title: 'Rezultate măsurabile',
+    desc: 'Lunar primești un raport cu cifre reale: trafic, apeluri, lead-uri, poziții Google. Știi exact ce primești.',
+  },
+]
+
+const serviciiFaqs = [
+  {
+    q: 'Chiar este gratuit website-ul?',
+    a: 'Da. Website-ul este creat și găzduit de noi fără niciun cost inițial. Singura condiție este un angajament minim de 6 luni prin care recuperăm costul de producție prin abonamentul lunar.',
+  },
+  {
+    q: 'Pot lua doar un serviciu, nu un pachet complet?',
+    a: 'Serviciile sunt concepute ca parte a unui abonament integrat pentru eficiență maximă. Totuși, pentru fotografii sau branding punctual, contactează-ne și discutăm o soluție personalizată.',
+  },
+  {
+    q: 'Cât durează să văd rezultate din SEO?',
+    a: 'SEO local în Google Maps — rezultate vizibile în 4-8 săptămâni. Poziții organice în Google Search — rezultate solide în 2-4 luni, cu creștere continuă.',
+  },
+  {
+    q: 'Administrați campaniile Google Ads și Meta Ads?',
+    a: 'Da. Noi creăm, configurăm și optimizăm zilnic campaniile. Bugetul media se plătește direct de tine în Google/Meta — nu trece prin noi. Comisionul nostru de administrare este inclus în abonamentul DOMINARE.',
+  },
+  {
+    q: 'Faceți fotografii și în afara Constanței?',
+    a: 'Da, în toată Dobrogea: Mamaia, Năvodari, Mangalia, Tulcea, Eforie. Pentru deplasări mai lungi, costul se stabilește transparent înainte de ședință.',
   },
 ]
 
@@ -79,16 +132,53 @@ export default function ServiciiPage() {
             <br />
             <span className="text-gold">Un singur abonament.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl mx-auto">
+          <p className="font-body italic text-muted-l text-lg max-w-2xl mx-auto mb-10">
             De la website gratuit până la fotografie profesională și Google Ads — totul gestionat de o singură echipă,
             pe o singură factură.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/pachete" className="btn-primary px-8 py-3.5 text-sm">
+              Vezi pachete & prețuri
+            </Link>
+            <Link href="/contact" className="border border-gold/40 text-gold hover:bg-gold/10 transition-colors px-8 py-3.5 font-mono text-xs uppercase tracking-widest">
+              Solicită audit gratuit →
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Services grid */}
+      {/* Advantages strip */}
+      <section className="bg-navy py-12">
+        <div className="container-site">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {advantages.map((adv) => (
+              <div key={adv.title} className="flex items-start gap-4">
+                <div className="flex-shrink-0 p-2.5 bg-gold/10 text-gold">
+                  <adv.icon className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-head font-bold text-cream mb-1">{adv.title}</h3>
+                  <p className="font-body text-xs text-cream/60 leading-relaxed">{adv.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services detailed */}
       <section className="bg-cream py-20 lg:py-28">
         <div className="container-site">
+          <div className="text-center mb-16">
+            <p className="eyebrow mb-4">Ce facem</p>
+            <h2 className="font-head font-extrabold text-h2 text-navy">
+              6 servicii. O singură echipă.
+            </h2>
+            <p className="font-body italic text-muted mt-4 max-w-2xl mx-auto">
+              Fiecare serviciu este construit să funcționeze independent și mai puternic împreună.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Link
@@ -103,15 +193,102 @@ export default function ServiciiPage() {
                   {service.highlight}
                 </p>
                 <h2 className="font-head font-bold text-h3 text-navy mb-3">{service.title}</h2>
-                <p className="font-body text-muted text-sm leading-relaxed mb-6">{service.desc}</p>
+                <p className="font-body text-muted text-sm leading-relaxed mb-5">{service.desc}</p>
+                <ul className="space-y-1.5 mb-6">
+                  {service.benefits.map((b) => (
+                    <li key={b} className="flex items-center gap-2">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-gold flex-shrink-0" aria-hidden="true" />
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-ink">{b}</span>
+                    </li>
+                  ))}
+                </ul>
                 <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
-                  Află mai mult <ArrowRight className="h-3 w-3" />
+                  Detalii complete <ArrowRight className="h-3 w-3" />
                 </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Why integrated approach */}
+      <section className="bg-navy-deep py-16 lg:py-20">
+        <div className="container-site max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="eyebrow mb-4">De ce un abonament tot-în-unu?</p>
+            <h2 className="font-head font-extrabold text-h2 text-cream">
+              Strategia digitală completă <span className="text-gold">bate</span> serviciile izolate.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Website + SEO = vizibilitate organică',
+                desc: 'Un website optimizat SEO din fundație aduce trafic organic constant — fără să plătești pentru fiecare click. Combinate, website-ul și SEO-ul devin cel mai rentabil canal de achiziție pe termen lung.',
+              },
+              {
+                title: 'Foto + Social Media = conținut autentic',
+                desc: 'Fotografiile profesionale la locația ta alimentează social media cu conținut real, care rezonează cu audiența locală. Nu stock photo, nu clipart — imaginile afacerii tale, zilnic pe feed.',
+              },
+              {
+                title: 'Google Ads + Landing page = conversii imediate',
+                desc: 'Campaniile de publicitate funcționează cel mai bine cu un website de calitate. Trimitem traficul plătit pe pagini optimizate pentru conversie — nu pe homepage-ul generic.',
+              },
+              {
+                title: 'Branding consistent pe toate canalele',
+                desc: 'Logo, culori, fonturi, ton de comunicare — identitatea brandului tău este coerentă pe website, social media, print și reclame. Consistența construiește încredere și recunoaștere.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-navy border border-navy-mid p-8">
+                <div className="w-8 h-0.5 bg-gold mb-5" />
+                <h3 className="font-head font-bold text-cream mb-3 text-lg">{item.title}</h3>
+                <p className="font-body text-sm text-cream/60 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries served */}
+      <section className="bg-parchment py-16">
+        <div className="container-site max-w-4xl mx-auto text-center">
+          <p className="eyebrow mb-4">Industrii</p>
+          <h2 className="font-head font-extrabold text-h2 text-navy mb-6">
+            Strategii adaptate industriei tale.
+          </h2>
+          <p className="font-body italic text-muted mb-10 max-w-2xl mx-auto">
+            Lucrăm cu afaceri din zeci de industrii din Dobrogea. Fiecare industrie are provocări specifice — și soluții specifice.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {industryLabels.map((ind) => (
+              <span key={ind} className="font-mono text-xs uppercase tracking-wider text-gold bg-gold/5 border border-gold/20 px-4 py-2">
+                {ind}
+              </span>
+            ))}
+          </div>
+          <Link href="/industrii" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-gold hover:text-gold-l transition-colors">
+            Vezi toate industriile → <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Pricing teaser */}
+      <section className="bg-cream py-16">
+        <div className="container-site max-w-3xl mx-auto text-center">
+          <p className="eyebrow mb-4">Pachete & Prețuri</p>
+          <h2 className="font-head font-extrabold text-h2 text-navy mb-6">
+            Toate serviciile, 3 pachete clare.
+          </h2>
+          <p className="font-body italic text-muted mb-8 max-w-2xl mx-auto">
+            De la 349 RON/lună cu website creat gratuit. Fără taxe de setup, fără contracte pe 1 an. Angajament minim 6 luni.
+          </p>
+          <Link href="/pachete" className="btn-primary px-10 py-4">
+            Vezi pachete & prețuri
+          </Link>
+        </div>
+      </section>
+
+      <FaqAccordion faqs={serviciiFaqs} title="Întrebări despre servicii" />
 
       <CtaSection />
     </>

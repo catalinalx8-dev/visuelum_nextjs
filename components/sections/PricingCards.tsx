@@ -111,8 +111,8 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
       }}
       transition={{ duration: 0.6 }}
       className={cn(
-        'flex flex-col border-2 transition-all duration-200',
-        plan.featured ? 'border-gold shadow-2xl shadow-gold/20 scale-[1.02]' : 'border-stone'
+        'flex flex-col border-2 transition-all duration-200 h-full',
+        plan.featured ? 'border-gold shadow-2xl shadow-gold/20' : 'border-stone'
       )}
     >
       {/* Header */}
@@ -236,7 +236,7 @@ export function PricingCards({ compact = false }: { compact?: boolean }) {
           whileInView="animate"
           viewport={{ once: true, margin: '-80px' }}
           transition={{ staggerChildren: 0.08 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"
         >
           {plans.map((plan) => (
             <PricingCard key={plan.id} plan={plan} compact={compact} />
