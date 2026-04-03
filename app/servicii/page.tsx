@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteConfig.url}/servicii` },
 }
 
+const industryLabels = [
+  'Restaurante', 'Saloane & Barber', 'Clinici', 'Pensiuni & Cazare',
+  'Fitness', 'Retail', 'Imobiliare', 'Juridic', 'Educație', 'Construcții',
+]
+
 const services = [
   {
     icon: Globe,
@@ -255,7 +260,7 @@ export default function ServiciiPage() {
             Lucrăm cu afaceri din zeci de industrii din Dobrogea. Fiecare industrie are provocări specifice — și soluții specifice.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {['Restaurante', 'Saloane & Barber', 'Clinici', 'Pensiuni & Cazare', 'Fitness', 'Retail', 'Imobiliare', 'Juridic', 'Educație', 'Construcții'].map((ind) => (
+            {industryLabels.map((ind) => (
               <span key={ind} className="font-mono text-xs uppercase tracking-wider text-gold bg-gold/5 border border-gold/20 px-4 py-2">
                 {ind}
               </span>
