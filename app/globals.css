@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@config "./tailwind.config.ts";
+@config "../tailwind.config.ts";
 
 :root {
   --navy:       #1a1a2e;
@@ -73,11 +73,11 @@
   }
 
   .btn-gold-ghost {
-    @apply btn-ghost text-gold border-gold hover:bg-gold hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 text-gold border-gold hover:bg-gold hover:text-white;
   }
 
   .btn-cream-ghost {
-    @apply btn-ghost text-cream border-cream hover:bg-cream hover:text-navy;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 text-cream border-cream hover:bg-cream hover:text-navy;
   }
 
   .container-site {
