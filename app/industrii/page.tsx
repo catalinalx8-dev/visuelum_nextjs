@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, MapPin } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -43,8 +44,18 @@ export default function IndustriiPage() {
 
       {/* Hero */}
       <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20">
-        <div className="absolute inset-0 grid-overlay" />
-        <div className="absolute inset-0 gold-glow opacity-50" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow opacity-50" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto text-center">
           <p className="eyebrow mb-5 sm:mb-6">Industrii</p>
           <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">

@@ -1,3 +1,4 @@
+import NextImage from 'next/image'
 import type { Metadata } from 'next'
 import { Smartphone, PenTool, Eye, TrendingUp, Calendar, Users } from 'lucide-react'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
@@ -32,7 +33,17 @@ export default function SocialMediaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
       <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <NextImage
+            src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1400&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto">
           <p className="eyebrow mb-4">Social Media Complet</p>
           <h1 className="font-head font-extrabold text-h1 text-cream mb-4">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Globe, Smartphone, Search, Camera, Target, Palette, ArrowRight, CheckCircle2, Zap, Users, BarChart2 } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -124,8 +125,18 @@ export default function ServiciiPage() {
 
       {/* Hero */}
       <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-14 sm:pb-16">
-        <div className="absolute inset-0 grid-overlay" />
-        <div className="absolute inset-0 gold-glow opacity-50" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow opacity-50" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-5 sm:mb-6">Servicii complete</p>
           <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">
@@ -141,7 +152,7 @@ export default function ServiciiPage() {
             <Link href="/pachete" className="btn-primary px-8 py-3.5 text-sm">
               Vezi pachete & prețuri
             </Link>
-            <Link href="/contact" className="border border-gold/40 text-gold hover:bg-gold/10 transition-colors px-8 py-3.5 font-mono text-xs uppercase tracking-widest">
+            <Link href="/contact" className="border border-gold/40 text-gold hover:bg-gold/10 transition-colors px-8 py-3.5 font-mono text-xs uppercase tracking-widest rounded-xl">
               Solicită audit gratuit →
             </Link>
           </div>

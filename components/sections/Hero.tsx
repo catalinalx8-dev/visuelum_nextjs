@@ -19,25 +19,59 @@ export function Hero() {
       aria-label="Hero"
     >
       {/* Grid overlay */}
-      <div className="absolute inset-0 grid-overlay opacity-60" />
+      <div className="absolute inset-0 grid-overlay opacity-60" aria-hidden="true" />
       {/* Radial glow */}
-      <div className="absolute inset-0 gold-glow" />
+      <div className="absolute inset-0 gold-glow" aria-hidden="true" />
 
       {/* Hero image — right side, desktop only */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block pointer-events-none">
+      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block pointer-events-none" aria-hidden="true">
         <div className="relative h-full w-full">
           <Image
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
-            alt="Analiză marketing digital pe laptop — dashboard cu grafice de performanță"
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85"
+            alt="Echipă de marketing digital lucrând la strategii online pentru afaceri locale"
             fill
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-25"
             sizes="50vw"
             priority
           />
-          {/* Fade gradient over the image so it blends with background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/40" />
         </div>
+      </div>
+
+      {/* Floating metric cards — visual decoration */}
+      <div className="absolute right-[5%] top-[22%] hidden xl:block pointer-events-none" aria-hidden="true">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.4, duration: 0.7 }}
+          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+        >
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Website live în</p>
+          <p className="font-head font-extrabold text-2xl text-gold">14 zile</p>
+        </motion.div>
+      </div>
+      <div className="absolute right-[12%] top-[42%] hidden xl:block pointer-events-none" aria-hidden="true">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.6, duration: 0.7 }}
+          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+        >
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Investiție inițială</p>
+          <p className="font-head font-extrabold text-2xl text-gold">0 RON</p>
+        </motion.div>
+      </div>
+      <div className="absolute right-[6%] top-[60%] hidden xl:block pointer-events-none" aria-hidden="true">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.8, duration: 0.7 }}
+          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+        >
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Garanție</p>
+          <p className="font-head font-extrabold text-2xl text-gold">30 zile</p>
+        </motion.div>
       </div>
 
       <Container className="relative z-10 py-32 lg:py-40">
@@ -97,7 +131,7 @@ export function Hero() {
               'Răspuns în 24h',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-gold flex-shrink-0" />
+                <Check className="h-4 w-4 text-gold flex-shrink-0" aria-hidden="true" />
                 <span className="font-mono text-xs uppercase tracking-widest text-muted-l">{item}</span>
               </div>
             ))}

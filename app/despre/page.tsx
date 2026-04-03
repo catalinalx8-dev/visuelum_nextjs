@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, ArrowRight, TrendingUp, Shield, Heart, Zap, Users, Star, Award, Clock } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
@@ -140,7 +141,17 @@ export default function DesprePage() {
 
       {/* Hero */}
       <section className="bg-navy-deep relative overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Despre Visuelum</p>
           <h1 className="font-head font-extrabold text-h1 text-cream mb-6">
