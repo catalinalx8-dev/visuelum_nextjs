@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FileSignature, Globe, Megaphone, BarChart2 } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { Section } from '@/components/ui/Section'
@@ -8,21 +9,25 @@ import { Section } from '@/components/ui/Section'
 const steps = [
   {
     nr: '01',
+    icon: FileSignature,
     title: 'Contract semnat',
     desc: 'Abonament minim 6 luni. Prețul lunar include totul. Fără costuri ascunse.',
   },
   {
     nr: '02',
+    icon: Globe,
     title: 'Website livrat în 14 zile',
     desc: 'Gratuit. Design profesional, mobil-optimizat, SEO din fundație.',
   },
   {
     nr: '03',
+    icon: Megaphone,
     title: 'Servicii active lunar',
     desc: 'Social media, Google, fotografie la locație. Noi facem totul.',
   },
   {
     nr: '04',
+    icon: BarChart2,
     title: 'Raport lunar cu cifre reale',
     desc: 'Trafic, reach, apeluri, lead-uri. Transparent și verificabil.',
   },
@@ -53,7 +58,7 @@ export function ProcessSteps() {
           transition={{ staggerChildren: 0.08 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <motion.div
               key={step.nr}
               variants={{
@@ -63,10 +68,20 @@ export function ProcessSteps() {
               transition={{ duration: 0.6 }}
               className="relative bg-white rounded-2xl p-8 border border-stone hover:border-gold/30 hover:shadow-md transition-all duration-300"
             >
-              <div className="mb-4">
-                <span className="font-head font-extrabold text-5xl text-gold/15 select-none">
-                  {step.nr}
-                </span>
+              {/* Connector line between steps */}
+              {index < steps.length - 1 && (
+                <div
+                  className="hidden lg:block absolute top-10 -right-4 w-8 h-px bg-gold/30 z-10"
+                  aria-hidden="true"
+                />
+              )}
+              {/* Step number — large watermark */}
+              <span className="absolute top-5 right-6 font-head font-extrabold text-5xl text-gold/8 select-none leading-none" aria-hidden="true">
+                {step.nr}
+              </span>
+              {/* Icon */}
+              <div className="inline-flex p-3 bg-gold/10 text-gold rounded-xl mb-5">
+                <step.icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <h3 className="font-head font-bold text-h3 text-navy mb-3">{step.title}</h3>
               <p className="font-body text-sm text-muted leading-relaxed">{step.desc}</p>

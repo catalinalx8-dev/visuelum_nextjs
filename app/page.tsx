@@ -11,12 +11,13 @@ import { QuickQuoteForm } from '@/components/sections/QuickQuoteForm'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
-import { siteConfig } from '@/lib/config'
+import { siteConfig, seoConfig } from '@/lib/config'
 import { faqSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.taglineShort}`,
   description: siteConfig.description,
+  keywords: [...seoConfig.keywords],
   alternates: { canonical: siteConfig.url },
 }
 

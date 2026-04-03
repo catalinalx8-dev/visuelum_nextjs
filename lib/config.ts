@@ -27,3 +27,47 @@ export const siteConfig = {
     to: 'contact@visuelum.ro',
   },
 } as const
+
+/**
+ * Feature flags — toggle site-wide functionality from one place.
+ * Set to `false` to disable without touching component code.
+ */
+export const siteFeatures = {
+  /** Floating WhatsApp contact button */
+  whatsappButton: true,
+  /** GDPR cookie consent banner */
+  cookieBanner: true,
+  /** Newsletter sign-up form in the footer */
+  newsletter: true,
+  /** Reading-progress bar at the top of the page */
+  scrollProgress: true,
+  /** Back-to-top button that appears after scrolling */
+  backToTop: true,
+  /** Vercel Analytics + Speed Insights */
+  analytics: true,
+} as const
+
+/**
+ * SEO configuration — keywords and meta used across pages.
+ * Add or remove keywords here to update search targeting globally.
+ */
+export const seoConfig = {
+  keywords: [
+    'marketing digital Constanța',
+    'agenție marketing digital',
+    'website profesional Constanța',
+    'website gratuit Constanța',
+    'social media Constanța',
+    'SEO local Constanța',
+    'Google Ads Constanța',
+    'fotografie profesionala Constanta',
+    'branding Constanța',
+    'agenție publicitate Constanța',
+    'marketing online Dobrogea',
+    'creare website Constanța',
+    'administrare social media',
+    'optimizare Google Business',
+  ],
+  /** Open-Graph / Twitter card default image (1200×630) */
+  ogImage: '/og-default.jpg',
+} as const

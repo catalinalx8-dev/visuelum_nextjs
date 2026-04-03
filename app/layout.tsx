@@ -8,7 +8,7 @@ import { CookieBanner } from '@/components/layout/CookieBanner'
 import { WhatsAppButton } from '@/components/contact/WhatsAppButton'
 import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { BackToTop } from '@/components/ui/BackToTop'
-import { siteConfig } from '@/lib/config'
+import { siteConfig, siteFeatures, seoConfig } from '@/lib/config'
 import { localBusinessSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
 
@@ -39,18 +39,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    'marketing digital Constanța',
-    'agenție marketing digital',
-    'website profesional Constanța',
-    'website gratuit Constanța',
-    'social media Constanța',
-    'SEO local Constanța',
-    'Google Ads Constanța',
-    'fotografie profesionala Constanta',
-    'branding Constanța',
-    'agenție publicitate Constanța',
-  ],
+  keywords: [...seoConfig.keywords],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -69,7 +58,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: '/og-default.jpg',
+        url: seoConfig.ogImage,
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} — Agenție Marketing Digital Constanța`,
@@ -80,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteConfig.name} — ${siteConfig.taglineShort}`,
     description: siteConfig.description,
-    images: ['/og-default.jpg'],
+    images: [seoConfig.ogImage],
   },
   alternates: {
     canonical: siteConfig.url,
@@ -110,15 +99,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-cream antialiased">
-        <ScrollProgress />
+        {siteFeatures.scrollProgress && <ScrollProgress />}
         <Header />
         <main>{children}</main>
         <Footer />
-        <CookieBanner />
-        <WhatsAppButton />
-        <BackToTop />
-        <Analytics />
-        <SpeedInsights />
+        {siteFeatures.cookieBanner && <CookieBanner />}
+        {siteFeatures.whatsappButton && <WhatsAppButton />}
+        {siteFeatures.backToTop && <BackToTop />}
+        {siteFeatures.analytics && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   )
