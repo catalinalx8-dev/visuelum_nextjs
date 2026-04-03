@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { siteConfig } from '@/lib/config'
@@ -19,6 +20,8 @@ const posts = [
     date: '2025-01-15',
     readTime: '8 min',
     category: 'SEO Local',
+    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07d?w=700&q=80',
+    imageAlt: 'Optimizare Google Business Profile — SEO local pentru afaceri din Constanța',
   },
   {
     slug: 'cat-costa-website-restaurant-constanta',
@@ -27,6 +30,8 @@ const posts = [
     date: '2025-01-08',
     readTime: '7 min',
     category: 'Website',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80',
+    imageAlt: 'Website pentru restaurant — design profesional și meniu digital online',
   },
   {
     slug: 'social-media-afaceri-locale-constanta',
@@ -35,6 +40,8 @@ const posts = [
     date: '2025-01-02',
     readTime: '9 min',
     category: 'Social Media',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=80',
+    imageAlt: 'Social media marketing pentru afaceri locale — Instagram, Facebook și TikTok',
   },
 ]
 
@@ -49,7 +56,17 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }} />
 
       <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" />
+        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1400&q=80"
+            alt=""
+            fill
+            className="object-cover opacity-10"
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Blog</p>
           <h1 className="font-head font-extrabold text-h1 text-cream mb-4">
@@ -65,20 +82,39 @@ export default function BlogPage() {
 
       <section className="bg-cream py-20">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 gap-8">
             {posts.map((post) => (
-              <article key={post.slug} className="bg-white border border-stone p-8 hover:border-gold/30 transition-colors group">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="font-mono text-xs uppercase tracking-widest text-gold bg-gold/5 border border-gold/20 px-3 py-1">{post.category}</span>
-                  <span className="font-mono text-xs text-muted">{formatDate(post.date)}</span>
-                  <span className="font-mono text-xs text-muted">· {post.readTime} citire</span>
-                </div>
-                <h2 className="font-head font-bold text-navy text-2xl mb-3 group-hover:text-gold transition-colors">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                </h2>
-                <p className="font-body text-muted text-sm leading-relaxed mb-5">{post.excerpt}</p>
-                <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold hover:text-gold-l transition-colors">
-                  Citește articolul <ArrowRight className="h-3 w-3" />
+              <article key={post.slug} className="group bg-white border border-stone rounded-2xl overflow-hidden hover:border-gold/30 hover:shadow-xl hover:shadow-navy/8 hover:-translate-y-0.5 transition-all duration-300">
+                <Link href={`/blog/${post.slug}`} className="grid grid-cols-1 sm:grid-cols-3 gap-0">
+                  {/* Image */}
+                  <div className="relative h-48 sm:h-auto overflow-hidden sm:col-span-1">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/0 sm:bg-gradient-to-r sm:from-transparent sm:to-white/5" />
+                  </div>
+                  {/* Content */}
+                  <div className="sm:col-span-2 p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="font-mono text-xs uppercase tracking-widest text-gold bg-gold/5 border border-gold/20 px-3 py-1 rounded-full">{post.category}</span>
+                        <span className="font-mono text-xs text-muted">{formatDate(post.date)}</span>
+                        <span className="font-mono text-xs text-muted">· {post.readTime} citire</span>
+                      </div>
+                      <h2 className="font-head font-bold text-navy text-2xl mb-3 group-hover:text-gold transition-colors leading-tight">
+                        {post.title}
+                      </h2>
+                      <p className="font-body text-muted text-sm leading-relaxed">{post.excerpt}</p>
+                    </div>
+                    <div className="mt-6 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
+                      Citește articolul <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                    </div>
+                  </div>
                 </Link>
               </article>
             ))}

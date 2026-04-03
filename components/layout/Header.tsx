@@ -202,15 +202,6 @@ export function Header() {
             Solicită Audit Gratuit
           </Link>
 
-          {/* Phone */}
-          <a
-            href={`tel:${siteConfig.phone}`}
-            className="flex items-center justify-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-l hover:text-gold transition-colors"
-          >
-            <Phone className="h-3.5 w-3.5" aria-hidden="true" />
-            {siteConfig.phoneDisplay}
-          </a>
-
           {/* Social media */}
           <div className="flex items-center justify-center gap-5 pt-1">
             {socialLinks.map(({ href, label, icon: Icon }) => (
@@ -226,11 +217,6 @@ export function Header() {
               </a>
             ))}
           </div>
-
-          {/* Tagline */}
-          <p className="text-center font-body italic text-muted/60 text-xs">
-            {siteConfig.taglineShort}
-          </p>
         </div>
       </div>
     </>

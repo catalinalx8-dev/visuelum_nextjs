@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Globe, Smartphone, Search, Camera, Target, Palette, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
@@ -13,36 +14,48 @@ const services = [
     title: 'Website Profesional',
     desc: 'Creat gratuit, live în 14 zile, mobil-optimizat',
     href: '/servicii/website',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
+    imageAlt: 'Design website profesional pe laptop — interfață modernă pentru afaceri locale',
   },
   {
     icon: Smartphone,
     title: 'Social Media Complet',
     desc: 'Postări, stories, copywriting, publicare zilnică',
     href: '/servicii/social-media',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
+    imageAlt: 'Gestionare social media — Instagram, Facebook și TikTok pentru afaceri',
   },
   {
     icon: Search,
     title: 'Google & SEO Local',
     desc: 'Google Business activ, SEO tehnic, poziții Maps',
     href: '/servicii/seo',
+    image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07d?w=600&q=80',
+    imageAlt: 'Optimizare SEO local Google — creștere poziții în căutările locale din Constanța',
   },
   {
     icon: Camera,
     title: 'Fotografie Profesională',
     desc: 'Sony A7 II, lumină naturală, editare Lightroom',
     href: '/servicii/foto-video',
+    image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80',
+    imageAlt: 'Fotografie profesională de produs și locație — Sony A7 II, editare Lightroom',
   },
   {
     icon: Target,
     title: 'Google Ads & Meta Ads',
     desc: 'Campanii cu buget client, gestionare completă',
     href: '/servicii/google-ads',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    imageAlt: 'Campanii Google Ads și Meta Ads — publicitate plătită cu rezultate măsurabile',
   },
   {
     icon: Palette,
     title: 'Branding & Design',
     desc: 'Identitate vizuală, materiale grafice, consecvență',
     href: '/servicii/branding',
+    image: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&q=80',
+    imageAlt: 'Branding și design grafic — identitate vizuală pentru afaceri locale din Constanța',
   },
 ]
 
@@ -81,16 +94,31 @@ export function ServicesGrid() {
               }}
               transition={{ duration: 0.6 }}
             >
-              <Link href={service.href} className="group service-card flex flex-col h-full">
-                <div className="mb-5">
-                  <div className="inline-flex p-3 bg-gold/10 text-gold mb-4 rounded-xl group-hover:bg-gold group-hover:text-white transition-colors duration-200">
-                    <service.icon className="h-6 w-6" />
+              <Link href={service.href} className="group bg-white border border-stone rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-navy/10 hover:border-gold/30" aria-label={service.title}>
+                {/* Service image */}
+                <div className="relative h-44 overflow-hidden flex-shrink-0">
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4">
+                    <div className="inline-flex p-2.5 bg-gold/90 text-white rounded-xl">
+                      <service.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
                   </div>
-                  <h3 className="font-head font-bold text-h3 text-navy mb-2">{service.title}</h3>
-                  <p className="font-body text-muted text-sm leading-relaxed">{service.desc}</p>
                 </div>
-                <div className="mt-auto flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
-                  Află mai mult <ArrowRight className="h-3 w-3" />
+                {/* Card content */}
+                <div className="flex flex-col flex-1 p-6">
+                  <h3 className="font-head font-bold text-h3 text-navy mb-2 group-hover:text-gold transition-colors duration-200">{service.title}</h3>
+                  <p className="font-body text-muted text-sm leading-relaxed flex-1">{service.desc}</p>
+                  <div className="mt-4 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
+                    Află mai mult <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  </div>
                 </div>
               </Link>
             </motion.div>
