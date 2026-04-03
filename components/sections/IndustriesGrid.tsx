@@ -54,7 +54,7 @@ export function IndustriesGrid() {
                 animate: { opacity: 1, scale: 1 },
               }}
               transition={{ duration: 0.4 }}
-              className="px-5 py-2.5 border border-stone bg-white font-mono text-xs uppercase tracking-widest text-muted cursor-default hover:bg-gold hover:text-white hover:border-gold transition-all duration-200"
+              className="px-5 py-2.5 border border-stone/70 bg-white rounded-full font-mono text-xs uppercase tracking-widest text-muted cursor-default hover:bg-gold hover:text-white hover:border-gold transition-all duration-200"
             >
               {industry}
             </motion.span>

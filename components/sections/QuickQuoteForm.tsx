@@ -119,7 +119,7 @@ export function QuickQuoteForm() {
               <div key={s} className="flex items-center gap-3">
                 <div
                   className={cn(
-                    'w-8 h-8 flex items-center justify-center font-mono text-xs font-bold transition-colors',
+                    'w-8 h-8 flex items-center justify-center font-mono text-xs font-bold transition-colors rounded-full',
                     step >= s ? 'bg-gold text-white' : 'bg-stone text-muted'
                   )}
                 >
@@ -139,7 +139,7 @@ export function QuickQuoteForm() {
                     <label
                       key={type.value}
                       className={cn(
-                        'flex items-center justify-center p-4 border-2 cursor-pointer font-mono text-xs uppercase tracking-wider transition-all',
+                        'flex items-center justify-center p-4 border-2 rounded-xl cursor-pointer font-mono text-xs uppercase tracking-wider transition-all',
                         businessType === type.value
                           ? 'border-gold bg-gold/5 text-gold'
                           : 'border-stone text-muted hover:border-gold/50'
@@ -173,7 +173,7 @@ export function QuickQuoteForm() {
                       key={goal.value}
                       onClick={() => toggleGoal(goal.value)}
                       className={cn(
-                        'flex items-center gap-3 p-4 border-2 cursor-pointer font-mono text-xs uppercase tracking-wider transition-all text-left',
+                        'flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer font-mono text-xs uppercase tracking-wider transition-all text-left',
                         selectedGoals.includes(goal.value)
                           ? 'border-gold bg-gold/5 text-gold'
                           : 'border-stone text-muted hover:border-gold/50'
@@ -215,7 +215,7 @@ export function QuickQuoteForm() {
                     <label
                       key={b.value}
                       className={cn(
-                        'flex items-center gap-4 p-5 border-2 cursor-pointer transition-all',
+                        'flex items-center gap-4 p-5 border-2 rounded-xl cursor-pointer transition-all',
                         budget === b.value
                           ? 'border-gold bg-gold/5'
                           : 'border-stone hover:border-gold/50'

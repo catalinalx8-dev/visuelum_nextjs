@@ -83,7 +83,7 @@ export function ServicesGrid() {
             >
               <Link href={service.href} className="group service-card flex flex-col h-full">
                 <div className="mb-5">
-                  <div className="inline-flex p-3 bg-gold/10 text-gold mb-4 group-hover:bg-gold group-hover:text-white transition-colors duration-200">
+                  <div className="inline-flex p-3 bg-gold/10 text-gold mb-4 rounded-xl group-hover:bg-gold group-hover:text-white transition-colors duration-200">
                     <service.icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-head font-bold text-h3 text-navy mb-2">{service.title}</h3>

@@ -111,7 +111,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
       }}
       transition={{ duration: 0.6 }}
       className={cn(
-        'flex flex-col border-2 transition-all duration-200 h-full',
+        'flex flex-col border-2 rounded-2xl transition-all duration-300 h-full',
         plan.featured ? 'border-gold shadow-2xl shadow-gold/20' : 'border-stone'
       )}
     >
@@ -192,7 +192,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
         <Link
           href="/contact"
           className={cn(
-            'w-full text-center font-mono text-xs uppercase tracking-widest py-3.5 px-6 transition-all duration-200',
+            'w-full text-center font-mono text-xs uppercase tracking-widest py-3.5 px-6 rounded-xl transition-all duration-200',
             plan.featured
               ? 'bg-gold text-white hover:bg-gold-l'
               : 'border border-navy text-navy hover:bg-navy hover:text-cream'

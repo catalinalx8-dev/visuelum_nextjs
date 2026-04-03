@@ -70,10 +70,10 @@ export function PortfolioSection() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="bg-white border border-stone p-8 flex flex-col hover:-translate-y-1 hover:shadow-xl hover:border-t-4 hover:border-t-gold transition-all duration-200"
+              className="bg-white border border-stone/60 rounded-2xl p-8 flex flex-col hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30 transition-all duration-300"
             >
               <div className="flex items-start gap-5 mb-5">
-                <div className="flex-shrink-0 p-3 bg-gold/10 text-gold">
+                <div className="flex-shrink-0 p-3 bg-gold/10 text-gold rounded-xl">
                   <step.icon className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <span className="font-head font-extrabold text-5xl text-stone leading-none select-none">

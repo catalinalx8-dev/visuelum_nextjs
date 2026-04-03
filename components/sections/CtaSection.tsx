@@ -8,8 +8,15 @@ import { siteConfig } from '@/lib/config'
 
 export function CtaSection() {
   return (
-    <section className="bg-gold py-20 lg:py-28">
-      <Container>
+    <section className="relative bg-gold py-20 lg:py-28 overflow-hidden">
+      {/* Subtle pattern overlay */}
+      <div
+        className="absolute inset-0 dot-pattern opacity-10"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-gold-l/20 via-transparent to-navy/10" aria-hidden="true" />
+
+      <Container className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}

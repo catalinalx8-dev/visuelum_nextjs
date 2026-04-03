@@ -1,13 +1,9 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import {
-  Menu, X, Phone, Instagram, Facebook, ArrowRight, ChevronDown,
-  Globe, Smartphone, Search, Camera, Target, Palette,
-  type LucideIcon,
-} from 'lucide-react'
+import { Menu, X, Phone, Instagram, Facebook } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
 
@@ -19,45 +15,16 @@ function TikTokIcon() {
   )
 }
 
-type NavChild = {
-  href: string
-  label: string
-  icon?: LucideIcon
-}
-
 type NavLink = {
   href: string
   label: string
-  children?: NavChild[]
 }
 
 const navLinks: NavLink[] = [
   { href: '/', label: 'Acasă' },
-  {
-    href: '/servicii',
-    label: 'Servicii',
-    children: [
-      { href: '/servicii/website', label: 'Website Profesional', icon: Globe },
-      { href: '/servicii/social-media', label: 'Social Media', icon: Smartphone },
-      { href: '/servicii/seo', label: 'SEO & Google Local', icon: Search },
-      { href: '/servicii/foto-video', label: 'Fotografie & Video', icon: Camera },
-      { href: '/servicii/google-ads', label: 'Google & Meta Ads', icon: Target },
-      { href: '/servicii/branding', label: 'Branding & Design', icon: Palette },
-    ],
-  },
+  { href: '/servicii', label: 'Servicii' },
   { href: '/pachete', label: 'Pachete' },
-  {
-    href: '/industrii',
-    label: 'Industrii',
-    children: [
-      { href: '/industrii/restaurante-cafenele', label: 'Restaurante & Cafenele' },
-      { href: '/industrii/saloane-barber', label: 'Saloane & Barber' },
-      { href: '/industrii/clinici-cabinete', label: 'Clinici & Cabinete' },
-      { href: '/industrii/pensiuni-cazare', label: 'Pensiuni & Cazare' },
-      { href: '/industrii/fitness-sporturi', label: 'Fitness & Sporturi' },
-      { href: '/industrii/retail-magazine', label: 'Retail & Magazine' },
-    ],
-  },
+  { href: '/industrii', label: 'Industrii' },
   { href: '/despre', label: 'Despre' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
@@ -69,13 +36,9 @@ const socialLinks = [
   { href: siteConfig.social.tiktok, label: 'TikTok', icon: TikTokIcon },
 ]
 
-const DROPDOWN_CLOSE_DELAY = 120
-
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -93,20 +56,8 @@ export function Header() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const openMenu = useCallback((key: string) => {
-    if (closeTimer.current) clearTimeout(closeTimer.current)
-    setOpenDropdown(key)
-  }, [])
-
-  const scheduleClose = useCallback(() => {
-    closeTimer.current = setTimeout(() => setOpenDropdown(null), DROPDOWN_CLOSE_DELAY)
-  }, [])
-
-  const isChildActive = (href: string) =>
-    pathname === href || pathname.startsWith(href.replace(/\/$/, '') + '/')
-
   const isActive = (link: NavLink) =>
-    pathname === link.href || link.children?.some((c) => isChildActive(c.href))
+    pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
 
   return (
     <>
@@ -135,88 +86,24 @@ export function Header() {
             <nav className="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigare principală">
               {navLinks.map((link) => {
                 const active = isActive(link)
-                const hasChildren = Boolean(link.children?.length)
-                const isOpen = openDropdown === link.href
-
                 return (
-                  <div
+                  <Link
                     key={link.href}
-                    className="relative"
-                    onMouseEnter={() => hasChildren && openMenu(link.href)}
-                    onMouseLeave={() => hasChildren && scheduleClose()}
-                  >
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        'group relative flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.15em] transition-colors py-1',
-                        active ? 'text-gold' : 'text-muted-l hover:text-gold-l'
-                      )}
-                      aria-current={pathname === link.href ? 'page' : undefined}
-                      aria-haspopup={hasChildren ? 'true' : undefined}
-                      aria-expanded={hasChildren ? isOpen : undefined}
-                    >
-                      {link.label}
-                      {hasChildren && (
-                        <ChevronDown
-                          className={cn(
-                            'h-3 w-3 transition-transform duration-200',
-                            isOpen ? 'rotate-180' : ''
-                          )}
-                          aria-hidden="true"
-                        />
-                      )}
-                      {/* Underline hover effect */}
-                      <span
-                        className={cn(
-                          'absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-200',
-                          active ? 'w-full' : 'w-0 group-hover:w-full'
-                        )}
-                      />
-                    </Link>
-
-                    {/* Dropdown */}
-                    {hasChildren && (
-                      <div
-                        className={cn(
-                          'absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 origin-top',
-                          isOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'
-                        )}
-                        onMouseEnter={() => openMenu(link.href)}
-                        onMouseLeave={scheduleClose}
-                        role="menu"
-                        aria-label={`Submeniu ${link.label}`}
-                      >
-                        <div className="bg-navy border border-navy-mid shadow-xl shadow-navy-deep/50 min-w-[220px] py-2">
-                          {/* Gold top accent */}
-                          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent mb-2" />
-                          {link.children!.map((child) => {
-                            const Icon = child.icon
-                            return (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                role="menuitem"
-                                className={cn(
-                                  'flex items-center gap-3 px-5 py-2.5 font-mono text-[10px] uppercase tracking-widest transition-all duration-150 group/item',
-                                  isChildActive(child.href)
-                                    ? 'text-gold bg-gold/5'
-                                    : 'text-muted-l hover:text-gold hover:bg-gold/5'
-                                )}
-                              >
-                                {Icon && (
-                                  <Icon
-                                    className="h-3.5 w-3.5 flex-shrink-0 transition-colors"
-                                    aria-hidden={true}
-                                  />
-                                )}
-                                {child.label}
-                              </Link>
-                            )
-                          })}
-                        </div>
-                      </div>
+                    href={link.href}
+                    className={cn(
+                      'group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors py-1',
+                      active ? 'text-gold' : 'text-muted-l hover:text-gold-l'
                     )}
-                  </div>
+                    aria-current={pathname === link.href ? 'page' : undefined}
+                  >
+                    {link.label}
+                    <span
+                      className={cn(
+                        'absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-200',
+                        active ? 'w-full' : 'w-0 group-hover:w-full'
+                      )}
+                    />
+                  </Link>
                 )
               })}
             </nav>
@@ -237,7 +124,7 @@ export function Header() {
 
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden p-2 -mr-1 text-cream"
+              className="lg:hidden p-2 -mr-1 text-cream rounded-lg hover:bg-navy-mid/40 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? 'Închide meniu' : 'Deschide meniu'}
               aria-expanded={mobileOpen}
@@ -253,7 +140,7 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          'lg:hidden fixed inset-0 z-50 flex flex-col bg-navy-deep transition-all duration-400 ease-out',
+          'lg:hidden fixed inset-0 z-50 flex flex-col bg-navy-deep transition-all duration-300 ease-out',
           mobileOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -281,27 +168,23 @@ export function Header() {
           </button>
         </div>
 
-        {/* Nav links — vertically centered */}
-        <nav className="flex-1 flex flex-col justify-center px-8" aria-label="Navigare mobilă">
-          <ul className="flex flex-col gap-1">
+        {/* Nav links — vertically + horizontally centered */}
+        <nav className="flex-1 flex flex-col items-center justify-center px-6 overflow-y-auto" aria-label="Navigare mobilă">
+          <ul className="flex flex-col items-center gap-2 w-full max-w-xs">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} className="w-full">
                 <Link
                   href={link.href}
                   className={cn(
-                    'group flex items-center justify-between py-4 border-b border-navy-mid/40 transition-colors',
+                    'flex items-center justify-center py-3.5 border-b border-navy-mid/30 transition-colors w-full',
                     isActive(link) ? 'text-gold' : 'text-cream/80 hover:text-gold-l'
                   )}
                   onClick={() => setMobileOpen(false)}
                   aria-current={pathname === link.href ? 'page' : undefined}
                 >
-                  <span className="font-head font-bold text-2xl tracking-tight">
+                  <span className="font-head font-bold text-xl tracking-tight text-center">
                     {link.label}
                   </span>
-                  <ArrowRight className={cn(
-                    'h-5 w-5 transition-all',
-                    isActive(link) ? 'text-gold opacity-100' : 'opacity-0 group-hover:opacity-60 group-hover:translate-x-1'
-                  )} />
                 </Link>
               </li>
             ))}
@@ -309,7 +192,7 @@ export function Header() {
         </nav>
 
         {/* Bottom section */}
-        <div className="px-8 pb-10 pt-6 flex-shrink-0 space-y-6">
+        <div className="px-6 pb-10 pt-6 flex-shrink-0 space-y-5">
           {/* CTA button */}
           <Link
             href="/contact"
@@ -329,7 +212,7 @@ export function Header() {
           </a>
 
           {/* Social media */}
-          <div className="flex items-center justify-center gap-6 pt-2">
+          <div className="flex items-center justify-center gap-5 pt-1">
             {socialLinks.map(({ href, label, icon: Icon }) => (
               <a
                 key={label}

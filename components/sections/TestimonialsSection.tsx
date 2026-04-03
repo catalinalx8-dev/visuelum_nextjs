@@ -64,9 +64,9 @@ export function TestimonialsSection() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="bg-navy-mid border border-navy-mid/50 p-8 flex flex-col gap-5 hover:border-gold/30 transition-colors duration-200"
+              className="bg-navy-mid border border-navy-mid/50 rounded-2xl p-8 flex flex-col gap-5 hover:border-gold/30 transition-colors duration-300"
             >
-              <div className="inline-flex p-3 bg-gold/10 text-gold w-fit">
+              <div className="inline-flex p-3 bg-gold/10 text-gold w-fit rounded-xl">
                 <item.icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <div>

@@ -56,7 +56,7 @@ export function WhyVisuelum() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="bg-navy-mid border border-navy-mid/50 p-8 hover:border-gold/30 transition-colors duration-200"
+              className="bg-navy-mid border border-navy-mid/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300"
             >
               <div className="w-8 h-0.5 bg-gold mb-5" />
               <h3 className="font-head font-bold text-h3 text-cream mb-3">{reason.title}</h3>
