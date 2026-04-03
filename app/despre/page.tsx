@@ -322,7 +322,7 @@ export default function DesprePage() {
               { icon: CheckCircle, title: 'Prețuri publice', desc: 'Prețurile noastre sunt afișate public pe site. Nu există surprize sau oferte diferite pentru clienți diferiți.' },
             ].map((t) => (
               <div key={t.title} className="bg-white border border-stone p-6">
-                <t.icon className="h-6 w-6 text-gold mb-3" />
+                <t.icon className="h-6 w-6 text-gold mb-3" aria-hidden="true" />
                 <h3 className="font-head font-bold text-navy mb-2">{t.title}</h3>
                 <p className="font-body text-muted text-xs leading-relaxed">{t.desc}</p>
               </div>

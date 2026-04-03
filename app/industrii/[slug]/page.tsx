@@ -322,7 +322,7 @@ const industryContent: Record<string, {
       { value: '12 luni', label: 'Calendar editorial' },
     ],
     process: [
-      { step: '01', title: 'Strategie & calendarul', desc: 'Mapăm ciclurile de înscriere și planificăm campaniile cu 6-8 săptămâni în avans față de fiecare sesiune.' },
+      { step: '01', title: 'Strategie & calendar', desc: 'Mapăm ciclurile de înscriere și planificăm campaniile cu 6-8 săptămâni în avans față de fiecare sesiune.' },
       { step: '02', title: 'Landing pages', desc: 'Creăm paginile dedicate fiecărui curs cu conținut persuasiv și formulare de înregistrare.' },
       { step: '03', title: 'Lansare campanii', desc: 'Activăm Google Ads și Meta Ads cu targetare precisă pe publicul tău țintă din Constanța.' },
       { step: '04', title: 'Optimizare & scalare', desc: 'Optimizăm costul per înregistrare săptămânal și scalăm campaniile eficiente. Raport detaliat post-sesiune.' },
