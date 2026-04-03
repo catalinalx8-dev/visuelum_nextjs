@@ -1,6 +1,18 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { Instagram, Facebook } from 'lucide-react'
 import { siteConfig } from '@/lib/config'
+import { sendNewsletterSignup } from '@/lib/send-email'
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z" />
+    </svg>
+  )
+}
 
 const serviceLinks = [
   { href: '/servicii/website', label: 'Website Profesional' },
@@ -26,10 +38,74 @@ const legalLinks = [
 
 export function Footer() {
   const year = new Date().getFullYear()
+  const [email, setEmail] = useState('')
+  const [newsletterState, setNewsletterState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [newsletterError, setNewsletterError] = useState('')
+
+  const handleNewsletter = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email || newsletterState === 'loading') return
+    setNewsletterState('loading')
+    setNewsletterError('')
+    const result = await sendNewsletterSignup(email)
+    if (result.success) {
+      setNewsletterState('success')
+      setEmail('')
+    } else {
+      setNewsletterState('error')
+      setNewsletterError(result.error ?? 'Eroare. Încearcă din nou.')
+    }
+  }
 
   return (
     <footer className="bg-navy-deep text-cream/70">
       <div className="container-site py-16">
+
+        {/* Newsletter strip */}
+        <div className="border-b border-navy-mid pb-12 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="font-head font-bold text-xl text-cream mb-2">
+                Tips gratuite de marketing digital
+              </h3>
+              <p className="font-body text-sm text-cream/60 leading-relaxed">
+                Sfaturi practice pentru afaceri locale din Dobrogea. Fără spam, doar valoare.
+              </p>
+            </div>
+            {newsletterState === 'success' ? (
+              <div className="flex items-center gap-3 p-4 border border-gold/30 bg-gold/5">
+                <span className="text-gold text-lg">✓</span>
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
+                  Mulțumim! Te-ai abonat cu succes.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletter} className="flex gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="email@afacerea-ta.ro"
+                  required
+                  className="flex-1 bg-navy-mid border border-navy-mid/70 px-4 py-3 font-body text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold transition-colors min-w-0"
+                  aria-label="Adresa de email pentru newsletter"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterState === 'loading'}
+                  className="btn-gold-ghost text-xs px-5 py-3 whitespace-nowrap disabled:opacity-60"
+                >
+                  {newsletterState === 'loading' ? '...' : 'Abonează-te'}
+                </button>
+              </form>
+            )}
+            {newsletterState === 'error' && (
+              <p className="font-mono text-xs text-red-400 mt-2">{newsletterError}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Main grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand col */}
           <div className="lg:col-span-1">
@@ -62,10 +138,10 @@ export function Footer() {
                 href={siteConfig.social.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-navy-mid hover:border-gold hover:text-gold transition-colors font-mono text-xs leading-none"
+                className="p-2 border border-navy-mid hover:border-gold hover:text-gold transition-colors"
                 aria-label="TikTok"
               >
-                TK
+                <TikTokIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -158,3 +234,4 @@ export function Footer() {
     </footer>
   )
 }
+
