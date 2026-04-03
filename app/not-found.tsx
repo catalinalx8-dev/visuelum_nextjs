@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -7,8 +8,18 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-navy-deep flex items-center justify-center px-4">
-      <div className="text-center">
+    <div className="min-h-screen bg-navy-deep relative flex items-center justify-center px-4">
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1400&q=80"
+          alt=""
+          fill
+          className="object-cover opacity-5"
+          sizes="100vw"
+          priority
+        />
+      </div>
+      <div className="relative z-10 text-center">
         <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">404</p>
         <h1 className="font-head font-extrabold text-display text-cream mb-6">
           Pagina<br />
