@@ -87,7 +87,7 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="email@afacerea-ta.ro"
                   required
-                  className="flex-1 bg-navy-mid border border-navy-mid/70 px-4 py-3 font-body text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold transition-colors min-w-0"
+                  className="flex-1 bg-navy-mid border border-navy-mid/70 rounded-xl px-4 py-3 font-body text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold transition-colors min-w-0"
                   aria-label="Adresa de email pentru newsletter"
                 />
                 <button
@@ -120,7 +120,7 @@ export function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-navy-mid hover:border-gold hover:text-gold transition-colors"
+                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -129,7 +129,7 @@ export function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-navy-mid hover:border-gold hover:text-gold transition-colors"
+                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" />
@@ -138,7 +138,7 @@ export function Footer() {
                 href={siteConfig.social.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-navy-mid hover:border-gold hover:text-gold transition-colors"
+                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
                 aria-label="TikTok"
               >
                 <TikTokIcon className="h-4 w-4" />
@@ -205,7 +205,7 @@ export function Footer() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold border border-gold px-4 py-2.5 hover:bg-gold hover:text-white transition-all duration-200"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold border border-gold rounded-xl px-4 py-2.5 hover:bg-gold hover:text-white transition-all duration-200"
               >
                 Audit Gratuit →
               </Link>

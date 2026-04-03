@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowDown, Check } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
@@ -22,12 +23,29 @@ export function Hero() {
       {/* Radial glow */}
       <div className="absolute inset-0 gold-glow" />
 
+      {/* Hero image — right side, desktop only */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block pointer-events-none">
+        <div className="relative h-full w-full">
+          <Image
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80"
+            alt="Analiză marketing digital pe laptop — dashboard cu grafice de performanță"
+            fill
+            className="object-cover object-center opacity-20"
+            sizes="50vw"
+            priority
+          />
+          {/* Fade gradient over the image so it blends with background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/40" />
+        </div>
+      </div>
+
       <Container className="relative z-10 py-32 lg:py-40">
         <motion.div
           initial="initial"
           animate="animate"
           transition={{ staggerChildren: 0.1 }}
-          className="max-w-4xl text-center sm:text-left"
+          className="max-w-4xl text-center sm:text-left lg:max-w-2xl"
         >
           <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
             <Eyebrow color="gold" className="mb-8">
@@ -93,6 +111,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
+        aria-hidden="true"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
