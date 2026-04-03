@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  --navy:       #1a1a2e;
+  --navy-deep:  #0f0f1e;
+  --navy-mid:   #2d2d4e;
+  --gold:       #c9922a;
+  --gold-l:     #e8b84b;
+  --gold-pale:  #f5e4bc;
+  --cream:      #faf9f5;
+  --parchment:  #f0ede4;
+  --stone:      #e8e4db;
+  --ink:        #0f0f0d;
+  --muted:      #7a756b;
+  --muted-l:    #b0aa9f;
+  --white:      #ffffff;
+  --green:      #2a6b47;
+
+  --f-head: 'Syne', sans-serif;
+  --f-body: 'Libre Baskerville', serif;
+  --f-mono: 'JetBrains Mono', monospace;
+
+  --section-py: clamp(4rem, 8vw, 7rem);
+  --container:  1280px;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: var(--f-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--f-head);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    background-color: var(--gold-pale);
+    color: var(--navy-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gold text-white font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-navy text-cream font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5;
+  }
+
+  .btn-gold-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 text-gold border-gold hover:bg-gold hover:text-white;
+  }
+
+  .btn-cream-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 font-head font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:-translate-y-0.5 text-cream border-cream hover:bg-cream hover:text-navy;
+  }
+
+  .container-site {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: var(--container);
+  }
+
+  .section-py {
+    padding-top: var(--section-py);
+    padding-bottom: var(--section-py);
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-gold;
+  }
+
+  .grid-overlay {
+    background-image: linear-gradient(rgba(201,146,42,.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(201,146,42,.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .gold-glow {
+    background: radial-gradient(ellipse at 50% -20%, rgba(201,146,42,.08) 0%, transparent 70%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .service-card {
+    @apply bg-white border border-stone p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-t-4 hover:border-t-gold;
+  }
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+}
