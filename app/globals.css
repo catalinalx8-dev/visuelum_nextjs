@@ -17,7 +17,7 @@
   --white:      #ffffff;
   --green:      #2a6b47;
 
-  --f-head: 'Syne', sans-serif;
+  --f-head: 'Inter', sans-serif;
   --f-body: 'Libre Baskerville', serif;
   --f-mono: 'JetBrains Mono', monospace;
 
@@ -45,7 +45,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--f-head);
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
   }
 
   ::selection {

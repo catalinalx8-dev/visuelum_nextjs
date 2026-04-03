@@ -19,16 +19,16 @@ const config: Config = {
         green: '#2a6b47',
       },
       fontFamily: {
-        head: ['var(--font-syne)', 'sans-serif'],
+        head: ['var(--font-inter)', 'sans-serif'],
         body: ['var(--font-libre)', 'serif'],
         mono: ['var(--font-jetbrains)', 'monospace'],
       },
       fontSize: {
-        display: ['clamp(3rem,8vw,6rem)', { lineHeight: '0.9', letterSpacing: '-0.04em' }],
-        hero: ['clamp(2.25rem,5vw,4rem)', { lineHeight: '1.0', letterSpacing: '-0.03em' }],
+        display: ['clamp(3rem,8vw,6rem)', { lineHeight: '0.92', letterSpacing: '-0.035em' }],
+        hero: ['clamp(2.25rem,5vw,4rem)', { lineHeight: '1.0', letterSpacing: '-0.025em' }],
         h1: ['clamp(1.875rem,4vw,3rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        h2: ['clamp(1.5rem,3vw,2.25rem)', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
-        h3: ['clamp(1.125rem,2vw,1.5rem)', { lineHeight: '1.3' }],
+        h2: ['clamp(1.5rem,3vw,2.25rem)', { lineHeight: '1.2', letterSpacing: '-0.015em' }],
+        h3: ['clamp(1.125rem,2vw,1.5rem)', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease forwards',
