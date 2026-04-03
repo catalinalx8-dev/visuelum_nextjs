@@ -27,7 +27,7 @@ const reasons = [
 
 export function WhyVisuelum() {
   return (
-    <Section className="bg-navy overflow-hidden">
+    <Section className="bg-white overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: image */}
@@ -47,10 +47,10 @@ export function WhyVisuelum() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-4 bg-gold rounded-2xl px-6 py-4 shadow-2xl" aria-hidden="true">
+            <div className="absolute -bottom-4 -right-4 bg-gold rounded-2xl px-6 py-4 shadow-xl" aria-hidden="true">
               <p className="font-mono text-[10px] uppercase tracking-widest text-white/80 mb-1">Garanție</p>
               <p className="font-head font-extrabold text-2xl text-white">30 zile</p>
             </div>
@@ -66,7 +66,7 @@ export function WhyVisuelum() {
               className="mb-12"
             >
               <Eyebrow color="gold" className="mb-4">De ce Visuelum</Eyebrow>
-              <h2 className="font-head font-extrabold text-h2 text-cream">
+              <h2 className="font-head font-extrabold text-h2 text-navy">
                 Nu suntem doar<br />o altă agenție.
               </h2>
             </motion.div>
@@ -88,10 +88,10 @@ export function WhyVisuelum() {
                   transition={{ duration: 0.5 }}
                   className="flex gap-5 items-start"
                 >
-                  <div className="flex-shrink-0 w-0.5 h-12 bg-gold/40 mt-1" aria-hidden="true" />
+                  <div className="flex-shrink-0 w-0.5 h-12 bg-gold/30 mt-1" aria-hidden="true" />
                   <div>
-                    <h3 className="font-head font-bold text-cream mb-1.5">{reason.title}</h3>
-                    <p className="font-body text-sm text-cream/60 leading-relaxed">{reason.desc}</p>
+                    <h3 className="font-head font-bold text-navy mb-1.5">{reason.title}</h3>
+                    <p className="font-body text-sm text-muted leading-relaxed">{reason.desc}</p>
                   </div>
                 </motion.div>
               ))}

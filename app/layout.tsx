@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Libre_Baskerville, JetBrains_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Header } from '@/components/layout/Header'
@@ -19,14 +19,6 @@ const fontInter = Inter({
   display: 'swap',
 })
 
-const fontLibre = Libre_Baskerville({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-libre',
-  display: 'swap',
-})
-
 const fontJetbrains = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
@@ -37,7 +29,7 @@ const fontJetbrains = JetBrains_Mono({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#1a1a2e',
+  themeColor: '#ffffff',
 }
 
 export const metadata: Metadata = {
@@ -105,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ro"
-      className={`${fontInter.variable} ${fontLibre.variable} ${fontJetbrains.variable}`}
+      className={`${fontInter.variable} ${fontJetbrains.variable}`}
     >
       <head>
         <script

@@ -49,7 +49,7 @@ const plans: PricingCardData[] = [
     ],
     footerTip: 'Ideal pentru: salon, atelier, cabinet, magazin mic',
     bgHeader: 'bg-navy',
-    textHeader: 'text-cream',
+    textHeader: 'text-white',
   },
   {
     id: 'crestere',
@@ -73,7 +73,7 @@ const plans: PricingCardData[] = [
     footerTip: 'Ideal pentru: restaurante, cafenele, saloane, clinici, pensiuni',
     featured: true,
     bgHeader: 'bg-gold',
-    textHeader: 'text-navy',
+    textHeader: 'text-white',
   },
   {
     id: 'dominare',
@@ -95,8 +95,8 @@ const plans: PricingCardData[] = [
       { text: 'Suport WhatsApp prioritar <4h zile lucrătoare', included: true },
     ],
     footerTip: 'Ideal pentru: agenții imobiliare, hoteluri, restaurante premium',
-    bgHeader: 'bg-[#1C3A2A]',
-    textHeader: 'text-cream',
+    bgHeader: 'bg-navy',
+    textHeader: 'text-white',
   },
 ]
 
@@ -117,19 +117,19 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
     >
       {/* Header */}
       <div className={cn('px-8 py-6', plan.bgHeader ?? 'bg-navy')}>
-        <span className={cn('font-mono text-xs uppercase tracking-widest block mb-3', plan.featured ? 'text-navy/70' : 'text-gold')}>
+        <span className={cn('font-mono text-xs uppercase tracking-widest block mb-3', plan.featured ? 'text-white/70' : 'text-gold')}>
           {plan.badge}
         </span>
-        <h3 className={cn('font-head font-extrabold text-2xl mb-1', plan.textHeader ?? 'text-cream')}>
+        <h3 className={cn('font-head font-extrabold text-2xl mb-1', plan.textHeader ?? 'text-white')}>
           {plan.name}
         </h3>
-        <div className={cn('flex items-baseline gap-1', plan.textHeader ?? 'text-cream')}>
+        <div className={cn('flex items-baseline gap-1', plan.textHeader ?? 'text-white')}>
           <span className="font-head font-extrabold text-4xl">
             {plan.price.toLocaleString('ro-RO')}
           </span>
           <span className="font-mono text-sm uppercase">RON/lună</span>
         </div>
-        <p className={cn('font-body italic text-sm mt-3 leading-relaxed', plan.featured ? 'text-navy/80' : 'text-cream/70')}>
+        <p className={cn('font-body text-sm mt-3 leading-relaxed', plan.featured ? 'text-white/80' : 'text-white/70')}>
           {plan.subtitle}
         </p>
       </div>

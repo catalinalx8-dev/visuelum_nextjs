@@ -13,7 +13,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="bg-navy py-16 lg:py-20">
+    <section className="bg-parchment py-16 lg:py-20 border-y border-stone">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -31,7 +31,7 @@ export function StatsBar() {
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="text-center"
             >
-              <div className="font-head font-extrabold text-4xl lg:text-5xl text-gold-l mb-2">
+              <div className="font-head font-extrabold text-4xl lg:text-5xl text-gold mb-2">
                 <AnimatedCounter
                   end={stat.value}
                   prefix={stat.prefix}
@@ -39,7 +39,7 @@ export function StatsBar() {
                   decimals={stat.decimals}
                 />
               </div>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted-l leading-relaxed">
+              <p className="font-mono text-xs uppercase tracking-widest text-muted leading-relaxed">
                 {stat.label}
               </p>
             </motion.div>

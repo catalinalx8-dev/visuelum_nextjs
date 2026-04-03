@@ -30,7 +30,7 @@ const steps = [
 
 export function ProcessSteps() {
   return (
-    <Section className="bg-navy relative overflow-hidden">
+    <Section className="bg-parchment relative overflow-hidden">
       <div className="absolute inset-0 grid-overlay" />
       <Container className="relative z-10">
         <motion.div
@@ -41,7 +41,7 @@ export function ProcessSteps() {
           className="text-center mb-16"
         >
           <Eyebrow color="gold" className="mb-4">Cum funcționează</Eyebrow>
-          <h2 className="font-head font-extrabold text-h2 text-cream">
+          <h2 className="font-head font-extrabold text-h2 text-navy">
             4 pași spre vizibilitate totală
           </h2>
         </motion.div>
@@ -61,15 +61,15 @@ export function ProcessSteps() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="relative bg-white rounded-2xl p-8 border border-stone hover:border-gold/30 hover:shadow-md transition-all duration-300"
             >
               <div className="mb-4">
-                <span className="font-head font-extrabold text-5xl text-gold/20 select-none">
+                <span className="font-head font-extrabold text-5xl text-gold/15 select-none">
                   {step.nr}
                 </span>
               </div>
-              <h3 className="font-head font-bold text-h3 text-cream mb-3">{step.title}</h3>
-              <p className="font-body text-sm text-cream/60 leading-relaxed">{step.desc}</p>
+              <h3 className="font-head font-bold text-h3 text-navy mb-3">{step.title}</h3>
+              <p className="font-body text-sm text-muted leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
         </motion.div>

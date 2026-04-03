@@ -64,10 +64,8 @@ export function Header() {
       {/* Main header */}
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
-          scrolled
-            ? 'bg-navy/96 backdrop-blur-md border-b border-navy-mid/40 shadow-lg shadow-navy-deep/30'
-            : 'bg-transparent'
+          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-stone',
+          scrolled ? 'shadow-sm' : ''
         )}
       >
         <div className="container-site">
@@ -76,7 +74,7 @@ export function Header() {
             {/* Wordmark */}
             <Link
               href="/"
-              className="font-head font-extrabold text-xl text-cream tracking-tight hover:text-gold-l transition-colors flex-shrink-0"
+              className="font-head font-extrabold text-xl text-navy tracking-tight hover:text-gold transition-colors flex-shrink-0"
               aria-label={siteConfig.name}
             >
               Visuelum<span className="text-gold">.</span>
@@ -92,7 +90,7 @@ export function Header() {
                     href={link.href}
                     className={cn(
                       'group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors py-1',
-                      active ? 'text-gold' : 'text-muted-l hover:text-gold-l'
+                      active ? 'text-gold' : 'text-muted hover:text-navy'
                     )}
                     aria-current={pathname === link.href ? 'page' : undefined}
                   >
@@ -112,7 +110,7 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted-l hover:text-gold-l transition-colors"
+                className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted hover:text-navy transition-colors"
               >
                 <Phone className="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true" />
                 {siteConfig.phoneDisplay}
@@ -124,7 +122,7 @@ export function Header() {
 
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden p-2 -mr-1 text-cream rounded-lg hover:bg-navy-mid/40 transition-colors"
+              className="lg:hidden p-2 -mr-1 text-navy rounded-lg hover:bg-stone/60 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? 'Închide meniu' : 'Deschide meniu'}
               aria-expanded={mobileOpen}
@@ -140,7 +138,7 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          'lg:hidden fixed inset-0 z-50 flex flex-col bg-navy-deep transition-all duration-300 ease-out',
+          'lg:hidden fixed inset-0 z-50 flex flex-col bg-white transition-all duration-300 ease-out',
           mobileOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
@@ -151,16 +149,16 @@ export function Header() {
         <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent w-full" />
 
         {/* Menu top bar */}
-        <div className="flex items-center justify-between px-6 h-16 flex-shrink-0">
+        <div className="flex items-center justify-between px-6 h-16 flex-shrink-0 border-b border-stone">
           <Link
             href="/"
-            className="font-head font-extrabold text-xl text-cream tracking-tight"
+            className="font-head font-extrabold text-xl text-navy tracking-tight"
             onClick={() => setMobileOpen(false)}
           >
             Visuelum<span className="text-gold">.</span>
           </Link>
           <button
-            className="p-2 -mr-2 text-cream/60 hover:text-cream transition-colors rounded-lg hover:bg-navy-mid/40"
+            className="p-2 -mr-2 text-muted hover:text-navy transition-colors rounded-lg hover:bg-stone/60"
             onClick={() => setMobileOpen(false)}
             aria-label="Închide meniu"
           >
@@ -176,8 +174,8 @@ export function Header() {
                 <Link
                   href={link.href}
                   className={cn(
-                    'flex items-center justify-center py-3.5 border-b border-navy-mid/30 transition-colors w-full',
-                    isActive(link) ? 'text-gold' : 'text-cream/80 hover:text-gold-l'
+                    'flex items-center justify-center py-3.5 border-b border-stone transition-colors w-full',
+                    isActive(link) ? 'text-gold' : 'text-muted hover:text-navy'
                   )}
                   onClick={() => setMobileOpen(false)}
                   aria-current={pathname === link.href ? 'page' : undefined}
@@ -211,7 +209,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex items-center justify-center w-10 h-10 rounded-full border border-navy-mid/60 text-muted-l hover:text-gold hover:border-gold/40 transition-colors"
+                className="flex items-center justify-center w-10 h-10 rounded-full border border-stone text-muted hover:text-gold hover:border-gold/40 transition-colors"
               >
                 <Icon />
               </a>
