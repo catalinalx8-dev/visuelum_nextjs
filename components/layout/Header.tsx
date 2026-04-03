@@ -1,9 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Instagram, Facebook, ArrowRight } from 'lucide-react'
+import {
+  Menu, X, Phone, Instagram, Facebook, ArrowRight, ChevronDown,
+  Globe, Smartphone, Search, Camera, Target, Palette,
+  type LucideIcon,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
 
@@ -15,41 +19,61 @@ function TikTokIcon() {
   )
 }
 
-const navLinks = [
+type NavChild = {
+  href: string
+  label: string
+  icon?: LucideIcon
+}
+
+type NavLink = {
+  href: string
+  label: string
+  children?: NavChild[]
+}
+
+const navLinks: NavLink[] = [
   { href: '/', label: 'Acasă' },
-  { href: '/servicii', label: 'Servicii' },
-  { href: '/pachete', label: 'Pachete & Prețuri' },
-  { href: '/industrii', label: 'Industrii' },
+  {
+    href: '/servicii',
+    label: 'Servicii',
+    children: [
+      { href: '/servicii/website', label: 'Website Profesional', icon: Globe },
+      { href: '/servicii/social-media', label: 'Social Media', icon: Smartphone },
+      { href: '/servicii/seo', label: 'SEO & Google Local', icon: Search },
+      { href: '/servicii/foto-video', label: 'Fotografie & Video', icon: Camera },
+      { href: '/servicii/google-ads', label: 'Google & Meta Ads', icon: Target },
+      { href: '/servicii/branding', label: 'Branding & Design', icon: Palette },
+    ],
+  },
+  { href: '/pachete', label: 'Pachete' },
+  {
+    href: '/industrii',
+    label: 'Industrii',
+    children: [
+      { href: '/industrii/restaurante-cafenele', label: 'Restaurante & Cafenele' },
+      { href: '/industrii/saloane-barber', label: 'Saloane & Barber' },
+      { href: '/industrii/clinici-cabinete', label: 'Clinici & Cabinete' },
+      { href: '/industrii/pensiuni-cazare', label: 'Pensiuni & Cazare' },
+      { href: '/industrii/fitness-sporturi', label: 'Fitness & Sporturi' },
+      { href: '/industrii/retail-magazine', label: 'Retail & Magazine' },
+    ],
+  },
   { href: '/despre', label: 'Despre' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]
 
-const desktopNavLinks = navLinks.filter(
-  (l) => l.href !== '/' && l.href !== '/contact'
-)
-
 const socialLinks = [
-  {
-    href: siteConfig.social.instagram,
-    label: 'Instagram',
-    icon: Instagram,
-  },
-  {
-    href: siteConfig.social.facebook,
-    label: 'Facebook',
-    icon: Facebook,
-  },
-  {
-    href: siteConfig.social.tiktok,
-    label: 'TikTok',
-    icon: TikTokIcon,
-  },
+  { href: siteConfig.social.instagram, label: 'Instagram', icon: Instagram },
+  { href: siteConfig.social.facebook, label: 'Facebook', icon: Facebook },
+  { href: siteConfig.social.tiktok, label: 'TikTok', icon: TikTokIcon },
 ]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -66,6 +90,18 @@ export function Header() {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
+
+  const openMenu = useCallback((key: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setOpenDropdown(key)
+  }, [])
+
+  const scheduleClose = useCallback(() => {
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 120)
+  }, [])
+
+  const isActive = (link: NavLink) =>
+    pathname === link.href || link.children?.some((c) => pathname === c.href || pathname.startsWith(c.href + '/'))
 
   return (
     <>
@@ -84,30 +120,104 @@ export function Header() {
             {/* Wordmark */}
             <Link
               href="/"
-              className="font-head font-extrabold text-xl text-cream tracking-tight hover:text-gold-l transition-colors"
+              className="font-head font-extrabold text-xl text-cream tracking-tight hover:text-gold-l transition-colors flex-shrink-0"
               aria-label={siteConfig.name}
             >
               Visuelum<span className="text-gold">.</span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-7" aria-label="Navigare principală">
-              {desktopNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    'font-mono text-[11px] uppercase tracking-[0.15em] transition-colors',
-                    pathname === link.href ? 'text-gold' : 'text-muted-l hover:text-gold-l'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigare principală">
+              {navLinks.map((link) => {
+                const active = isActive(link)
+                const hasChildren = Boolean(link.children?.length)
+                const isOpen = openDropdown === link.href
+
+                return (
+                  <div
+                    key={link.href}
+                    className="relative"
+                    onMouseEnter={() => hasChildren && openMenu(link.href)}
+                    onMouseLeave={() => hasChildren && scheduleClose()}
+                  >
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        'group relative flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.15em] transition-colors py-1',
+                        active ? 'text-gold' : 'text-muted-l hover:text-gold-l'
+                      )}
+                      aria-current={pathname === link.href ? 'page' : undefined}
+                      aria-haspopup={hasChildren ? 'true' : undefined}
+                      aria-expanded={hasChildren ? isOpen : undefined}
+                    >
+                      {link.label}
+                      {hasChildren && (
+                        <ChevronDown
+                          className={cn(
+                            'h-3 w-3 transition-transform duration-200',
+                            isOpen ? 'rotate-180' : ''
+                          )}
+                          aria-hidden="true"
+                        />
+                      )}
+                      {/* Underline hover effect */}
+                      <span
+                        className={cn(
+                          'absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-200',
+                          active ? 'w-full' : 'w-0 group-hover:w-full'
+                        )}
+                      />
+                    </Link>
+
+                    {/* Dropdown */}
+                    {hasChildren && (
+                      <div
+                        className={cn(
+                          'absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 origin-top',
+                          isOpen ? 'opacity-100 scale-y-100 pointer-events-auto' : 'opacity-0 scale-y-95 pointer-events-none'
+                        )}
+                        onMouseEnter={() => openMenu(link.href)}
+                        onMouseLeave={scheduleClose}
+                        role="menu"
+                        aria-label={`Submeniu ${link.label}`}
+                      >
+                        <div className="bg-navy border border-navy-mid shadow-xl shadow-navy-deep/50 min-w-[220px] py-2">
+                          {/* Gold top accent */}
+                          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent mb-2" />
+                          {link.children!.map((child) => {
+                            const Icon = child.icon
+                            return (
+                              <Link
+                                key={child.href}
+                                href={child.href}
+                                role="menuitem"
+                                className={cn(
+                                  'flex items-center gap-3 px-5 py-2.5 font-mono text-[10px] uppercase tracking-widest transition-all duration-150 group/item',
+                                  pathname === child.href
+                                    ? 'text-gold bg-gold/5'
+                                    : 'text-muted-l hover:text-gold hover:bg-gold/5'
+                                )}
+                              >
+                                {Icon && (
+                                  <Icon
+                                    className="h-3.5 w-3.5 flex-shrink-0 transition-colors"
+                                    aria-hidden={true}
+                                  />
+                                )}
+                                {child.label}
+                              </Link>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
             </nav>
 
             {/* Desktop right side */}
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
                 className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted-l hover:text-gold-l transition-colors"
@@ -169,22 +279,23 @@ export function Header() {
         {/* Nav links — vertically centered */}
         <nav className="flex-1 flex flex-col justify-center px-8" aria-label="Navigare mobilă">
           <ul className="flex flex-col gap-1">
-            {navLinks.map((link, i) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={cn(
                     'group flex items-center justify-between py-4 border-b border-navy-mid/40 transition-colors',
-                    pathname === link.href ? 'text-gold' : 'text-cream/80 hover:text-gold-l'
+                    isActive(link) ? 'text-gold' : 'text-cream/80 hover:text-gold-l'
                   )}
                   onClick={() => setMobileOpen(false)}
+                  aria-current={pathname === link.href ? 'page' : undefined}
                 >
                   <span className="font-head font-bold text-2xl tracking-tight">
                     {link.label}
                   </span>
                   <ArrowRight className={cn(
                     'h-5 w-5 transition-all',
-                    pathname === link.href ? 'text-gold opacity-100' : 'opacity-0 group-hover:opacity-60 group-hover:translate-x-1'
+                    isActive(link) ? 'text-gold opacity-100' : 'opacity-0 group-hover:opacity-60 group-hover:translate-x-1'
                   )} />
                 </Link>
               </li>
