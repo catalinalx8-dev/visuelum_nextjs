@@ -57,3 +57,25 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
     return { success: false, error: 'Eroare la trimiterea mesajului. Încearcă din nou.' }
   }
 }
+
+export async function sendNewsletterSignup(email: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const apiKey = process.env.RESEND_API_KEY
+    // Without an API key the signup cannot be persisted; treat as no-op in development
+    if (!apiKey) return { success: true }
+
+    const { Resend } = await import('resend')
+    const resend = new Resend(apiKey)
+
+    await resend.emails.send({
+      from: siteConfig.resend.from,
+      to: siteConfig.resend.to,
+      subject: `Newsletter signup: ${email}`,
+      html: `<p>Abonat nou la newsletter: <strong>${email}</strong></p>`,
+    })
+
+    return { success: true }
+  } catch {
+    return { success: false, error: 'Eroare. Încearcă din nou.' }
+  }
+}

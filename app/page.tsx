@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Hero } from '@/components/sections/Hero'
 import { StatsBar } from '@/components/sections/StatsBar'
 import { ServicesGrid } from '@/components/sections/ServicesGrid'
+import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { PricingCards } from '@/components/sections/PricingCards'
 import { IndustriesGrid } from '@/components/sections/IndustriesGrid'
@@ -60,6 +61,7 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <ServicesGrid />
+      <PortfolioSection />
       <ProcessSteps />
       <PricingCards compact />
       <IndustriesGrid />
