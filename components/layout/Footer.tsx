@@ -58,7 +58,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-navy-deep text-cream/70">
+    <footer className="bg-navy text-cream/70">
       <div className="container-site py-16">
 
         {/* Newsletter strip */}
@@ -73,7 +73,7 @@ export function Footer() {
               </p>
             </div>
             {newsletterState === 'success' ? (
-              <div className="flex items-center gap-3 p-4 border border-gold/30 bg-gold/5">
+              <div className="flex items-center gap-3 p-4 border border-gold/30 bg-gold/5 rounded-xl">
                 <span className="text-gold text-lg">✓</span>
                 <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
                   Mulțumim! Te-ai abonat cu succes.
@@ -154,7 +154,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-cream/60 hover:text-gold-l transition-colors"
+                    className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -171,7 +171,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-cream/60 hover:text-gold-l transition-colors"
+                    className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -187,7 +187,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="font-body text-sm text-cream/60 hover:text-gold-l transition-colors"
+                  className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
                 >
                   {siteConfig.email}
                 </a>
@@ -195,7 +195,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="font-body text-sm text-cream/60 hover:text-gold-l transition-colors"
+                  className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
                 >
                   {siteConfig.phoneDisplay}
                 </a>

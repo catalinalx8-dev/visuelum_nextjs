@@ -20,8 +20,8 @@ export function BackToTop() {
       onClick={scrollToTop}
       aria-label="Înapoi sus"
       className={cn(
-        'fixed bottom-24 right-6 z-50 p-3 bg-navy text-cream shadow-lg transition-all duration-300',
-        'hover:bg-gold hover:-translate-y-1',
+        'fixed bottom-24 right-6 z-50 p-3 bg-white border border-stone text-navy shadow-md rounded-lg transition-all duration-300',
+        'hover:bg-gold hover:text-white hover:border-gold hover:-translate-y-1',
         visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       )}
     >

@@ -15,11 +15,11 @@ const fadeUp = {
 export function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center bg-navy-deep overflow-hidden"
+      className="relative min-h-screen flex items-center bg-white overflow-hidden"
       aria-label="Hero"
     >
-      {/* Grid overlay */}
-      <div className="absolute inset-0 grid-overlay opacity-60" aria-hidden="true" />
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 grid-overlay opacity-100" aria-hidden="true" />
       {/* Radial glow */}
       <div className="absolute inset-0 gold-glow" aria-hidden="true" />
 
@@ -30,12 +30,11 @@ export function Hero() {
             src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85"
             alt="Echipă de marketing digital lucrând la strategii online pentru afaceri locale"
             fill
-            className="object-cover object-center opacity-25"
+            className="object-cover object-center opacity-20"
             sizes="50vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/20" />
         </div>
       </div>
 
@@ -45,9 +44,9 @@ export function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.4, duration: 0.7 }}
-          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+          className="bg-white border border-stone rounded-2xl px-5 py-3.5 shadow-lg shadow-navy/5"
         >
-          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Website live în</p>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-1">Website live în</p>
           <p className="font-head font-extrabold text-2xl text-gold">14 zile</p>
         </motion.div>
       </div>
@@ -56,9 +55,9 @@ export function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.6, duration: 0.7 }}
-          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+          className="bg-white border border-stone rounded-2xl px-5 py-3.5 shadow-lg shadow-navy/5"
         >
-          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Investiție inițială</p>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-1">Investiție inițială</p>
           <p className="font-head font-extrabold text-2xl text-gold">0 RON</p>
         </motion.div>
       </div>
@@ -67,9 +66,9 @@ export function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.8, duration: 0.7 }}
-          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3.5 shadow-2xl"
+          className="bg-white border border-stone rounded-2xl px-5 py-3.5 shadow-lg shadow-navy/5"
         >
-          <p className="font-mono text-[10px] uppercase tracking-widest text-muted-l mb-1">Garanție</p>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-1">Garanție</p>
           <p className="font-head font-extrabold text-2xl text-gold">30 zile</p>
         </motion.div>
       </div>
@@ -90,7 +89,7 @@ export function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="font-head font-extrabold text-display text-cream leading-none mb-6"
+            className="font-head font-extrabold text-display text-navy leading-none mb-6"
           >
             Vizibilitate
             <br />
@@ -101,7 +100,7 @@ export function Hero() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="font-body italic text-muted-l text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mb-10 mx-auto sm:mx-0"
+            className="font-body text-muted text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mb-10 mx-auto sm:mx-0"
           >
             Există mii de afaceri bune în România care nu există online. Noi le facem vizibile —
             cu website gratuit, social media activ și Google optimizat, contra unui singur abonament lunar.
@@ -132,7 +131,7 @@ export function Hero() {
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-gold flex-shrink-0" aria-hidden="true" />
-                <span className="font-mono text-xs uppercase tracking-widest text-muted-l">{item}</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-muted">{item}</span>
               </div>
             ))}
           </motion.div>
@@ -151,7 +150,7 @@ export function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ArrowDown className="h-5 w-5 text-gold/60" />
+          <ArrowDown className="h-5 w-5 text-gold/50" />
         </motion.div>
       </motion.div>
     </section>

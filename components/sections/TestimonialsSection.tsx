@@ -31,7 +31,7 @@ const commitments = [
 
 export function TestimonialsSection() {
   return (
-    <Section className="bg-navy">
+    <Section className="bg-parchment">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -41,10 +41,10 @@ export function TestimonialsSection() {
           className="text-center mb-16"
         >
           <Eyebrow color="gold" className="mb-4">Angajamentul nostru</Eyebrow>
-          <h2 className="font-head font-extrabold text-h2 text-cream">
+          <h2 className="font-head font-extrabold text-h2 text-navy">
             Ce îți promitem de la prima zi.
           </h2>
-          <p className="font-body italic text-muted-l mt-4 max-w-xl mx-auto">
+          <p className="font-body text-muted mt-4 max-w-xl mx-auto">
             Construim o relație pe termen lung, bazată pe rezultate măsurabile și comunicare onestă.
           </p>
         </motion.div>
@@ -64,14 +64,14 @@ export function TestimonialsSection() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="bg-navy-mid border border-navy-mid/50 rounded-2xl p-8 flex flex-col gap-5 hover:border-gold/30 transition-colors duration-300"
+              className="bg-white border border-stone rounded-2xl p-8 flex flex-col gap-5 hover:border-gold/30 hover:shadow-md transition-all duration-300"
             >
               <div className="inline-flex p-3 bg-gold/10 text-gold w-fit rounded-xl">
                 <item.icon className="h-5 w-5" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="font-head font-bold text-h3 text-cream mb-3">{item.title}</h3>
-                <p className="font-body text-sm text-cream/60 leading-relaxed">{item.desc}</p>
+                <h3 className="font-head font-bold text-h3 text-navy mb-3">{item.title}</h3>
+                <p className="font-body text-sm text-muted leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
           ))}

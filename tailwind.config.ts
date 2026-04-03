@@ -10,12 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#1a1a2e', deep: '#0f0f1e', mid: '#2d2d4e' },
-        gold: { DEFAULT: '#c9922a', l: '#e8b84b', pale: '#f5e4bc' },
-        cream: '#faf9f5',
-        parchment: '#f0ede4',
-        stone: '#e8e4db',
-        ink: '#0f0f0d',
-        muted: { DEFAULT: '#7a756b', l: '#b0aa9f' },
+        gold: { DEFAULT: '#b8832a', l: '#d4a044', pale: '#f5e4bc' },
+        cream: '#ffffff',
+        parchment: '#f7f7f8',
+        stone: '#eeeef0',
+        ink: '#111118',
+        muted: { DEFAULT: '#6b7280', l: '#9ca3af' },
         green: '#2a6b47',
       },
       fontFamily: {
