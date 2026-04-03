@@ -69,6 +69,8 @@ const socialLinks = [
   { href: siteConfig.social.tiktok, label: 'TikTok', icon: TikTokIcon },
 ]
 
+const DROPDOWN_CLOSE_DELAY = 120
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -97,11 +99,14 @@ export function Header() {
   }, [])
 
   const scheduleClose = useCallback(() => {
-    closeTimer.current = setTimeout(() => setOpenDropdown(null), 120)
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), DROPDOWN_CLOSE_DELAY)
   }, [])
 
+  const isChildActive = (href: string) =>
+    pathname === href || pathname.startsWith(href.replace(/\/$/, '') + '/')
+
   const isActive = (link: NavLink) =>
-    pathname === link.href || link.children?.some((c) => pathname === c.href || pathname.startsWith(c.href + '/'))
+    pathname === link.href || link.children?.some((c) => isChildActive(c.href))
 
   return (
     <>
@@ -193,7 +198,7 @@ export function Header() {
                                 role="menuitem"
                                 className={cn(
                                   'flex items-center gap-3 px-5 py-2.5 font-mono text-[10px] uppercase tracking-widest transition-all duration-150 group/item',
-                                  pathname === child.href
+                                  isChildActive(child.href)
                                     ? 'text-gold bg-gold/5'
                                     : 'text-muted-l hover:text-gold hover:bg-gold/5'
                                 )}
