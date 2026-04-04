@@ -13,11 +13,12 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
+  { question: 'Pot vedea website-ul înainte să mă angajez?', answer: 'Da! Pentru clienții noi oferim un demo website 100% gratuit, personalizat afacerii tale. Îl poți vedea înainte de orice semnătură. Dacă îți place, continuăm și personalizăm totul după dorința ta.' },
   { question: 'Cât durează să fie gata website-ul?', answer: 'Maximum 14 zile lucrătoare de la semnarea contractului și furnizarea materialelor (logo, texte, fotografii). De obicei finalizăm în 7–10 zile.' },
-  { question: 'Ce se întâmplă cu site-ul dacă plec după 6 luni?', answer: 'Website-ul este găzduit pe serverele noastre. Dacă nu continui abonamentul, site-ul se închide. Domeniu rămâne al tău permanent. Poți oricând migra site-ul la alt provider contra unui cost de 300–500 RON.' },
+  { question: 'Ce se întâmplă cu site-ul dacă plec după 6 luni?', answer: 'Ai două opțiuni: continui abonamentul lună de lună fără angajament suplimentar, sau primești codul sursă și te ocupi tu de hosting + administrare. Dacă nu plătești abonamentul în cele 6 luni, website-ul se închide. Domeniu rămâne al tău permanent.' },
   { question: 'Pe ce platformă este construit website-ul?', answer: 'Folosim WordPress sau Next.js, în funcție de nevoile afacerii. Restaurantele cu meniu digital, pensiunile cu rezervări sau magazinele online primesc soluții adaptate.' },
   { question: 'Pot adăuga pagini suplimentare?', answer: 'Da. Pachetul PREZENȚA include 5 pagini, CREȘTERE — 8 pagini, DOMINARE — nelimitat. Dacă ai nevoie de pagini extra în pachetele de bază, adăugăm contra unui cost mic.' },
-  { question: 'Eu dețin domeniul?', answer: 'Da, absolut. Domeniul (.ro sau .com) este cumpărat pe numele tău sau transferat în contul tău. Este proprietatea ta permanentă, indiferent ce se întâmplă cu abonamentul.' },
+  { question: 'Eu dețin domeniul?', answer: 'Da, absolut. Domeniul este achiziționat de tine separat sau cumpărat pe numele tău. Este proprietatea ta permanentă, 100%, indiferent ce se întâmplă cu abonamentul.' },
 ]
 
 export default function WebsitePage() {
@@ -90,10 +91,11 @@ export default function WebsitePage() {
           <h2 className="font-head font-extrabold text-h2 text-navy text-center mb-12">Cum lucrăm</h2>
           <div className="space-y-8">
             {[
-              { nr: '01', title: 'Briefing & Contract', desc: 'Discutăm nevoile, structura site-ului, stilul vizual. Semnăm contractul de abonament.' },
-              { nr: '02', title: 'Design & Conținut', desc: 'Creăm designul, scriem textele SEO, organizăm fotografiile furnizate de tine.' },
-              { nr: '03', title: 'Revizii & Aprobare', desc: 'Îți trimitem preview-ul. Facem 2 runde de revizii incluse.' },
-              { nr: '04', title: 'Lansare & Indexare', desc: 'Site-ul merge live. Îl trimitem la Google pentru indexare rapidă.' },
+              { nr: '01', title: 'Demo Gratuit', desc: 'Creăm un website demo personalizat afacerii tale, 100% gratuit, înainte de orice angajament. Dacă îți place ce facem, continuăm.' },
+              { nr: '02', title: 'Briefing & Contract', desc: 'Discutăm nevoile, structura site-ului, stilul vizual. Semnăm contractul de abonament.' },
+              { nr: '03', title: 'Design & Conținut', desc: 'Creăm designul, scriem textele SEO, organizăm fotografiile furnizate de tine.' },
+              { nr: '04', title: 'Revizii & Aprobare', desc: 'Îți trimitem preview-ul. Facem 2 runde de revizii incluse.' },
+              { nr: '05', title: 'Lansare & Indexare', desc: 'Site-ul merge live. Îl trimitem la Google pentru indexare rapidă.' },
             ].map((step) => (
               <div key={step.nr} className="flex gap-6">
                 <span className="font-head font-extrabold text-4xl text-gold/30 flex-shrink-0 w-12">{step.nr}</span>
@@ -103,6 +105,26 @@ export default function WebsitePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Digital menu & domain info */}
+      <section className="bg-navy py-12">
+        <div className="container-site max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white/5 border border-white/10 p-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-gold mb-3">Meniu digital restaurant</p>
+              <p className="font-body text-sm text-cream/80 leading-relaxed">
+                Creăm meniuri digitale QR interactive pentru restaurante. Același model ca la website: hosting gratuit dacă alegi administrare web lunară pe 6 luni. Poți alege un pachet separat cu doar website + administrare, fără alte servicii.
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-gold mb-3">Domeniu 100% al tău</p>
+              <p className="font-body text-sm text-cream/80 leading-relaxed">
+                Domeniul este achiziționat de tine separat și rămâne proprietatea ta 100% permanent. Indiferent dacă colaborăm sau nu. După 6 luni poți primi codul sursă și te poți ocupa singur de hosting și administrare.
+              </p>
+            </div>
           </div>
         </div>
       </section>
