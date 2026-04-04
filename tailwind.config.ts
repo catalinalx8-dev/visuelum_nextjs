@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { theme } from './lib/theme'
 
 const config: Config = {
   content: [
@@ -9,19 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: { DEFAULT: '#1a1a2e', deep: '#0f0f1e', mid: '#2d2d4e' },
-        gold: { DEFAULT: '#966d25', l: '#b8832a', pale: '#f5e4bc' },
-        cream: '#ffffff',
-        parchment: '#f7f7f8',
-        stone: '#eeeef0',
-        ink: '#111118',
-        muted: { DEFAULT: '#6b7280', l: '#9ca3af' },
-        green: '#2a6b47',
+        navy: theme.colors.navy,
+        gold: theme.colors.gold,
+        cream: theme.colors.cream,
+        parchment: theme.colors.parchment,
+        stone: theme.colors.stone,
+        ink: theme.colors.ink,
+        muted: theme.colors.muted,
+        green: theme.colors.green,
       },
       fontFamily: {
-        head: ['var(--font-inter)', 'sans-serif'],
-        body: ['var(--font-libre)', 'serif'],
-        mono: ['var(--font-jetbrains)', 'monospace'],
+        head: [`var(--font-inter)`, theme.fonts.head, 'sans-serif'],
+        body: [`var(--font-libre)`, theme.fonts.body, 'serif'],
+        mono: [`var(--font-jetbrains)`, theme.fonts.mono, 'monospace'],
       },
       fontSize: {
         display: ['clamp(3rem,8vw,6rem)', { lineHeight: '0.92', letterSpacing: '-0.035em' }],

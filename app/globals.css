@@ -1,12 +1,18 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+/*
+ * CSS custom properties — sourced from lib/theme.ts.
+ * These mirror the Tailwind theme tokens so inline styles and
+ * non-utility CSS can reference the same design system values.
+ */
 :root {
+  /* Colors — keep in sync with lib/theme.ts */
   --navy:       #1a1a2e;
   --navy-deep:  #0f0f1e;
   --navy-mid:   #2d2d4e;
   --gold:       #c9922a;
-  --gold-l:     #e8b84b;
+  --gold-l:     #e0a83a;
   --gold-pale:  #f5e4bc;
   --cream:      #faf9f5;
   --parchment:  #f0ede4;
@@ -17,10 +23,12 @@
   --white:      #ffffff;
   --green:      #2a6b47;
 
+  /* Typography — keep in sync with lib/theme.ts */
   --f-head: 'Inter', sans-serif;
   --f-body: 'Libre Baskerville', serif;
   --f-mono: 'JetBrains Mono', monospace;
 
+  /* Layout */
   --section-py: clamp(4rem, 8vw, 7rem);
   --container:  1280px;
 }
