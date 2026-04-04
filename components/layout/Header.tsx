@@ -237,10 +237,10 @@ export function Header() {
 
             {/* Nav links — centered with stagger */}
             <nav
-              className="relative flex-1 flex flex-col items-center justify-center px-6 overflow-y-auto"
+              className="relative flex-1 flex flex-col items-center justify-center px-6 overflow-hidden"
               aria-label="Navigare mobilă"
             >
-              <ul className="flex flex-col items-center gap-1 w-full max-w-sm">
+              <ul className="flex flex-col items-center gap-0 w-full max-w-sm">
                 {navLinks.map((link, i) => {
                   const active = isActive(link)
                   return (
@@ -254,7 +254,7 @@ export function Header() {
                       <Link
                         href={link.href}
                         className={cn(
-                          'flex items-center justify-between w-full py-4 px-5 rounded-2xl transition-all duration-200',
+                          'flex items-center justify-between w-full py-2.5 px-4 rounded-xl transition-all duration-200',
                           active
                             ? 'bg-gold/15 text-gold'
                             : 'text-white/80 hover:bg-white/5 hover:text-white'
@@ -262,7 +262,7 @@ export function Header() {
                         onClick={() => setMobileOpen(false)}
                         aria-current={pathname === link.href ? 'page' : undefined}
                       >
-                        <span className="font-head font-bold text-2xl tracking-tight">
+                        <span className="font-head font-bold text-xl tracking-tight">
                           {link.label}
                         </span>
                         {active && (
@@ -280,7 +280,7 @@ export function Header() {
 
             {/* Bottom section */}
             <motion.div
-              className="relative px-6 pb-10 pt-6 flex-shrink-0 space-y-4 border-t border-white/10"
+              className="relative px-6 pb-6 pt-4 flex-shrink-0 space-y-3 border-t border-white/10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.4 }}
@@ -299,14 +299,14 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="flex items-center justify-center w-full py-4 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-base rounded-2xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                className="flex items-center justify-center w-full py-3 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-sm rounded-2xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                 onClick={() => setMobileOpen(false)}
               >
                 Solicită Audit Gratuit
               </Link>
 
               {/* Social links */}
-              <div className="flex items-center justify-center gap-4 pt-1">
+              <div className="flex items-center justify-center gap-3 pt-0">
                 {socialLinks.map(({ href, label, icon: Icon }) => (
                   <a
                     key={label}
@@ -314,7 +314,7 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 text-white/50 hover:text-gold hover:border-gold/50 transition-all duration-200"
+                    className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 text-white/50 hover:text-gold hover:border-gold/50 transition-all duration-200"
                   >
                     <Icon />
                   </a>
