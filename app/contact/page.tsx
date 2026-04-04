@@ -25,26 +25,27 @@ export default function ContactPage() {
       />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
-        <div className="container-site relative z-10 max-w-4xl mx-auto">
+        <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Contact</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-4">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
             Hai să vorbim despre
             <br />
             <span className="text-gold">afacerea ta.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-xl">
+          <p className="font-body italic text-muted text-lg max-w-xl mx-auto">
             Audit digital gratuit. Fără angajament. Fără risc.
           </p>
         </div>
@@ -56,6 +57,18 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Contact info — 2 cols */}
             <div className="lg:col-span-2">
+              {/* Image */}
+              <div className="relative rounded-2xl overflow-hidden aspect-video mb-8">
+                <Image
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80"
+                  alt="Biroul Visuelum din Constanța"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+              </div>
               <h2 className="font-head font-bold text-h3 text-navy mb-8">Informații de contact</h2>
 
               <div className="space-y-6">

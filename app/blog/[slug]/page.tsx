@@ -166,14 +166,15 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src={post.image}
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
@@ -181,7 +182,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="container-site relative z-10 max-w-3xl mx-auto">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-l hover:text-gold transition-colors mb-8"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted hover:text-gold transition-colors mb-8"
           >
             <ArrowLeft className="h-3 w-3" /> Blog
           </Link>
@@ -189,11 +190,11 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="font-mono text-xs uppercase tracking-widest text-gold bg-gold/5 border border-gold/20 px-3 py-1">
               {post.category}
             </span>
-            <span className="font-mono text-xs text-muted-l">{formatDate(post.date)}</span>
-            <span className="font-mono text-xs text-muted-l">· {post.readTime} citire</span>
+            <span className="font-mono text-xs text-muted">{formatDate(post.date)}</span>
+            <span className="font-mono text-xs text-muted">· {post.readTime} citire</span>
           </div>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-4">{post.title}</h1>
-          <p className="font-body italic text-muted-l text-lg">{post.excerpt}</p>
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-4">{post.title}</h1>
+          <p className="font-body italic text-muted text-lg">{post.excerpt}</p>
         </div>
       </section>
 

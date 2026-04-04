@@ -32,26 +32,27 @@ export default function BrandingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <NextImage
             src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto">
           <p className="eyebrow mb-4">Branding & Identitate Vizuală</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-4">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
             Arăți cum meriți.
             <br />
             <span className="text-gold">Nu cum poți.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl">
+          <p className="font-body italic text-muted text-lg max-w-2xl">
             Identitate vizuală completă care comunică profesionalism și construiește încredere înainte ca clientul să spună ceva.
           </p>
         </div>

@@ -55,26 +55,27 @@ export default function BlogPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }} />
 
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
-        <div className="container-site relative z-10 max-w-4xl mx-auto">
+        <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Blog</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-4">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
             Marketing digital
             <br />
             <span className="text-gold">fără jargon.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl">
+          <p className="font-body italic text-muted text-lg max-w-2xl mx-auto">
             Articole practice pentru antreprenori locali din Constanța. Fără teorie inutilă.
           </p>
         </div>

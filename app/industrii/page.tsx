@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, MapPin } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
@@ -32,6 +32,21 @@ const stats = [
   { value: '30 zile', label: 'Garanție rezultate' },
 ]
 
+const industryImages: Record<string, { image: string; imageAlt: string }> = {
+  'restaurante-cafenele': { image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80', imageAlt: 'Restaurant modern' },
+  'saloane-barber': { image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80', imageAlt: 'Salon de înfrumusețare' },
+  'clinici-cabinete': { image: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80', imageAlt: 'Cabinet medical' },
+  'pensiuni-cazare': { image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80', imageAlt: 'Pensiune turistică' },
+  'fitness-sporturi': { image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80', imageAlt: 'Sală de fitness' },
+  'retail-magazine': { image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80', imageAlt: 'Magazin retail' },
+  'agentii-imobiliare': { image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80', imageAlt: 'Agenție imobiliară' },
+  'cabinete-juridice': { image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80', imageAlt: 'Cabinet juridic' },
+  'educatie-cursuri': { image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80', imageAlt: 'Educație și cursuri' },
+  'constructii-renovari': { image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80', imageAlt: 'Construcții și renovări' },
+}
+
+const DEFAULT_INDUSTRY_IMAGE = { image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80', imageAlt: 'Afacere locală' }
+
 export default function IndustriiPage() {
   const breadcrumbs = [
     { name: 'Acasă', url: siteConfig.url },
@@ -43,34 +58,34 @@ export default function IndustriiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbs)) }} />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
-        <div className="absolute inset-0 gold-glow opacity-50" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto text-center">
           <p className="eyebrow mb-5 sm:mb-6">Industrii</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-5 sm:mb-6">
             Strategie digitală adaptată
             <br />
             <span className="text-gold">industriei tale.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
+          <p className="font-body italic text-muted text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
             Fiecare industrie are provocări unice. Soluțiile noastre sunt create specific pentru afacerea ta — nu șabloane generice.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <div className="font-head font-extrabold text-3xl text-gold mb-1">{s.value}</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-l">{s.label}</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted">{s.label}</div>
               </div>
             ))}
           </div>
@@ -89,49 +104,37 @@ export default function IndustriiPage() {
               Selectează industria ta pentru a vedea cum te putem ajuta specific.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industries.map((industry) => (
-              <Link
-                key={industry.slug}
-                href={`/industrii/${industry.slug}`}
-                className="group bg-white border border-stone hover:border-gold/50 hover:shadow-xl hover:shadow-navy/8 hover:-translate-y-0.5 transition-all duration-300 block overflow-hidden"
-              >
-                {/* Gold top accent on hover */}
-                <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                <div className="p-8">
-                  <div className="flex items-start gap-4 mb-5">
-                    <span
-                      className="text-3xl leading-none flex-shrink-0 w-14 h-14 flex items-center justify-center bg-gold/8 group-hover:bg-gold/15 transition-colors duration-200 rounded-sm"
-                      aria-hidden="true"
-                    >
-                      {industry.emoji}
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <h3 className="font-head font-bold text-navy text-xl group-hover:text-gold transition-colors">
-                          {industry.title}
-                        </h3>
-                        <ArrowRight className="h-4 w-4 text-muted-l group-hover:text-gold group-hover:translate-x-1 transition-all flex-shrink-0" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry) => {
+              const imgData = industryImages[industry.slug] ?? DEFAULT_INDUSTRY_IMAGE
+              return (
+                <Link
+                  key={industry.slug}
+                  href={`/industrii/${industry.slug}`}
+                  className="group relative overflow-hidden rounded-2xl aspect-[4/3] flex items-end block hover:shadow-xl hover:shadow-navy/15 transition-all duration-300"
+                  aria-label={`${industry.title} — ${industry.highlight}`}
+                >
+                  <Image
+                    src={imgData.image}
+                    alt={imgData.imageAlt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/30 to-transparent" />
+                  <div className="relative z-10 p-5 w-full">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-head font-bold text-cream text-lg leading-tight">{industry.title}</h3>
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-300">
+                        <ArrowRight className="h-3.5 w-3.5 text-gold group-hover:text-white transition-colors" aria-hidden="true" />
                       </div>
-                      <p className="font-body text-muted text-sm leading-relaxed">{industry.shortDesc}</p>
                     </div>
+                    <p className="font-mono text-[10px] uppercase tracking-wider text-gold/80">{industry.highlight}</p>
                   </div>
-                  <div className="flex items-center gap-2 pt-4 border-t border-stone mb-4">
-                    <CheckCircle className="h-4 w-4 text-gold flex-shrink-0" aria-hidden="true" />
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-gold font-semibold">
-                      {industry.highlight}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {industry.services.map((service) => (
-                      <span key={service} className="font-mono text-xs uppercase tracking-wider text-muted bg-parchment border border-stone px-3 py-1 group-hover:border-gold/20 transition-colors">
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

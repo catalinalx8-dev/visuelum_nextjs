@@ -18,6 +18,15 @@ const industryLabels = [
   'Fitness', 'Retail', 'Imobiliare', 'Juridic', 'Educație', 'Construcții',
 ]
 
+const serviceImages: Record<string, string> = {
+  '/servicii/website': 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
+  '/servicii/social-media': 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
+  '/servicii/seo': 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07d?w=600&q=80',
+  '/servicii/foto-video': 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80',
+  '/servicii/google-ads': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+  '/servicii/branding': 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&q=80',
+}
+
 const services = [
   {
     icon: Globe,
@@ -124,27 +133,27 @@ export default function ServiciiPage() {
       />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-28 sm:pt-32 pb-14 sm:pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
-        <div className="absolute inset-0 gold-glow opacity-50" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-28 sm:pt-32 pb-14 sm:pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-5 sm:mb-6">Servicii complete</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-5 sm:mb-6">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-5 sm:mb-6">
             Tot ce are nevoie afacerea ta.
             <br />
             <span className="text-gold">Un singur abonament.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
+          <p className="font-body italic text-muted text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
             De la website gratuit până la fotografie profesională și Google Ads — totul gestionat de o singură echipă,
             pe o singură factură.
           </p>
@@ -196,27 +205,43 @@ export default function ServiciiPage() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group service-card block"
+                className="group service-card block overflow-hidden p-0 rounded-xl"
                 aria-label={`${service.title} — ${service.highlight}`}
               >
-                <div className="inline-flex p-3 bg-gold/10 text-gold mb-5 group-hover:bg-gold group-hover:text-white transition-colors duration-200">
-                  <service.icon className="h-6 w-6" aria-hidden="true" />
+                {/* Service image */}
+                <div className="relative h-44 overflow-hidden flex-shrink-0">
+                  <Image
+                    src={serviceImages[service.href]}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4">
+                    <div className="inline-flex p-2.5 bg-gold/90 text-white rounded-xl">
+                      <service.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                  </div>
                 </div>
-                <p className="font-mono text-xs uppercase tracking-widest text-gold mb-2">
-                  {service.highlight}
-                </p>
-                <h3 className="font-head font-bold text-h3 text-navy mb-3">{service.title}</h3>
-                <p className="font-body text-muted text-sm leading-relaxed mb-5">{service.desc}</p>
-                <ul className="space-y-1.5 mb-6" aria-label={`Beneficii ${service.title}`}>
-                  {service.benefits.map((b) => (
-                    <li key={b} className="flex items-center gap-2">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-gold flex-shrink-0" aria-hidden="true" />
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-ink">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
-                  Detalii complete <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                <div className="p-6">
+                  <p className="font-mono text-xs uppercase tracking-widest text-gold mb-2">
+                    {service.highlight}
+                  </p>
+                  <h3 className="font-head font-bold text-h3 text-navy mb-3">{service.title}</h3>
+                  <p className="font-body text-muted text-sm leading-relaxed mb-5">{service.desc}</p>
+                  <ul className="space-y-1.5 mb-6" aria-label={`Beneficii ${service.title}`}>
+                    {service.benefits.map((b) => (
+                      <li key={b} className="flex items-center gap-2">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-gold flex-shrink-0" aria-hidden="true" />
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-ink">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
+                    Detalii complete <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  </div>
                 </div>
               </Link>
             ))}

@@ -55,26 +55,27 @@ export default function PachetePage() {
       />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-16">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Pachete & Prețuri</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-6">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-6">
             Pachete clare. Prețuri corecte.
             <br />
             <span className="text-gold">Zero risc.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-lg max-w-2xl mx-auto">
+          <p className="font-body italic text-muted text-lg max-w-2xl mx-auto">
             Website-ul este creat gratuit și găzduit de noi 6 luni. Tu plătești lunar abonamentul de administrare.
             Domeniul tău rămâne al tău întotdeauna.
           </p>
