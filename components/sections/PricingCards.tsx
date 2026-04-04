@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Check, X, ChevronDown } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { Section } from '@/components/ui/Section'
@@ -101,7 +100,6 @@ const plans: PricingCardData[] = [
 ]
 
 function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact?: boolean }) {
-  const [hostingOpen, setHostingOpen] = useState(false)
 
   return (
     <motion.div
@@ -171,35 +169,14 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
           ))}
         </ul>
 
-        {/* Hosting info collapsible */}
+        {/* Hosting info — link to T&C */}
         <div className="mt-6 border-t border-stone pt-4">
-          <button
-            onClick={() => setHostingOpen(!hostingOpen)}
+          <a
+            href="/termeni-si-conditii"
             className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold hover:text-gold-l transition-colors"
           >
-            Website gratuit — cum funcționează?
-            <ChevronDown className={cn('h-3 w-3 transition-transform duration-300', hostingOpen && 'rotate-180')} />
-          </button>
-          {hostingOpen && (
-            <motion.ul
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              className="mt-3 space-y-2"
-            >
-              {[
-                'Website creat și găzduit de noi pe durata celor 6 luni',
-                'Domeniul (.ro sau .com) este achiziționat de tine separat și rămâne 100% proprietatea ta permanent',
-                'Dacă nu continui după 6 luni → website se închide, domeniu rămâne al tău',
-                'Dacă continui → hosting rămâne activ fără costuri suplimentare',
-                'După 6 luni poți primi codul sursă și te poți ocupa tu de hosting + administrare',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="text-gold text-xs mt-0.5">›</span>
-                  <span className="font-body text-xs text-muted leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </motion.ul>
-          )}
+            Detalii complete hosting & contract →
+          </a>
         </div>
       </div>
 
@@ -218,7 +195,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
             : undefined
           }
         >
-          Alege pachetul
+          {plan.featured ? 'Vreau acest pachet →' : 'Alege pachetul'}
         </Link>
         <p className="font-mono text-xs text-muted text-center">{plan.footerTip}</p>
       </div>
@@ -238,15 +215,15 @@ export function PricingCards({ compact = false }: { compact?: boolean }) {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <Eyebrow className="mb-4">Pachete & Prețuri</Eyebrow>
+            <Eyebrow className="mb-4">Pachete Marketing Digital — Constanța</Eyebrow>
             <h2 className="font-head font-extrabold text-h2 text-navy mb-4">
-              Pachete clare. Prețuri corecte.
+              Alege pachetul potrivit afacerii tale.
               <br />
-              Zero risc.
+              <span className="text-gold">0 RON investiție inițială.</span>
             </h2>
             <p className="font-body italic text-muted max-w-2xl mx-auto">
-              Website-ul este creat gratuit și găzduit de noi 6 luni. Tu plătești lunar abonamentul de administrare.
-              Domeniul tău rămâne al tău întotdeauna.
+              Website-ul este creat gratuit. Tu plătești doar abonamentul lunar — după ce ești online și mulțumit.
+              Domeniu rămâne al tău indiferent de decizie.
             </p>
           </motion.div>
         )}

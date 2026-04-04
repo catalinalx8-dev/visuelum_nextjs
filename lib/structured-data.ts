@@ -3,15 +3,21 @@ import { siteConfig } from './config'
 export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     name: siteConfig.name,
+    legalName: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
+    image: `${siteConfig.url}/og-default.jpg`,
+    logo: `${siteConfig.url}/logo.png`,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Constanța',
       addressLocality: 'Constanța',
+      addressRegion: 'CT',
+      postalCode: '900000',
       addressCountry: 'RO',
     },
     geo: {
@@ -25,6 +31,8 @@ export function localBusinessSchema() {
     })),
     sameAs: Object.values(siteConfig.social),
     priceRange: '€€',
+    currenciesAccepted: 'RON',
+    paymentAccepted: 'Cash, Credit Card, Bank Transfer',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -32,6 +40,75 @@ export function localBusinessSchema() {
         opens: '09:00',
         closes: '18:00',
       },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Servicii Marketing Digital',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Profesional Gratuit',
+            description: 'Website profesional creat gratuit, mobil-optimizat, SEO din fundație, livrat în 14 zile.',
+          },
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            price: 349,
+            priceCurrency: 'RON',
+            unitText: 'lună',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Social Media Management Constanța',
+            description: 'Gestionare completă Instagram, Facebook, TikTok — postări zilnice, stories, copywriting.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'SEO Local Constanța',
+            description: 'Optimizare SEO locală: Google Business Profile, audit tehnic, conținut optimizat pentru Constanța.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fotografie Profesională Constanța',
+            description: 'Fotografie profesională la locație cu Sony A7 II. Livrare în 48h, editare Lightroom inclusă.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Google Ads & Meta Ads',
+            description: 'Campanii PPC Google și Meta gestionate profesional. Optimizare zilnică, raportare lunară.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Branding & Identitate Vizuală',
+            description: 'Logo profesional, manual de brand, materiale grafice pentru print și digital.',
+          },
+        },
+      ],
+    },
+    knowsAbout: [
+      'Marketing Digital',
+      'SEO Local',
+      'Social Media Management',
+      'Google Ads',
+      'Website Design',
+      'Branding',
+      'Fotografie Profesională',
     ],
   }
 }

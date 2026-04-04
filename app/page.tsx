@@ -23,32 +23,36 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: 'Cât costă colaborarea?',
-    a: 'De la 349 RON/lună, cu website creat gratuit și găzduit de noi 6 luni.',
+    q: 'Cât costă un website profesional în Constanța?',
+    a: 'Cu Visuelum, website-ul este creat 100% gratuit — zero cost inițial. Plătești doar abonamentul lunar de la 349 RON, care include și administrarea, hosting-ul și SSL-ul pe toată durata colaborării.',
   },
   {
-    q: 'Ce se întâmplă cu website-ul dacă nu continuăm?',
-    a: 'Website-ul se închide de pe serverele noastre. Domeniul (.ro sau .com) rămâne întotdeauna al tău.',
+    q: 'Cât durează să apară afacerea mea pe Google în Constanța?',
+    a: 'Google Business Profile îl activăm din prima săptămână — apari pe Google Maps imediat. Google Ads aduce trafic plătit în câteva zile. SEO organic local — rezultate solide în 2–4 luni, cu creștere continuă.',
   },
   {
-    q: 'Cât durează să văd rezultate?',
-    a: 'Google Ads aduce lead-uri în câteva zile. SEO local — rezultate solide în 2–4 luni.',
+    q: 'Ce se întâmplă cu website-ul dacă nu continuăm colaborarea?',
+    a: 'Website-ul se închide de pe serverele noastre. Domeniul (.ro sau .com) rămâne întotdeauna 100% al tău — îl poți transfera oricând. Detalii complete în Termeni și Condiții.',
   },
   {
-    q: 'Trebuie să am cunoștințe tehnice?',
-    a: 'Zero. Tu te ocupi de afacere, noi de tot ce înseamnă online.',
+    q: 'Trebuie să am cunoștințe tehnice sau să mă implic?',
+    a: 'Zero implicare tehnică din partea ta. Tu te ocupi de afacere, noi de tot ce înseamnă online: website, postări, Google, reclame, fotografii. O dată pe lună primești un raport clar cu ce am făcut.',
   },
   {
-    q: 'Bugetul de reclame este inclus?',
-    a: 'Nu. Bugetul media (Google/Meta Ads) se plătește direct în platforme. Noi administrăm campaniile.',
+    q: 'Bugetul de reclame Google / Meta este inclus în abonament?',
+    a: 'Nu. Bugetul media (Google Ads / Meta Ads) se plătește direct de tine în platforme, transparent. Administrarea campaniilor de publicitate este inclusă în pachetul DOMINARE sau disponibilă ca serviciu separat.',
   },
   {
     q: 'Fotografiați și în afara Constanței?',
-    a: 'Da, în toată Dobrogea. Pentru deplasări mai lungi, costul se stabilește transparent înainte.',
+    a: 'Da, în toată Dobrogea: Mamaia, Năvodari, Mangalia, Eforie, Tulcea, Techirghiol. Pentru deplasări mai lungi, costul de transport se stabilește transparent înainte.',
   },
   {
-    q: 'Există garanție?',
-    a: 'Da. În primele 30 zile, dacă nu ești mulțumit de ce am livrat, oprim colaborarea fără penalități.',
+    q: 'Există garanție că voi fi mulțumit?',
+    a: 'Da. Garanție 30 de zile: dacă nu ești mulțumit de ce am livrat în prima lună, oprim colaborarea fără nicio penalitate. Nu avem niciun interes să păstrăm clienți nemulțumiți.',
+  },
+  {
+    q: 'Pot comanda servicii o singură dată, fără abonament?',
+    a: 'Da. Fotografia profesională, videoclipuri Reels/TikTok, branding și Google/Meta Ads pot fi comandate o singură dată, fără abonament. Contactează-ne pentru o ofertă personalizată.',
   },
 ]
 

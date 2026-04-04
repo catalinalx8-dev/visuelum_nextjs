@@ -5,10 +5,10 @@ import { Container } from '@/components/ui/Container'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 
 const stats = [
-  { value: 500, prefix: '~', suffix: 'K', label: 'IMM-uri în România', decimals: 0 },
-  { value: 30, prefix: '<', suffix: '%', label: 'Au prezență digitală activă', decimals: 0 },
-  { value: 0, prefix: '', suffix: ' RON', label: 'Investiție inițială client', decimals: 0 },
-  { value: 14, prefix: '', suffix: ' zile', label: 'Website livrat', decimals: 0 },
+  { value: 14, prefix: '', suffix: ' zile', label: 'Website livrat la cheie', decimals: 0 },
+  { value: 0, prefix: '', suffix: ' RON', label: 'Investiție inițială website', decimals: 0 },
+  { value: 30, prefix: '', suffix: ' zile', label: 'Garanție rezultate', decimals: 0 },
+  { value: 349, prefix: 'de la ', suffix: ' RON', label: 'Abonament lunar complet', decimals: 0 },
 ]
 
 export function StatsBar() {

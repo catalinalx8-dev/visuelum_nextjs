@@ -35,17 +35,19 @@ export function CtaSection() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="font-head font-extrabold text-h1 text-white mb-4">
-            Afacerea dvs. apare mâine pe Google.
+            Clienții tăi te caută pe Google.
+            <br />
+            <span className="opacity-80">Ești acolo?</span>
           </h2>
           <p className="font-body text-white/80 text-lg mb-10">
-            Audit digital gratuit. Fără angajament. Fără risc.
+            Audit digital gratuit în 48h. Fără angajament. Fără risc. Zero RON investiție inițială.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-navy font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-navy/30 active:translate-y-0"
             >
-              Solicită Acum <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Vreau Audit Gratuit <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <a
               href={`tel:${siteConfig.phone}`}

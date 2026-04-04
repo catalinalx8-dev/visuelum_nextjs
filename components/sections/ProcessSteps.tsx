@@ -10,26 +10,26 @@ const steps = [
   {
     nr: '01',
     icon: FileSignature,
-    title: 'Contract semnat',
-    desc: 'Abonament minim 6 luni. Prețul lunar include totul. Fără costuri ascunse.',
+    title: 'Audit gratuit în 48h',
+    desc: 'Analizăm prezența ta online și îți prezentăm clar ce poți câștiga. Zero cost, zero obligații.',
   },
   {
     nr: '02',
     icon: Globe,
-    title: 'Website livrat în 14 zile',
-    desc: 'Gratuit. Design profesional, mobil-optimizat, SEO din fundație.',
+    title: 'Website live în 14 zile',
+    desc: 'Design profesional, mobil-optimizat, SEO din fundație — livrat fără niciun cost inițial.',
   },
   {
     nr: '03',
     icon: Megaphone,
-    title: 'Servicii active lunar',
-    desc: 'Social media, Google, fotografie la locație. Noi facem totul.',
+    title: 'Servicii active de luna 1',
+    desc: 'Social media, Google, fotografie la locație. Noi facem totul, tu primești clienți.',
   },
   {
     nr: '04',
     icon: BarChart2,
-    title: 'Raport lunar cu cifre reale',
-    desc: 'Trafic, reach, apeluri, lead-uri. Transparent și verificabil.',
+    title: 'Raport lunar cu rezultate reale',
+    desc: 'Trafic, apeluri, lead-uri, poziții Google. Transparență totală, cifre verificabile.',
   },
 ]
 
@@ -47,7 +47,7 @@ export function ProcessSteps() {
         >
           <Eyebrow color="gold" className="mb-4">Cum funcționează</Eyebrow>
           <h2 className="font-head font-extrabold text-h2 text-navy">
-            4 pași spre vizibilitate totală
+            De la zero la clienți noi în 14 zile
           </h2>
         </motion.div>
 
