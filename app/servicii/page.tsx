@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Servicii Marketing Digital Constanța — Website Gratuit, SEO, Social Media, Foto',
   description: 'Servicii complete de marketing digital în Constanța: website profesional creat gratuit, SEO local, social media management, fotografie Sony A7 II, Google Ads și branding. Un singur abonament, de la 349 RON/lună.',
   alternates: { canonical: `${siteConfig.url}/servicii` },
-  keywords: 'servicii marketing digital Constanta, website profesional Constanta, SEO local Constanta, social media management Constanta, fotografie profesionala Constanta, Google Ads Constanta',
+  keywords: 'servicii marketing digital Constanta, website profesional Constanta, SEO local Constanta, social media management Constanta, fotografie profesională Constanta, Google Ads Constanta',
 }
 
 const industryLabels = [

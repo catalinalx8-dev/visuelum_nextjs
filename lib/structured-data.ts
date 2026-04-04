@@ -54,7 +54,7 @@ export function localBusinessSchema() {
           },
           priceSpecification: {
             '@type': 'PriceSpecification',
-            price: 349,
+            price: '349',
             priceCurrency: 'RON',
             unitText: 'lună',
           },
