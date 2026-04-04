@@ -14,8 +14,24 @@ export const metadata: Metadata = {
 
 const pricingFaqs = [
   {
+    q: 'Ce înseamnă demo-ul gratuit?',
+    a: 'Înainte de orice angajament, creăm un website demo personalizat sau furnizăm fotografii cu watermark — 100% gratuit. Dacă îți place ce facem, continuăm și personalizăm totul după dorința ta. Dacă nu, nu există niciun cost și nicio obligație.',
+  },
+  {
     q: 'De ce am nevoie de minim 6 luni?',
-    a: 'Website-ul este creat gratuit de noi. Ne trebuie 6 luni ca să recuperăm costul de producție (design + dezvoltare + hosting). După 6 luni, abonamentul continuă lună de lună, fără angajament suplimentar.',
+    a: 'Website-ul este creat gratuit de noi. Ne trebuie 6 luni ca să recuperăm costul de producție (design + dezvoltare + hosting). Dacă nu plătești abonamentul în această perioadă, website-ul se închide. Domeniu rămâne al tău permanent.',
+  },
+  {
+    q: 'Ce se întâmplă după 6 luni?',
+    a: 'Ai două opțiuni: continui abonamentul lună de lună fără angajament suplimentar (hosting rămâne inclus), sau primești codul sursă și te ocupi tu de hosting + administrare. Domeniu rămâne întotdeauna proprietatea ta, indiferent de decizie.',
+  },
+  {
+    q: 'Pot cumpăra servicii o singură dată, fără abonament?',
+    a: 'Da! Toate serviciile în afara creării de website (fotografie, video, branding, meniu digital, Google Ads) pot fi achiziționate o singură dată, fără abonament. Poți alege și un pachet personalizat cu exact serviciile de care ai nevoie.',
+  },
+  {
+    q: 'Ce este pachetul personalizat?',
+    a: 'Creăm o ofertă adaptată exact nevoilor tale: alegi serviciile dorite (website, foto, video, social media, SEO etc.) și stabilim împreună prețul. Pot exista discounturi în funcție de combinația aleasă. Contactează-ne pentru o ofertă personalizată.',
   },
   {
     q: 'Prețurile includ TVA?',
@@ -31,7 +47,7 @@ const pricingFaqs = [
   },
   {
     q: 'Ce se întâmplă cu domeniul dacă plec?',
-    a: 'Domeniul (.ro sau .com) rămâne întotdeauna în proprietatea ta. Îl cumperi tu sau îl cumpărăm noi pe numele tău. Website-ul de pe serverele noastre se închide, domeniu rămâne activ al tău.',
+    a: 'Domeniul (.ro sau .com) rămâne întotdeauna în proprietatea ta. Îl cumperi tu separat sau îl cumpărăm noi pe numele tău. Website-ul de pe serverele noastre se închide, domeniu rămâne activ al tău.',
   },
 ]
 
@@ -82,6 +98,30 @@ export default function PachetePage() {
         </div>
       </section>
 
+      {/* Demo Gratuit */}
+      <section className="bg-navy py-14">
+        <div className="container-site max-w-4xl mx-auto text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">Primul pas — Zero risc</p>
+          <h2 className="font-head font-extrabold text-h2 text-white mb-5">
+            Demo 100% Gratuit
+          </h2>
+          <p className="font-body text-cream/80 leading-relaxed max-w-2xl mx-auto mb-8">
+            Înainte de orice decizie, îți arătăm concret ce poți obține: un website demo personalizat sau fotografii cu watermark — 100% gratuit, fără angajament.
+            Dacă îți place ce facem, continuăm și personalizăm totul după dorința ta. Dacă nu, pleci fără niciun cost.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto text-left">
+            <div className="bg-white/5 border border-white/10 p-5">
+              <p className="font-head font-bold text-white mb-2">Website demo</p>
+              <p className="font-body text-sm text-cream/70 leading-relaxed">Creăm un website demonstrativ personalizat afacerii tale, 100% gratuit. Îl vezi înainte să semnezi orice.</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-5">
+              <p className="font-head font-bold text-white mb-2">Fotografii cu watermark</p>
+              <p className="font-body text-sm text-cream/70 leading-relaxed">Realizăm fotografii profesionale la locația ta. Le livrăm cu watermark. Dacă colaborarea continuă, ștergem watermark-ul.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing cards */}
       <PricingCards />
 
@@ -94,7 +134,11 @@ export default function PachetePage() {
               Website-ul tău este creat 100% gratuit de echipa noastră. Design profesional, mobil-optimizat, SEO din fundație — fără niciun cost inițial.
               <br /><br />
               Singura noastră condiție: un angajament minim de 6 luni, timp în care recuperăm costul de producție prin abonamentul lunar.
+              Dacă nu plătești abonamentul în această perioadă, website-ul se va închide.
               Este o investiție corectă pentru ambele părți.
+              <br /><br />
+              <strong>Ce se întâmplă după 6 luni?</strong> Ai două opțiuni: continui abonamentul lună de lună (fără angajament suplimentar),
+              sau primești codul sursă și te ocupi tu de hosting + administrare. Domeniu rămâne al tău permanent în orice situație.
             </p>
           </div>
         </div>
@@ -147,6 +191,51 @@ export default function PachetePage() {
         </div>
       </section>
 
+      {/* One-time services */}
+      <section className="bg-parchment py-16">
+        <div className="container-site max-w-4xl mx-auto">
+          <h2 className="font-head font-extrabold text-h2 text-navy text-center mb-4">Servicii disponibile o singură dată</h2>
+          <p className="font-body text-muted text-center max-w-2xl mx-auto mb-10">
+            Nu orice serviciu necesită abonament. Le poți cumpăra o singură dată, independent, fără nicio altă obligație.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: 'Fotografie profesională', desc: 'Ședință foto la locația ta. Livrare în 48h, drepturi incluse.' },
+              { title: 'Video Reels / TikTok', desc: 'Conținut video faceless (fără influencer), adaptat platformei.' },
+              { title: 'Branding & Identitate', desc: 'Logo, culori, fonturi, carte de vizită — tot ce definește brandul tău.' },
+              { title: 'Meniu digital restaurant', desc: 'Meniu QR interactiv, actualizabil oricând. Găzduit 6 luni gratuit cu administrare lunară.' },
+              { title: 'Fotografii AirBnb', desc: 'Poze profesionale la locație pentru listingul tău AirBnb. Fără servicii de administrare.' },
+              { title: 'Google / Meta Ads', desc: 'Configurare și lansare campanie publicitară. Bugetul de reclamă este al tău, separat.' },
+            ].map((item) => (
+              <div key={item.title} className="service-card">
+                <h3 className="font-head font-bold text-navy mb-2">{item.title}</h3>
+                <p className="font-body text-muted text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Custom package */}
+      <section className="bg-navy py-14">
+        <div className="container-site max-w-3xl mx-auto text-center">
+          <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">Ofertă personalizată</p>
+          <h2 className="font-head font-extrabold text-h2 text-white mb-5">Pachet personalizat</h2>
+          <p className="font-body text-cream/80 leading-relaxed max-w-2xl mx-auto mb-8">
+            Alegi exact serviciile de care ai nevoie — website, fotografie, video, social media, SEO sau orice combinație.
+            Stabilim împreună prețul și pot exista discounturi în funcție de pachetul ales.
+            Totul transparent, fără costuri ascunse.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block font-mono text-xs uppercase tracking-widest py-3.5 px-8 text-white hover:-translate-y-0.5 transition-all duration-300"
+            style={{ background: 'linear-gradient(135deg,#7c3aed,#06b6d4)', boxShadow: '0 4px 20px -4px rgba(124,58,237,0.4)' }}
+          >
+            Solicită ofertă personalizată
+          </a>
+        </div>
+      </section>
+
       {/* Guarantee */}
       <section className="bg-parchment py-12">
         <div className="container-site max-w-3xl mx-auto">
@@ -154,7 +243,7 @@ export default function PachetePage() {
             <p className="font-mono text-xs uppercase tracking-widest text-gold mb-3">Garanție 30 zile</p>
             <p className="font-body text-cream/80 leading-relaxed">
               Dacă în primele 30 zile nu ești mulțumit de ce am livrat, oprim colaborarea fără penalități.
-              <strong className="text-cream"> Zero risc.</strong>
+              <strong className="text-cream"> Zero risc.</strong> Dorim colaborări pe termen lung, cu clienți puțini pe care să îi fidelizăm.
             </p>
           </div>
         </div>

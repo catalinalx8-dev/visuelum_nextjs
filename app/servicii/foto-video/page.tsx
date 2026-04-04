@@ -14,10 +14,12 @@ export const metadata: Metadata = {
 
 const faqs = [
   { question: 'Ce echipament folosiți?', answer: 'Sony A7 II full-frame cu obiective profesionale. Lumini de studio portabile pentru ședințe în interior. Editare Lightroom și Adobe Premiere pentru video.' },
+  { question: 'Pot vedea ce puteți face înainte să mă angajez?', answer: 'Da! Pentru clienții noi realizăm fotografii profesionale la locație și le livrăm cu watermark, 100% gratuit. Dacă îți place ce facem, ștergem watermark-ul și continuăm colaborarea.' },
   { question: 'Cât durează o ședință foto?', answer: 'O ședință standard este de 2 ore (pachetul CREȘTERE) sau 3 ore (DOMINARE). Include deplasarea la locație, fotografierea și briefingul inițial.' },
   { question: 'Cât durează livrarea?', answer: 'Fotografiile editate sunt livrate în 48 ore de la ședință, prin link de descărcare. Video-urile (Reels/TikTok) — în 5–7 zile lucrătoare.' },
   { question: 'Fotografiați și în afara Constanței?', answer: 'Da, în toată Dobrogea și împrejurimi. Pentru deplasări la mai mult de 50km, există un cost suplimentar stabilit transparent înainte de ședință.' },
   { question: 'Dețin drepturile fotografiilor?', answer: 'Da, absolut. Fotografiile și video-urile create sunt proprietatea afacerii tale. Le poți folosi pe orice platformă, fără restricții sau atribuire către Visuelum.' },
+  { question: 'Apare cineva în video-uri?', answer: 'Video-urile sunt faceless — fără influencer sau persoană care să vorbească. Conținut vizual profesional al afacerii tale. Dacă dorești să apari tu sau alte persoane în video, putem adapta producția.' },
 ]
 
 export default function FotoVideoPage() {
@@ -66,7 +68,7 @@ export default function FotoVideoPage() {
               { icon: Camera, title: 'Sony A7 II Full-Frame', desc: 'Calitate profesională, detalii clare, culori naturale. Nu telefon, nu aparat compact.' },
               { icon: Star, title: 'Editare Lightroom', desc: 'Post-procesare profesională — tonuri, contrast, claritate. Fiecare fotografie editată individual.' },
               { icon: Clock, title: '48h Livrare', desc: 'Fotografiile editate sunt gata în maximum 48 ore de la ședință. Video-uri în 5–7 zile.' },
-              { icon: Film, title: 'Reels & TikTok', desc: 'Video-uri verticals optimizate pentru social media. Editare cu muzică și text overlay.' },
+              { icon: Film, title: 'Video Faceless', desc: 'Conținut video fără influencer sau persoană care să vorbească. Dacă dorești să apari tu, adaptăm producția.' },
               { icon: MapPin, title: 'La locația ta', desc: 'Venim noi la restaurant, salon, clinică sau magazin. Fără deplasare din partea ta.' },
               { icon: Image, title: 'Drepturi de autor', desc: 'Toate materialele sunt proprietatea afacerii tale, fără restricții de utilizare.' },
             ].map((item) => (
@@ -78,6 +80,28 @@ export default function FotoVideoPage() {
                 <p className="font-body text-muted text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AirBnb & Demo */}
+      <section className="bg-parchment py-16">
+        <div className="container-site max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gold/10 border-l-4 border-gold p-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-gold mb-3">AirBnb</p>
+              <h3 className="font-head font-bold text-navy mb-2">Fotografii profesionale AirBnb</h3>
+              <p className="font-body text-sm text-muted leading-relaxed">
+                Realizăm fotografii profesionale la locația ta pentru a-ți îmbunătăți listingul AirBnb. Serviciu disponibil o singură dată, fără administrare inclusă.
+              </p>
+            </div>
+            <div className="bg-navy/5 border-l-4 border-navy p-6">
+              <p className="font-mono text-xs uppercase tracking-widest text-gold mb-3">Demo Gratuit</p>
+              <h3 className="font-head font-bold text-navy mb-2">Fotografii cu watermark — 100% gratuit</h3>
+              <p className="font-body text-sm text-muted leading-relaxed">
+                Pentru clienții noi realizăm fotografii la locație și le livrăm cu watermark, fără niciun cost. Dacă îți place ce facem, ștergem watermark-ul și continuăm colaborarea.
+              </p>
+            </div>
           </div>
         </div>
       </section>

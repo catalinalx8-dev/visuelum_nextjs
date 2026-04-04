@@ -188,9 +188,10 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
             >
               {[
                 'Website creat și găzduit de noi pe durata celor 6 luni',
-                'Domeniul (.ro sau .com) rămâne întotdeauna în proprietatea ta',
+                'Domeniul (.ro sau .com) este achiziționat de tine separat și rămâne 100% proprietatea ta permanent',
                 'Dacă nu continui după 6 luni → website se închide, domeniu rămâne al tău',
                 'Dacă continui → hosting rămâne activ fără costuri suplimentare',
+                'După 6 luni poți primi codul sursă și te poți ocupa tu de hosting + administrare',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-gold text-xs mt-0.5">›</span>
