@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Plus_Jakarta_Sans, DM_Sans, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Header } from '@/components/layout/Header'
@@ -12,10 +12,17 @@ import { siteConfig, siteFeatures, seoConfig } from '@/lib/config'
 import { localBusinessSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
 
-const fontInter = Inter({
+const fontJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+  display: 'swap',
+})
+
+const fontDmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
   display: 'swap',
 })
 
@@ -86,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ro"
-      className={`${fontInter.variable} ${fontJetbrains.variable}`}
+      className={`${fontJakarta.variable} ${fontDmSans.variable} ${fontJetbrains.variable}`}
     >
       <head>
         <script

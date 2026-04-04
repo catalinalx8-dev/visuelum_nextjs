@@ -6,31 +6,31 @@
 export const theme = {
   colors: {
     navy: {
-      DEFAULT: '#1a1a2e',
-      deep: '#0f0f1e',
-      mid: '#2d2d4e',
+      DEFAULT: '#18181b',
+      deep: '#09090b',
+      mid: '#27272a',
     },
     gold: {
-      DEFAULT: '#c9922a',
-      l: '#e0a83a',
-      pale: '#f5e4bc',
+      DEFAULT: '#6366f1',
+      l: '#818cf8',
+      pale: '#e0e7ff',
     },
-    cream: '#faf9f5',
-    parchment: '#f0ede4',
-    stone: '#e8e4db',
-    ink: '#0f0f0d',
+    cream: '#fafafa',
+    parchment: '#f4f4f5',
+    stone: '#e4e4e7',
+    ink: '#09090b',
     muted: {
-      DEFAULT: '#7a756b',
-      l: '#b0aa9f',
+      DEFAULT: '#71717a',
+      l: '#a1a1aa',
     },
     white: '#ffffff',
-    green: '#2a6b47',
+    green: '#16a34a',
   },
 
   /** Google Font family names loaded in app/layout.tsx */
   fonts: {
-    head: 'Inter',
-    body: 'Libre Baskerville',
+    head: 'Plus Jakarta Sans',
+    body: 'DM Sans',
     mono: 'JetBrains Mono',
   },
 } as const

@@ -8,24 +8,24 @@
  */
 :root {
   /* Colors — keep in sync with lib/theme.ts */
-  --navy:       #1a1a2e;
-  --navy-deep:  #0f0f1e;
-  --navy-mid:   #2d2d4e;
-  --gold:       #c9922a;
-  --gold-l:     #e0a83a;
-  --gold-pale:  #f5e4bc;
-  --cream:      #faf9f5;
-  --parchment:  #f0ede4;
-  --stone:      #e8e4db;
-  --ink:        #0f0f0d;
-  --muted:      #7a756b;
-  --muted-l:    #b0aa9f;
+  --navy:       #18181b;
+  --navy-deep:  #09090b;
+  --navy-mid:   #27272a;
+  --gold:       #6366f1;
+  --gold-l:     #818cf8;
+  --gold-pale:  #e0e7ff;
+  --cream:      #fafafa;
+  --parchment:  #f4f4f5;
+  --stone:      #e4e4e7;
+  --ink:        #09090b;
+  --muted:      #71717a;
+  --muted-l:    #a1a1aa;
   --white:      #ffffff;
-  --green:      #2a6b47;
+  --green:      #16a34a;
 
   /* Typography — keep in sync with lib/theme.ts */
-  --f-head: 'Inter', sans-serif;
-  --f-body: 'Libre Baskerville', serif;
+  --f-head: 'Plus Jakarta Sans', sans-serif;
+  --f-body: 'DM Sans', sans-serif;
   --f-mono: 'JetBrains Mono', monospace;
 
   /* Layout */
@@ -109,7 +109,7 @@
   }
 
   .gold-glow {
-    background: radial-gradient(ellipse at 50% -20%, rgba(184,131,42,.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% -20%, rgba(99,102,241,.06) 0%, transparent 70%);
   }
 
   .text-balance {
