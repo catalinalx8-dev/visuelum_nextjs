@@ -61,7 +61,7 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <Section className="bg-parchment">
+    <Section className="bg-white">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -94,27 +94,44 @@ export function ServicesGrid() {
               }}
               transition={{ duration: 0.6 }}
             >
-              <Link href={service.href} className="group bg-white border border-stone rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-navy/10 hover:border-gold/30" aria-label={service.title}>
+              <Link
+                href={service.href}
+                className="group relative bg-white border border-stone/60 rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-transparent"
+                style={{ '--tw-shadow-color': 'rgba(124,58,237,0.15)' } as React.CSSProperties}
+                aria-label={service.title}
+              >
+                {/* Glow border on hover */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ boxShadow: '0 0 0 2px rgba(124,58,237,0.5), 0 8px 32px -4px rgba(124,58,237,0.2)' }}
+                  aria-hidden="true"
+                />
                 {/* Service image */}
                 <div className="relative h-44 overflow-hidden flex-shrink-0">
                   <Image
                     src={service.image}
                     alt={service.imageAlt}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-107"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/20 to-transparent group-hover:from-navy-deep/80 transition-all duration-300" />
+                  {/* Gradient icon */}
                   <div className="absolute bottom-3 left-4">
-                    <div className="inline-flex p-2.5 bg-gold/90 text-white rounded-xl">
+                    <div
+                      className="inline-flex p-2.5 text-white rounded-xl"
+                      style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
+                    >
                       <service.icon className="h-5 w-5" aria-hidden="true" />
                     </div>
                   </div>
                 </div>
                 {/* Card content */}
                 <div className="flex flex-col flex-1 p-6">
-                  <h3 className="font-head font-bold text-h3 text-navy mb-2 group-hover:text-gold transition-colors duration-200">{service.title}</h3>
+                  <h3 className="font-head font-bold text-h3 text-navy mb-2 group-hover:text-gold transition-colors duration-200">
+                    {service.title}
+                  </h3>
                   <p className="font-body text-muted text-sm leading-relaxed flex-1">{service.desc}</p>
                   <div className="mt-4 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold group-hover:gap-3 transition-all duration-200">
                     Află mai mult <ArrowRight className="h-3 w-3" aria-hidden="true" />

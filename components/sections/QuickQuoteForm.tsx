@@ -116,16 +116,28 @@ export function QuickQuoteForm() {
           {/* Step indicator */}
           <div className="flex items-center gap-3 mb-10">
             {[1, 2, 3].map((s) => (
-              <div key={s} className="flex items-center gap-3">
+              <div key={s} className="flex items-center gap-3 flex-1">
                 <div
                   className={cn(
-                    'w-8 h-8 flex items-center justify-center font-mono text-xs font-bold transition-colors rounded-full',
-                    step >= s ? 'bg-gold text-white' : 'bg-stone text-muted'
+                    'w-8 h-8 flex-shrink-0 flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 rounded-full',
+                    step >= s ? 'text-white shadow-lg' : 'bg-stone text-muted'
                   )}
+                  style={step >= s ? {
+                    background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
+                    boxShadow: '0 4px 12px -2px rgba(124,58,237,0.4)',
+                  } : undefined}
                 >
                   {step > s ? <Check className="h-3 w-3" /> : s}
                 </div>
-                {s < 3 && <div className={cn('flex-1 h-px transition-colors', step > s ? 'bg-gold' : 'bg-stone')} />}
+                {s < 3 && (
+                  <div
+                    className="flex-1 h-px transition-all duration-300"
+                    style={step > s
+                      ? { background: 'linear-gradient(90deg, #7c3aed, #06b6d4)' }
+                      : { background: '#e5e7eb' }
+                    }
+                  />
+                )}
               </div>
             ))}
           </div>

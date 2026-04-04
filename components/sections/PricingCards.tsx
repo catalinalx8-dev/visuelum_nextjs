@@ -111,12 +111,22 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
       }}
       transition={{ duration: 0.6 }}
       className={cn(
-        'flex flex-col border-2 rounded-2xl transition-all duration-300 h-full',
-        plan.featured ? 'border-gold shadow-2xl shadow-gold/20' : 'border-stone'
+        'flex flex-col rounded-2xl transition-all duration-300 h-full',
+        plan.featured
+          ? 'gradient-border shadow-2xl shadow-gold/25 scale-[1.02]'
+          : 'border-2 border-stone hover:border-gold/30 hover:shadow-xl hover:shadow-gold/10'
       )}
     >
       {/* Header */}
-      <div className={cn('px-8 py-6', plan.bgHeader ?? 'bg-navy')}>
+      <div
+        className={cn('px-8 py-6 rounded-t-2xl', plan.featured ? 'rounded-t-[calc(1rem-2px)]' : '')}
+        style={plan.featured
+          ? { background: 'linear-gradient(135deg, #7c3aed, #a855f7 50%, #06b6d4)' }
+          : plan.bgHeader === 'bg-navy'
+            ? { background: '#0f0f23' }
+            : undefined
+        }
+      >
         <span className={cn('font-mono text-xs uppercase tracking-widest block mb-3', plan.featured ? 'text-white/70' : 'text-gold')}>
           {plan.badge}
         </span>
@@ -145,7 +155,12 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
           {plan.features.map((feature) => (
             <li key={feature.text} className="flex items-start gap-3">
               {feature.included ? (
-                <Check className="h-4 w-4 text-green mt-0.5 flex-shrink-0" />
+                <span
+                  className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full flex items-center justify-center"
+                  style={{ background: 'linear-gradient(135deg,#7c3aed,#06b6d4)' }}
+                >
+                  <Check className="h-2.5 w-2.5 text-white" />
+                </span>
               ) : (
                 <X className="h-4 w-4 text-muted-l mt-0.5 flex-shrink-0" />
               )}
@@ -163,7 +178,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
             className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold hover:text-gold-l transition-colors"
           >
             Website gratuit — cum funcționează?
-            <ChevronDown className={cn('h-3 w-3 transition-transform', hostingOpen && 'rotate-180')} />
+            <ChevronDown className={cn('h-3 w-3 transition-transform duration-300', hostingOpen && 'rotate-180')} />
           </button>
           {hostingOpen && (
             <motion.ul
@@ -188,15 +203,19 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
       </div>
 
       {/* Footer */}
-      <div className="bg-white border-t border-stone px-8 py-5 flex flex-col gap-3">
+      <div className="bg-white border-t border-stone px-8 py-5 flex flex-col gap-3 rounded-b-2xl">
         <Link
           href="/contact"
           className={cn(
-            'w-full text-center font-mono text-xs uppercase tracking-widest py-3.5 px-6 rounded-xl transition-all duration-200',
+            'w-full text-center font-mono text-xs uppercase tracking-widest py-3.5 px-6 rounded-xl transition-all duration-300',
             plan.featured
-              ? 'bg-gold text-white hover:bg-gold-l'
-              : 'border border-navy text-navy hover:bg-navy hover:text-cream'
+              ? 'text-white font-bold hover:-translate-y-0.5'
+              : 'border-2 border-navy text-navy hover:bg-navy hover:text-cream'
           )}
+          style={plan.featured
+            ? { background: 'linear-gradient(135deg, #7c3aed, #06b6d4)', boxShadow: '0 4px 20px -4px rgba(124,58,237,0.4)' }
+            : undefined
+          }
         >
           Alege pachetul
         </Link>
@@ -208,7 +227,7 @@ function PricingCard({ plan, compact = false }: { plan: PricingCardData; compact
 
 export function PricingCards({ compact = false }: { compact?: boolean }) {
   return (
-    <Section className="bg-cream">
+    <Section className="bg-parchment">
       <Container>
         {!compact && (
           <motion.div
