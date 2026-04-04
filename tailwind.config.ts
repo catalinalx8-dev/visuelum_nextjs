@@ -20,8 +20,8 @@ const config: Config = {
         green: theme.colors.green,
       },
       fontFamily: {
-        head: [`var(--font-inter)`, theme.fonts.head, 'sans-serif'],
-        body: [`var(--font-libre)`, theme.fonts.body, 'serif'],
+        head: [`var(--font-jakarta)`, theme.fonts.head, 'sans-serif'],
+        body: [`var(--font-dm-sans)`, theme.fonts.body, 'sans-serif'],
         mono: [`var(--font-jetbrains)`, theme.fonts.mono, 'monospace'],
       },
       fontSize: {
@@ -46,8 +46,8 @@ const config: Config = {
           to: { opacity: '1' },
         },
         goldPulse: {
-          '0%,100%': { boxShadow: '0 0 0 0 rgba(201,146,42,0.4)' },
-          '50%': { boxShadow: '0 0 0 8px rgba(201,146,42,0)' },
+          '0%,100%': { boxShadow: '0 0 0 0 rgba(99,102,241,0.4)' },
+          '50%': { boxShadow: '0 0 0 8px rgba(99,102,241,0)' },
         },
       },
     },
