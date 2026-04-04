@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Instagram, Facebook } from 'lucide-react'
+import { Phone, Instagram, Facebook } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
 
@@ -36,6 +37,40 @@ const socialLinks = [
   { href: siteConfig.social.tiktok, label: 'TikTok', icon: TikTokIcon },
 ]
 
+function HamburgerButton({
+  isOpen,
+  onClick,
+}: {
+  isOpen: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      className="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 gap-[6px] rounded-xl hover:bg-stone/50 transition-colors"
+      onClick={onClick}
+      aria-label={isOpen ? 'Închide meniu' : 'Deschide meniu'}
+      aria-expanded={isOpen}
+      aria-controls="mobile-menu"
+    >
+      <motion.span
+        className="block h-0.5 w-5 bg-navy rounded-full"
+        animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+      />
+      <motion.span
+        className="block h-0.5 w-5 bg-navy rounded-full"
+        animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+        transition={{ duration: 0.2 }}
+      />
+      <motion.span
+        className="block h-0.5 w-5 bg-navy rounded-full"
+        animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+      />
+    </button>
+  )
+}
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -53,7 +88,9 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [mobileOpen])
 
   const isActive = (link: NavLink) =>
@@ -64,24 +101,38 @@ export function Header() {
       {/* Main header */}
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-stone',
-          scrolled ? 'shadow-sm' : ''
+          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-xl',
+          scrolled
+            ? 'bg-white/95 shadow-lg shadow-navy/5 border-b border-stone/80 h-16'
+            : 'bg-white/80 border-b border-stone/40 h-[72px]'
         )}
       >
-        <div className="container-site">
-          <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="container-site h-full">
+          <div className="flex items-center justify-between h-full">
 
             {/* Wordmark */}
             <Link
               href="/"
-              className="font-head font-extrabold text-xl text-navy tracking-tight hover:text-gold transition-colors flex-shrink-0"
+              className="font-head font-extrabold text-2xl text-navy tracking-tight hover:text-gold transition-colors duration-200 flex-shrink-0 flex items-center"
               aria-label={siteConfig.name}
             >
-              Visuelum<span className="text-gold">.</span>
+              Visuelum
+              <motion.span
+                className="text-gold"
+                animate={{ scale: [1, 1.4, 1] }}
+                transition={{
+                  duration: 0.5,
+                  repeat: 3,
+                  repeatDelay: 4,
+                  ease: 'easeInOut',
+                }}
+              >
+                .
+              </motion.span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigare principală">
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Navigare principală">
               {navLinks.map((link) => {
                 const active = isActive(link)
                 return (
@@ -89,134 +140,190 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      'group relative font-mono text-[11px] uppercase tracking-[0.15em] transition-colors py-1',
-                      active ? 'text-gold' : 'text-muted hover:text-navy'
+                      'relative px-4 py-2 rounded-full font-body text-sm font-medium transition-all duration-200',
+                      active
+                        ? 'bg-gold/10 text-gold'
+                        : 'text-muted hover:bg-stone/60 hover:text-navy'
                     )}
                     aria-current={pathname === link.href ? 'page' : undefined}
                   >
                     {link.label}
-                    <span
-                      className={cn(
-                        'absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-200',
-                        active ? 'w-full' : 'w-0 group-hover:w-full'
-                      )}
-                    />
                   </Link>
                 )
               })}
             </nav>
 
             {/* Desktop right side */}
-            <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+            <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted hover:text-navy transition-colors"
+                className="flex items-center gap-2 text-sm font-body font-medium text-muted hover:text-navy transition-colors duration-200"
               >
-                <Phone className="h-3.5 w-3.5 flex-shrink-0" aria-hidden="true" />
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-gold/10 text-gold flex-shrink-0">
+                  <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+                </span>
                 {siteConfig.phoneDisplay}
               </a>
-              <Link href="/contact" className="btn-primary text-xs px-5 py-2.5">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-sm rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-gold/40 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
                 Audit Gratuit
               </Link>
             </div>
 
             {/* Mobile hamburger */}
-            <button
-              className="lg:hidden p-2 -mr-1 text-navy rounded-lg hover:bg-stone/60 transition-colors"
+            <HamburgerButton
+              isOpen={mobileOpen}
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? 'Închide meniu' : 'Deschide meniu'}
-              aria-expanded={mobileOpen}
-              aria-controls="mobile-menu"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
+            />
           </div>
         </div>
       </header>
 
       {/* Full-screen mobile menu */}
-      <div
-        id="mobile-menu"
-        className={cn(
-          'lg:hidden fixed inset-0 z-50 flex flex-col bg-white transition-all duration-300 ease-out',
-          mobileOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        )}
-        aria-hidden={!mobileOpen}
-      >
-        {/* Gold top line */}
-        <div className="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent w-full" />
-
-        {/* Menu top bar */}
-        <div className="flex items-center justify-between px-6 h-16 flex-shrink-0 border-b border-stone">
-          <Link
-            href="/"
-            className="font-head font-extrabold text-xl text-navy tracking-tight"
-            onClick={() => setMobileOpen(false)}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            id="mobile-menu"
+            className="lg:hidden fixed inset-0 z-50 flex flex-col bg-navy-deep overflow-hidden"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Meniu navigare"
           >
-            Visuelum<span className="text-gold">.</span>
-          </Link>
-          <button
-            className="p-2 -mr-2 text-muted hover:text-navy transition-colors rounded-lg hover:bg-stone/60"
-            onClick={() => setMobileOpen(false)}
-            aria-label="Închide meniu"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
+            {/* Background decorations */}
+            <div className="absolute inset-0 dot-pattern opacity-20 pointer-events-none" aria-hidden="true" />
+            <div
+              className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
+              style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)' }}
+              aria-hidden="true"
+            />
+            <div
+              className="absolute bottom-0 left-0 w-64 h-64 rounded-full pointer-events-none"
+              style={{ background: 'radial-gradient(circle, rgba(129,140,248,0.12) 0%, transparent 70%)' }}
+              aria-hidden="true"
+            />
 
-        {/* Nav links — vertically + horizontally centered */}
-        <nav className="flex-1 flex flex-col items-center justify-center px-6 overflow-y-auto" aria-label="Navigare mobilă">
-          <ul className="flex flex-col items-center gap-2 w-full max-w-xs">
-            {navLinks.map((link) => (
-              <li key={link.href} className="w-full">
-                <Link
-                  href={link.href}
-                  className={cn(
-                    'flex items-center justify-center py-3.5 border-b border-stone transition-colors w-full',
-                    isActive(link) ? 'text-gold' : 'text-muted hover:text-navy'
-                  )}
-                  onClick={() => setMobileOpen(false)}
-                  aria-current={pathname === link.href ? 'page' : undefined}
-                >
-                  <span className="font-head font-bold text-xl tracking-tight text-center">
-                    {link.label}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Bottom section */}
-        <div className="px-6 pb-10 pt-6 flex-shrink-0 space-y-5">
-          {/* CTA button */}
-          <Link
-            href="/contact"
-            className="btn-primary w-full justify-center text-sm py-4 block text-center"
-            onClick={() => setMobileOpen(false)}
-          >
-            Solicită Audit Gratuit
-          </Link>
-
-          {/* Social media */}
-          <div className="flex items-center justify-center gap-5 pt-1">
-            {socialLinks.map(({ href, label, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="flex items-center justify-center w-10 h-10 rounded-full border border-stone text-muted hover:text-gold hover:border-gold/40 transition-colors"
+            {/* Top bar */}
+            <div className="relative flex items-center justify-between px-6 h-[72px] flex-shrink-0 border-b border-white/10">
+              <Link
+                href="/"
+                className="font-head font-extrabold text-2xl text-white tracking-tight flex items-center hover:text-white/80 transition-colors"
+                onClick={() => setMobileOpen(false)}
               >
-                <Icon />
+                Visuelum<span className="text-gold">.</span>
+              </Link>
+              <button
+                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200"
+                onClick={() => setMobileOpen(false)}
+                aria-label="Închide meniu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                >
+                  <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Nav links — centered with stagger */}
+            <nav
+              className="relative flex-1 flex flex-col items-center justify-center px-6 overflow-y-auto"
+              aria-label="Navigare mobilă"
+            >
+              <ul className="flex flex-col items-center gap-1 w-full max-w-sm">
+                {navLinks.map((link, i) => {
+                  const active = isActive(link)
+                  return (
+                    <motion.li
+                      key={link.href}
+                      className="w-full"
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.08 + i * 0.07, duration: 0.4, ease: 'easeOut' }}
+                    >
+                      <Link
+                        href={link.href}
+                        className={cn(
+                          'flex items-center justify-between w-full py-4 px-5 rounded-2xl transition-all duration-200',
+                          active
+                            ? 'bg-gold/15 text-gold'
+                            : 'text-white/80 hover:bg-white/5 hover:text-white'
+                        )}
+                        onClick={() => setMobileOpen(false)}
+                        aria-current={pathname === link.href ? 'page' : undefined}
+                      >
+                        <span className="font-head font-bold text-2xl tracking-tight">
+                          {link.label}
+                        </span>
+                        {active && (
+                          <span
+                            className="w-2 h-2 rounded-full bg-gold flex-shrink-0"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </Link>
+                    </motion.li>
+                  )
+                })}
+              </ul>
+            </nav>
+
+            {/* Bottom section */}
+            <motion.div
+              className="relative px-6 pb-10 pt-6 flex-shrink-0 space-y-4 border-t border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55, duration: 0.4 }}
+            >
+              {/* Phone */}
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="flex items-center justify-center gap-3 text-white/60 hover:text-white transition-colors duration-200 text-sm font-body"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gold/15 text-gold flex-shrink-0">
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                </span>
+                {siteConfig.phoneDisplay}
               </a>
-            ))}
-          </div>
-        </div>
-      </div>
+
+              {/* CTA */}
+              <Link
+                href="/contact"
+                className="flex items-center justify-center w-full py-4 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-base rounded-2xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                onClick={() => setMobileOpen(false)}
+              >
+                Solicită Audit Gratuit
+              </Link>
+
+              {/* Social links */}
+              <div className="flex items-center justify-center gap-4 pt-1">
+                {socialLinks.map(({ href, label, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex items-center justify-center w-11 h-11 rounded-full border border-white/20 text-white/50 hover:text-gold hover:border-gold/50 transition-all duration-200"
+                  >
+                    <Icon />
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
