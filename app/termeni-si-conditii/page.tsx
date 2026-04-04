@@ -97,11 +97,21 @@ export default function TermeniPage() {
                 prin abonamentul lunar plătit de client.
               </p>
               <p className="mt-4">
+                <strong className="text-navy">Hosting gratuit pe toată durata colaborării:</strong>{' '}
+                Hosting-ul este oferit gratuit de Visuelum clientului pe toată durata în care abonamentul este activ — nu doar primele 6 luni.
+                Visuelum asigură și administrează hosting-ul în numele clientului, fără costuri suplimentare față de abonamentul lunar.
+              </p>
+              <p className="mt-4">
                 <strong className="text-navy">Condiție de menținere a website-ului:</strong>{' '}
-                Website-ul este găzduit pe serverele Visuelum pe durata abonamentului activ. Dacă
-                clientul nu achită abonamentul lunar în termenul scadent, Visuelum are dreptul să
-                suspende și ulterior să închidă website-ul de pe serverele sale, fără a fi necesară
+                Dacă clientul nu achită abonamentul lunar în termenul scadent, Visuelum are dreptul să
+                suspende și ulterior să închidă website-ul, fără a fi necesară
                 o notificare suplimentară după primele 15 zile de întârziere.
+              </p>
+              <p className="mt-4">
+                <strong className="text-navy">Reziliere înainte de 6 luni:</strong>{' '}
+                Dacă clientul reziliază contractul înainte de finalizarea celor 6 luni minime, website-ul este suspendat.
+                Domeniu rămâne exclusiv proprietatea clientului — acesta poate colabora cu alt prestator sau îl poate administra
+                cum dorește. Codul sursă al website-ului nu se transferă clientului în această situație.
               </p>
               <p className="mt-4">
                 <strong className="text-navy">Ce se întâmplă după 6 luni:</strong>{' '}
@@ -111,12 +121,12 @@ export default function TermeniPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-gold mt-1">›</span>
                   <span><strong>Continuarea abonamentului</strong> — lună de lună, fără angajament suplimentar.
-                    Hosting-ul rămâne inclus în abonament.</span>
+                    Hosting-ul rămâne inclus gratuit în abonament.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-gold mt-1">›</span>
                   <span><strong>Preluarea codului sursă</strong> — clientul primește toate fișierele
-                    website-ului și se poate ocupa singur de hosting și administrare.</span>
+                    website-ului și se poate ocupa singur de hosting și administrare, unde dorește.</span>
                 </li>
               </ul>
             </div>
@@ -191,11 +201,14 @@ export default function TermeniPage() {
                 de zile. Deoarece website-ul a fost creat gratuit, o reziliere înainte de finalizarea
                 celor 6 luni minime implică plata unei compensații egale cu abonamentele lunare rămase
                 până la împlinirea celor 6 luni, conform contractului individual.
+                Website-ul va fi suspendat, iar codul sursă nu se transferă clientului.
+                Domeniu rămâne exclusiv proprietatea clientului.
               </p>
               <p className="mt-4">
                 <strong className="text-navy">Reziliere după 6 luni:</strong>{' '}
                 Clientul poate înceta colaborarea oricând, fără penalități, cu notificare scrisă de
-                minimum 15 zile.
+                minimum 15 zile. La cerere, clientul primește integral codul sursă al website-ului
+                și îl poate găzdui și administra unde dorește.
               </p>
             </div>
 

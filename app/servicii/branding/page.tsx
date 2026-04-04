@@ -1,23 +1,22 @@
 import NextImage from 'next/image'
 import type { Metadata } from 'next'
-import { Palette, Type, Layout, Printer, Layers, CheckSquare } from 'lucide-react'
+import { Type, Layout, Printer, Layers, CheckSquare, Calendar } from 'lucide-react'
 import { FaqAccordion } from '@/components/sections/FaqAccordion'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema, faqSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Branding & Identitate Vizuală Constanța — Arăți Cum Meriți',
-  description: 'Servicii complete de branding pentru afaceri din Constanța. Logo, culori, fonturi, materiale grafice, print. Identitate vizuală profesională, consecventă.',
+  title: 'Branding & Design Grafic Constanța — Materiale Profesionale pentru Afacerea Ta',
+  description: 'Servicii de design grafic și branding pentru afaceri din Constanța. Flyere, postere, calendare personalizate, bannere și materiale print. Design profesional, consecvent și adaptat afacerii tale.',
   alternates: { canonical: `${siteConfig.url}/servicii/branding` },
 }
 
 const faqs = [
-  { question: 'Includeți și logo în abonament?', answer: 'Logo-ul este inclus în pachetul DOMINARE și poate fi adăugat la celelalte pachete contra unui cost separat (300–600 RON). Dacă ai deja logo, îl integrăm în toate materialele.' },
-  { question: 'Câte variante de logo primesc?', answer: '3 concepte inițiale diferite, urmând 2 runde de revizii pe varianta aleasă. Livrăm în toate formatele (SVG, PNG, PDF) pentru print și digital.' },
-  { question: 'Ce materiale grafice includeți lunar?', answer: 'În pachetul DOMINARE: bannere social media, postere promoționale, materiale pentru print (meniu, flyere, carduri vizită), templates pentru stories. Totul adaptat identității brandului tău.' },
-  { question: 'Primesc ghid de brand?', answer: 'Da, la final de proces creăm un Brand Book complet: logo usage, culori, fonturi, tone of voice. Documentul te ghidează în toate deciziile vizuale viitoare.' },
+  { question: 'Ce materiale grafice includeți?', answer: 'Bannere social media, postere promoționale, flyere, calendare personalizate pentru afacerea ta, materiale pentru print (meniu, carduri vizită) și templates pentru stories. Totul adaptat identității afacerii tale.' },
+  { question: 'Creați și logo sau catalog de brand?', answer: 'Nu creăm logo sau catalog de brand. Ne concentrăm pe materiale grafice practice care aduc vizibilitate și promovează afacerea ta: flyere, postere, calendare personalizate, bannere și alte materiale promoționale.' },
   { question: 'Pot folosi materialele după ce plec?', answer: 'Absolut. Toate materialele grafice create sunt proprietatea ta. Le poți folosi, modifica și distribui fără restricții sau taxe suplimentare.' },
+  { question: 'Ce tipuri de afaceri beneficiază de serviciile de design?', answer: 'Orice afacere care are nevoie de materiale promoționale: restaurante (meniuri, flyere), saloane (calendare, postere), clinici, magazine și multe altele. Materialele sunt personalizate după specificul afacerii tale.' },
 ]
 
 export default function BrandingPage() {
@@ -46,14 +45,14 @@ export default function BrandingPage() {
           />
         </div>
         <div className="container-site relative z-10 max-w-4xl mx-auto">
-          <p className="eyebrow mb-4">Branding & Identitate Vizuală</p>
+          <p className="eyebrow mb-4">Branding & Design Grafic</p>
           <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
             Arăți cum meriți.
             <br />
             <span className="text-gold">Nu cum poți.</span>
           </h1>
           <p className="font-body italic text-muted text-lg max-w-2xl">
-            Identitate vizuală completă care comunică profesionalism și construiește încredere înainte ca clientul să spună ceva.
+            Design grafic profesional — flyere, postere, calendare personalizate și materiale promoționale adaptate afacerii tale.
           </p>
         </div>
       </section>
@@ -63,12 +62,12 @@ export default function BrandingPage() {
           <h2 className="font-head font-extrabold text-h2 text-navy text-center mb-12">Ce includem</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Palette, title: 'Logo & Identitate', desc: '3 concepte, 2 runde revizii. Logo în toate formatele pentru print și digital.' },
-              { icon: Type, title: 'Tipografie & Culori', desc: 'Sistem de fonturi și paletă de culori care comunică valorile brandului tău.' },
+              { icon: Type, title: 'Tipografie & Culori', desc: 'Sistem de fonturi și paletă de culori care comunică valorile brandului tău pe toate materialele.' },
               { icon: Layout, title: 'Templates Social Media', desc: 'Formate standard Canva/Figma pentru postări și stories. Refolosești singur oricând.' },
-              { icon: Printer, title: 'Materiale Print', desc: 'Cărți vizită, flyere, meniu, bannere — design profesional gata de tipar.' },
-              { icon: Layers, title: 'Brand Book', desc: 'Ghid complet de utilizare a brandului. Consecvență pe toate platformele.' },
-              { icon: CheckSquare, title: 'Design lunar', desc: 'În pachetul DOMINARE, lunar primești materiale grafice noi adaptate nevoilor curente.' },
+              { icon: Printer, title: 'Materiale Print', desc: 'Flyere, postere, meniu, bannere, cărți vizită — design profesional gata de tipar.' },
+              { icon: Calendar, title: 'Calendare personalizate', desc: 'Calendare personalizate pentru afacerea ta — utile, vizibile și promovate zilnic.' },
+              { icon: Layers, title: 'Materiale promoționale', desc: 'Orice material grafic de care are nevoie afacerea ta: roll-up, afișe, decor interior, standuri.' },
+              { icon: CheckSquare, title: 'Design lunar', desc: 'Lunar primești materiale grafice noi adaptate nevoilor curente ale afacerii tale.' },
             ].map((item) => (
               <div key={item.title} className="service-card">
                 <div className="inline-flex p-3 bg-gold/10 text-gold mb-4">

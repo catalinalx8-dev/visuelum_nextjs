@@ -72,10 +72,10 @@ const services = [
   {
     icon: Palette,
     title: 'Branding & Design',
-    desc: 'Identitate vizuală completă: logo profesional, paletă de culori, tipografie, manual de brand, materiale grafice pentru print și digital. Brandingul tău creat să inspire încredere și să fie memorabil — de la prima impresie.',
+    desc: 'Materiale grafice profesionale pentru afacerea ta: flyere, postere, calendare personalizate, bannere și multe altele. Design adaptat identității brandului tău — consecvent pe toate platformele și canalele de comunicare.',
     href: '/servicii/branding',
-    highlight: 'Identitate profesională',
-    benefits: ['Logo profesional', 'Manual de brand', 'Materiale print', 'Design digital'],
+    highlight: 'Design personalizat',
+    benefits: ['Flyere & postere', 'Calendare personalizate', 'Materiale print', 'Design digital'],
   },
 ]
 
