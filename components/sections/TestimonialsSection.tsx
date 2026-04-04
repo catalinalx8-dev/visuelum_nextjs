@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { Star, Quote } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
-import { Section } from '@/components/ui/Section'
 
 const testimonials = [
   {
@@ -36,24 +35,22 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <Section className="bg-navy relative overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <Image
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=70"
-          alt=""
-          fill
-          className="object-cover opacity-5"
-          sizes="100vw"
-          loading="lazy"
-        />
-      </div>
-      {/* Radial glow */}
+    <section
+      className="section-py relative overflow-hidden"
+      style={{ background: 'linear-gradient(160deg, #07071a 0%, #0f0f23 40%, #1a0a2e 100%)' }}
+    >
+      {/* Glow orbs */}
       <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(201,146,42,0.08) 0%, transparent 60%)' }}
+        className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%)', filter: 'blur(40px)' }}
         aria-hidden="true"
       />
+      <div
+        className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 70%)', filter: 'blur(50px)' }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 grid-overlay opacity-20" aria-hidden="true" />
 
       <Container className="relative z-10">
         <motion.div
@@ -89,7 +86,7 @@ export function TestimonialsSection() {
                 animate: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col gap-5 hover:bg-white/8 hover:border-gold/30 transition-all duration-300"
+              className="glass rounded-2xl p-8 flex flex-col gap-5 hover:border-gold/30 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Stars */}
               <div className="flex gap-1" aria-label={`${t.stars} stele`}>
@@ -99,7 +96,11 @@ export function TestimonialsSection() {
               </div>
 
               {/* Quote icon */}
-              <Quote className="h-6 w-6 text-gold/30" aria-hidden="true" />
+              <Quote
+                className="h-7 w-7"
+                style={{ color: 'rgba(124,58,237,0.5)' }}
+                aria-hidden="true"
+              />
 
               {/* Text */}
               <p className="font-body text-sm text-white/70 leading-relaxed flex-1 italic">
@@ -108,14 +109,20 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-gold/30">
-                  <Image
-                    src={t.avatar}
-                    alt={`Fotografie ${t.name}`}
-                    fill
-                    className="object-cover"
-                    sizes="48px"
-                  />
+                {/* Gradient ring avatar */}
+                <div
+                  className="relative flex-shrink-0 p-0.5 rounded-full"
+                  style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
+                >
+                  <div className="relative w-11 h-11 rounded-full overflow-hidden">
+                    <Image
+                      src={t.avatar}
+                      alt={`Fotografie ${t.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
+                  </div>
                 </div>
                 <div>
                   <p className="font-head font-bold text-white text-sm">{t.name}</p>
@@ -128,6 +135,6 @@ export function TestimonialsSection() {
           ))}
         </motion.div>
       </Container>
-    </Section>
+    </section>
   )
 }

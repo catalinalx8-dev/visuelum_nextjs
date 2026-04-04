@@ -58,22 +58,41 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-navy text-cream/70">
-      <div className="container-site py-16">
+    <footer
+      className="text-cream/70 relative overflow-hidden"
+      style={{ background: 'linear-gradient(180deg, #0f0f23 0%, #07071a 100%)' }}
+    >
+      {/* Top gradient accent line */}
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, #7c3aed, #06b6d4, transparent)' }}
+        aria-hidden="true"
+      />
+      {/* Subtle background glow */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, rgba(124,58,237,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }}
+        aria-hidden="true"
+      />
+
+      <div className="container-site py-16 relative z-10">
 
         {/* Newsletter strip */}
-        <div className="border-b border-navy-mid pb-12 mb-12">
+        <div className="border-b border-white/10 pb-12 mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="font-head font-bold text-xl text-cream mb-2">
                 Tips gratuite de marketing digital
               </h3>
-              <p className="font-body text-sm text-cream/60 leading-relaxed">
+              <p className="font-body text-sm text-cream/50 leading-relaxed">
                 Sfaturi practice pentru afaceri locale din Dobrogea. Fără spam, doar valoare.
               </p>
             </div>
             {newsletterState === 'success' ? (
-              <div className="flex items-center gap-3 p-4 border border-gold/30 bg-gold/5 rounded-xl">
+              <div
+                className="flex items-center gap-3 p-4 rounded-xl"
+                style={{ border: '1px solid rgba(124,58,237,0.3)', background: 'rgba(124,58,237,0.08)' }}
+              >
                 <span className="text-gold text-lg">✓</span>
                 <p className="font-mono text-xs uppercase tracking-[0.15em] text-gold">
                   Mulțumim! Te-ai abonat cu succes.
@@ -87,13 +106,21 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="email@afacerea-ta.ro"
                   required
-                  className="flex-1 bg-navy-mid border border-navy-mid/70 rounded-xl px-4 py-3 font-body text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold transition-colors min-w-0"
+                  className="flex-1 rounded-full px-5 py-3 font-body text-sm text-cream placeholder:text-white/30 focus:outline-none transition-all min-w-0"
+                  style={{
+                    background: 'rgba(255,255,255,0.06)',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                  }}
                   aria-label="Adresa de email pentru newsletter"
                 />
                 <button
                   type="submit"
                   disabled={newsletterState === 'loading'}
-                  className="btn-gold-ghost text-xs px-5 py-3 whitespace-nowrap disabled:opacity-60"
+                  className="font-head font-bold text-xs uppercase tracking-widest text-white px-6 py-3 rounded-full whitespace-nowrap disabled:opacity-60 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  style={{
+                    background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
+                    boxShadow: '0 4px 16px -4px rgba(124,58,237,0.4)',
+                  }}
                 >
                   {newsletterState === 'loading' ? '...' : 'Abonează-te'}
                 </button>
@@ -109,40 +136,29 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand col */}
           <div className="lg:col-span-1">
-            <Link href="/" className="font-head font-extrabold text-2xl text-cream tracking-tight">
-              Visuelum<span className="text-gold">.</span>
+            <Link href="/" className="font-head font-extrabold text-2xl text-cream tracking-tight flex items-center">
+              Visuelum<span className="gradient-text">.</span>
             </Link>
-            <p className="mt-4 font-body text-sm leading-relaxed text-cream/60 max-w-xs">
+            <p className="mt-4 font-body text-sm leading-relaxed text-cream/50 max-w-xs">
               {siteConfig.tagline}
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href={siteConfig.social.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg border border-navy-mid hover:border-gold hover:text-gold transition-colors"
-                aria-label="TikTok"
-              >
-                <TikTokIcon className="h-4 w-4" />
-              </a>
+              {[
+                { href: siteConfig.social.instagram, label: 'Instagram', Icon: Instagram },
+                { href: siteConfig.social.facebook, label: 'Facebook', Icon: Facebook },
+                { href: siteConfig.social.tiktok, label: 'TikTok', Icon: TikTokIcon },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon-link p-2.5 rounded-lg border border-white/10 text-white/40 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
+                  aria-label={label}
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -154,7 +170,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
+                    className="font-body text-sm text-cream/50 hover:text-gold transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -171,7 +187,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
+                    className="font-body text-sm text-cream/50 hover:text-gold transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -187,7 +203,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
+                  className="font-body text-sm text-cream/50 hover:text-gold transition-colors"
                 >
                   {siteConfig.email}
                 </a>
@@ -195,17 +211,18 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="font-body text-sm text-cream/60 hover:text-gold transition-colors"
+                  className="font-body text-sm text-cream/50 hover:text-gold transition-colors"
                 >
                   {siteConfig.phoneDisplay}
                 </a>
               </li>
-              <li className="font-body text-sm text-cream/40">{siteConfig.address}</li>
+              <li className="font-body text-sm text-cream/30">{siteConfig.address}</li>
             </ul>
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gold border border-gold rounded-xl px-4 py-2.5 hover:bg-gold hover:text-white transition-all duration-200"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white rounded-xl px-4 py-2.5 transition-all duration-300 hover:-translate-y-0.5"
+                style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)', boxShadow: '0 4px 16px -4px rgba(124,58,237,0.4)' }}
               >
                 Audit Gratuit →
               </Link>
@@ -214,8 +231,8 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-navy-mid flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-xs text-cream/30">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-mono text-xs text-cream/25">
             © {year} {siteConfig.name}. Toate drepturile rezervate.
           </p>
           <div className="flex items-center gap-6">
@@ -223,7 +240,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-mono text-xs text-cream/30 hover:text-cream/60 transition-colors"
+                className="font-mono text-xs text-cream/25 hover:text-cream/50 transition-colors"
               >
                 {link.label}
               </Link>

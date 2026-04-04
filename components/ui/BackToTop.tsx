@@ -20,10 +20,11 @@ export function BackToTop() {
       onClick={scrollToTop}
       aria-label="Înapoi sus"
       className={cn(
-        'fixed bottom-24 right-6 z-50 p-3 bg-white border border-stone text-navy shadow-md rounded-lg transition-all duration-300',
-        'hover:bg-gold hover:text-white hover:border-gold hover:-translate-y-1',
+        'fixed bottom-24 right-6 z-50 p-3 text-white shadow-lg rounded-xl transition-all duration-300',
+        'hover:-translate-y-1 hover:shadow-xl',
         visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       )}
+      style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)', boxShadow: '0 4px 20px -4px rgba(124,58,237,0.5)' }}
     >
       <ArrowUp className="h-5 w-5" />
     </button>

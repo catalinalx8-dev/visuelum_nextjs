@@ -8,20 +8,26 @@
  */
 :root {
   /* Colors — keep in sync with lib/theme.ts */
-  --navy:       #18181b;
-  --navy-deep:  #09090b;
-  --navy-mid:   #27272a;
-  --gold:       #6366f1;
-  --gold-l:     #818cf8;
-  --gold-pale:  #e0e7ff;
+  --navy:       #0f0f23;
+  --navy-deep:  #07071a;
+  --navy-mid:   #1a1a3e;
+  --gold:       #7c3aed;
+  --gold-l:     #a78bfa;
+  --gold-pale:  #ede9fe;
+  --cyan:       #06b6d4;
   --cream:      #fafafa;
-  --parchment:  #f4f4f5;
-  --stone:      #e4e4e7;
-  --ink:        #09090b;
-  --muted:      #71717a;
-  --muted-l:    #a1a1aa;
+  --parchment:  #f5f3ff;
+  --stone:      #e5e7eb;
+  --ink:        #0f0f23;
+  --muted:      #6b7280;
+  --muted-l:    #9ca3af;
   --white:      #ffffff;
-  --green:      #16a34a;
+  --green:      #10b981;
+
+  /* Gradient accent — violet → cyan */
+  --accent-start: #7c3aed;
+  --accent-end:   #06b6d4;
+  --accent-mid:   #a855f7;
 
   /* Typography — keep in sync with lib/theme.ts */
   --f-head: 'Plus Jakarta Sans', sans-serif;
@@ -67,27 +73,71 @@
   }
 }
 
+/* ─── Animations ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%     { transform: translateY(-14px); }
+}
+
+@keyframes gradientShift {
+  0%,100% { background-position: 0% 50%; }
+  50%     { background-position: 100% 50%; }
+}
+
+@keyframes pulseGlow {
+  0%,100% { opacity: 0.5; transform: scale(1); }
+  50%     { opacity: 1;   transform: scale(1.1); }
+}
+
+@keyframes borderRotate {
+  0%   { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
 @layer components {
+  /* ─── Buttons ─── */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gold text-white font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/30 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-white font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-0;
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+    box-shadow: 0 4px 24px -4px rgba(124,58,237,0.35);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 8px 32px -4px rgba(124,58,237,0.55);
+  }
+  .btn-primary:focus-visible {
+    --tw-ring-color: var(--gold);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-navy text-cream font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/30 focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-navy text-cream font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/30 focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 active:translate-y-0;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0;
   }
 
   .btn-gold-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 text-gold border-gold hover:bg-gold hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 text-gold border-gold;
+  }
+  .btn-gold-ghost:hover {
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 6px 24px -4px rgba(124,58,237,0.4);
   }
 
   .btn-cream-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-current font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 text-cream border-cream hover:bg-cream hover:text-navy;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/40 text-white font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-navy hover:border-white active:translate-y-0;
   }
 
+  /* ─── Layout ─── */
   .container-site {
     @apply mx-auto px-4 sm:px-6 lg:px-8;
     max-width: var(--container);
@@ -98,20 +148,45 @@
     padding-bottom: var(--section-py);
   }
 
+  /* ─── Typography helpers ─── */
   .eyebrow {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-gold;
   }
 
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── Decorative utilities ─── */
   .grid-overlay {
-    background-image: linear-gradient(rgba(99,102,241,.04) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(99,102,241,.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(124,58,237,.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(124,58,237,.04) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
   .gold-glow {
-    background: radial-gradient(ellipse at 50% -20%, rgba(99,102,241,.10) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% -20%, rgba(124,58,237,.12) 0%, transparent 70%);
   }
 
+  /* ─── Glassmorphism ─── */
+  .glass {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .glass-light {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+
+  /* ─── Card helpers ─── */
   .text-balance {
     text-wrap: balance;
   }
@@ -123,6 +198,23 @@
   .service-card {
     @apply bg-white border border-stone/60 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30;
   }
+
+  /* ─── Gradient border (featured card) ─── */
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem;
+    background: white;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(1rem + 2px);
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-mid), var(--accent-end), var(--accent-start));
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    z-index: -1;
+  }
 }
 
 @layer utilities {
@@ -133,5 +225,28 @@
   .dot-pattern {
     background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
     background-size: 32px 32px;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.12) 50%,
+      transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+  }
+
+  /* ─── Social icon link hover ─── */
+  .social-icon-link:hover {
+    border-color: rgba(124,58,237,0.5);
+    box-shadow: 0 0 12px rgba(124,58,237,0.2);
   }
 }

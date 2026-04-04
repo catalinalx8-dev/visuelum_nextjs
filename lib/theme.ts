@@ -6,25 +6,26 @@
 export const theme = {
   colors: {
     navy: {
-      DEFAULT: '#18181b',
-      deep: '#09090b',
-      mid: '#27272a',
+      DEFAULT: '#0f0f23',
+      deep: '#07071a',
+      mid: '#1a1a3e',
     },
     gold: {
-      DEFAULT: '#6366f1',
-      l: '#818cf8',
-      pale: '#e0e7ff',
+      DEFAULT: '#7c3aed',
+      l: '#a78bfa',
+      pale: '#ede9fe',
     },
+    cyan: '#06b6d4',
     cream: '#fafafa',
-    parchment: '#f4f4f5',
-    stone: '#e4e4e7',
-    ink: '#09090b',
+    parchment: '#f5f3ff',
+    stone: '#e5e7eb',
+    ink: '#0f0f23',
     muted: {
-      DEFAULT: '#71717a',
-      l: '#a1a1aa',
+      DEFAULT: '#6b7280',
+      l: '#9ca3af',
     },
     white: '#ffffff',
-    green: '#16a34a',
+    green: '#10b981',
   },
 
   /** Google Font family names loaded in app/layout.tsx */

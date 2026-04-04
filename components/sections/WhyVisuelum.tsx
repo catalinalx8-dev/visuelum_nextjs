@@ -47,11 +47,15 @@ export function WhyVisuelum() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
             </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-4 bg-gold rounded-2xl px-6 py-4 shadow-xl" aria-hidden="true">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-white/80 mb-1">Garanție</p>
+            {/* Floating badge with gradient */}
+            <div
+              className="absolute -bottom-4 -right-4 rounded-2xl px-6 py-4 shadow-xl"
+              style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
+              aria-hidden="true"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-widest text-white/70 mb-1">Garanție</p>
               <p className="font-head font-extrabold text-2xl text-white">30 zile</p>
             </div>
           </motion.div>
@@ -78,7 +82,7 @@ export function WhyVisuelum() {
               transition={{ staggerChildren: 0.08 }}
               className="flex flex-col gap-6"
             >
-              {reasons.map((reason) => (
+              {reasons.map((reason, i) => (
                 <motion.div
                   key={reason.title}
                   variants={{
@@ -86,11 +90,22 @@ export function WhyVisuelum() {
                     animate: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.5 }}
-                  className="flex gap-5 items-start"
+                  className="flex gap-5 items-start group cursor-default"
                 >
-                  <div className="flex-shrink-0 w-0.5 h-12 bg-gold/30 mt-1" aria-hidden="true" />
+                  {/* Gradient left bar */}
+                  <div
+                    className="flex-shrink-0 w-0.5 h-14 mt-1 rounded-full transition-all duration-300 group-hover:w-1"
+                    style={{
+                      background: i % 2 === 0
+                        ? 'linear-gradient(180deg, #7c3aed, #a855f7)'
+                        : 'linear-gradient(180deg, #a855f7, #06b6d4)',
+                    }}
+                    aria-hidden="true"
+                  />
                   <div>
-                    <h3 className="font-head font-bold text-navy mb-1.5">{reason.title}</h3>
+                    <h3 className="font-head font-bold text-navy mb-1.5 group-hover:text-gold transition-colors duration-200">
+                      {reason.title}
+                    </h3>
                     <p className="font-body text-sm text-muted leading-relaxed">{reason.desc}</p>
                   </div>
                 </motion.div>

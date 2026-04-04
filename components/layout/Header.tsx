@@ -46,24 +46,26 @@ function HamburgerButton({
 }) {
   return (
     <button
-      className="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 gap-[6px] rounded-xl hover:bg-stone/50 transition-colors"
+      className="lg:hidden relative flex flex-col items-center justify-center w-10 h-10 gap-[6px] rounded-xl hover:bg-white/10 transition-colors"
       onClick={onClick}
       aria-label={isOpen ? 'Închide meniu' : 'Deschide meniu'}
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
     >
       <motion.span
-        className="block h-0.5 w-5 bg-navy rounded-full"
+        className="block h-0.5 w-5 rounded-full"
+        style={{ background: 'linear-gradient(90deg, #7c3aed, #06b6d4)' }}
         animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
       />
       <motion.span
-        className="block h-0.5 w-5 bg-navy rounded-full"
+        className="block h-0.5 w-5 rounded-full bg-muted"
         animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
         transition={{ duration: 0.2 }}
       />
       <motion.span
-        className="block h-0.5 w-5 bg-navy rounded-full"
+        className="block h-0.5 w-5 rounded-full"
+        style={{ background: 'linear-gradient(90deg, #7c3aed, #06b6d4)' }}
         animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
       />
@@ -101,10 +103,11 @@ export function Header() {
       {/* Main header */}
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-xl',
+          'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
           scrolled
-            ? 'bg-white/95 shadow-lg shadow-navy/5 border-b border-stone/80 h-16'
-            : 'bg-white/80 border-b border-stone/40 h-[72px]'
+            ? 'backdrop-blur-2xl border-b border-white/10 h-16 shadow-lg shadow-navy-deep/20'
+            : 'backdrop-blur-xl border-b border-white/5 h-[72px]',
+          'bg-navy-deep/80'
         )}
       >
         <div className="container-site h-full">
@@ -113,12 +116,12 @@ export function Header() {
             {/* Wordmark */}
             <Link
               href="/"
-              className="font-head font-extrabold text-2xl text-navy tracking-tight hover:text-gold transition-colors duration-200 flex-shrink-0 flex items-center"
+              className="font-head font-extrabold text-2xl text-white tracking-tight flex-shrink-0 flex items-center hover:opacity-80 transition-opacity duration-200"
               aria-label={siteConfig.name}
             >
               Visuelum
               <motion.span
-                className="text-gold"
+                className="gradient-text"
                 animate={{ scale: [1, 1.4, 1] }}
                 transition={{
                   duration: 0.5,
@@ -140,14 +143,25 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      'relative px-4 py-2 rounded-full font-body text-sm font-medium transition-all duration-200',
+                      'relative px-4 py-2 rounded-full font-body text-sm font-medium transition-all duration-200 group',
                       active
-                        ? 'bg-gold/10 text-gold'
-                        : 'text-muted hover:bg-stone/60 hover:text-navy'
+                        ? 'text-gold'
+                        : 'text-white/60 hover:text-white'
                     )}
                     aria-current={pathname === link.href ? 'page' : undefined}
                   >
                     {link.label}
+                    {/* Animated underline */}
+                    <span
+                      className={cn(
+                        'absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300',
+                        active
+                          ? 'w-4 opacity-100'
+                          : 'w-0 opacity-0 group-hover:w-4 group-hover:opacity-100'
+                      )}
+                      style={{ background: 'linear-gradient(90deg, #7c3aed, #06b6d4)' }}
+                      aria-hidden="true"
+                    />
                   </Link>
                 )
               })}
@@ -157,16 +171,23 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-2 text-sm font-body font-medium text-muted hover:text-navy transition-colors duration-200"
+                className="flex items-center gap-2 text-sm font-body font-medium text-white/50 hover:text-white transition-colors duration-200"
               >
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-gold/10 text-gold flex-shrink-0">
-                  <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+                <span
+                  className="flex items-center justify-center w-7 h-7 rounded-full flex-shrink-0"
+                  style={{ background: 'rgba(124,58,237,0.2)' }}
+                >
+                  <Phone className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
                 </span>
                 {siteConfig.phoneDisplay}
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-sm rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-gold/40 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-white font-head font-bold text-sm rounded-full transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                style={{
+                  background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
+                  boxShadow: '0 4px 16px -4px rgba(124,58,237,0.5)',
+                }}
               >
                 Audit Gratuit
               </Link>
@@ -186,7 +207,7 @@ export function Header() {
         {mobileOpen && (
           <motion.div
             id="mobile-menu"
-            className="lg:hidden fixed inset-0 z-50 flex flex-col bg-navy-deep overflow-hidden"
+            className="lg:hidden fixed inset-0 z-50 flex flex-col overflow-hidden"
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
@@ -194,17 +215,18 @@ export function Header() {
             role="dialog"
             aria-modal="true"
             aria-label="Meniu navigare"
+            style={{ background: 'linear-gradient(160deg, #07071a 0%, #0f0f23 60%, #1a0a2e 100%)' }}
           >
             {/* Background decorations */}
-            <div className="absolute inset-0 dot-pattern opacity-20 pointer-events-none" aria-hidden="true" />
+            <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" aria-hidden="true" />
             <div
               className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
-              style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%)', filter: 'blur(40px)' }}
               aria-hidden="true"
             />
             <div
               className="absolute bottom-0 left-0 w-64 h-64 rounded-full pointer-events-none"
-              style={{ background: 'radial-gradient(circle, rgba(129,140,248,0.12) 0%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%)', filter: 'blur(40px)' }}
               aria-hidden="true"
             />
 
@@ -215,7 +237,7 @@ export function Header() {
                 className="font-head font-extrabold text-2xl text-white tracking-tight flex items-center hover:text-white/80 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                Visuelum<span className="text-gold">.</span>
+                Visuelum<span className="gradient-text">.</span>
               </Link>
               <button
                 className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200"
@@ -254,10 +276,10 @@ export function Header() {
                       <Link
                         href={link.href}
                         className={cn(
-                          'flex items-center justify-between w-full py-2.5 px-4 rounded-xl transition-all duration-200',
+                          'flex items-center justify-between w-full py-3 px-4 rounded-xl transition-all duration-200',
                           active
-                            ? 'bg-gold/15 text-gold'
-                            : 'text-white/80 hover:bg-white/5 hover:text-white'
+                            ? 'text-gold'
+                            : 'text-white/70 hover:text-white hover:bg-white/5'
                         )}
                         onClick={() => setMobileOpen(false)}
                         aria-current={pathname === link.href ? 'page' : undefined}
@@ -267,7 +289,8 @@ export function Header() {
                         </span>
                         {active && (
                           <span
-                            className="w-2 h-2 rounded-full bg-gold flex-shrink-0"
+                            className="w-2 h-2 rounded-full flex-shrink-0"
+                            style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
                             aria-hidden="true"
                           />
                         )}
@@ -290,8 +313,11 @@ export function Header() {
                 href={`tel:${siteConfig.phone}`}
                 className="flex items-center justify-center gap-3 text-white/60 hover:text-white transition-colors duration-200 text-sm font-body"
               >
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gold/15 text-gold flex-shrink-0">
-                  <Phone className="h-4 w-4" aria-hidden="true" />
+                <span
+                  className="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0"
+                  style={{ background: 'rgba(124,58,237,0.2)' }}
+                >
+                  <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
                 </span>
                 {siteConfig.phoneDisplay}
               </a>
@@ -299,7 +325,8 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="flex items-center justify-center w-full py-3 bg-gradient-to-r from-gold to-gold-l text-white font-head font-bold text-sm rounded-2xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                className="flex items-center justify-center w-full py-3.5 text-white font-head font-bold text-sm rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)', boxShadow: '0 4px 20px -4px rgba(124,58,237,0.4)' }}
                 onClick={() => setMobileOpen(false)}
               >
                 Solicită Audit Gratuit
