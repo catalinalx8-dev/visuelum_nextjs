@@ -243,4 +243,10 @@
   .animate-pulse-glow {
     animation: pulseGlow 2.5s ease-in-out infinite;
   }
+
+  /* ─── Social icon link hover ─── */
+  .social-icon-link:hover {
+    border-color: rgba(124,58,237,0.5);
+    box-shadow: 0 0 12px rgba(124,58,237,0.2);
+  }
 }

@@ -153,11 +153,8 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg border border-white/10 text-white/40 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
-                  style={{ '--hover-border': 'rgba(124,58,237,0.5)' } as React.CSSProperties}
+                  className="social-icon-link p-2.5 rounded-lg border border-white/10 text-white/40 hover:text-white transition-all duration-300 hover:-translate-y-0.5"
                   aria-label={label}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(124,58,237,0.5)'; (e.currentTarget as HTMLElement).style.boxShadow = '0 0 12px rgba(124,58,237,0.2)' }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'; (e.currentTarget as HTMLElement).style.boxShadow = 'none' }}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
