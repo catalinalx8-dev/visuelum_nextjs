@@ -45,6 +45,8 @@ const industryImages: Record<string, { image: string; imageAlt: string }> = {
   'constructii-renovari': { image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80', imageAlt: 'Construcții și renovări' },
 }
 
+const DEFAULT_INDUSTRY_IMAGE = { image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80', imageAlt: 'Afacere locală' }
+
 export default function IndustriiPage() {
   const breadcrumbs = [
     { name: 'Acasă', url: siteConfig.url },
@@ -104,7 +106,7 @@ export default function IndustriiPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => {
-              const imgData = industryImages[industry.slug] ?? { image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80', imageAlt: industry.title }
+              const imgData = industryImages[industry.slug] ?? DEFAULT_INDUSTRY_IMAGE
               return (
                 <Link
                   key={industry.slug}
@@ -112,7 +114,14 @@ export default function IndustriiPage() {
                   className="group relative overflow-hidden rounded-2xl aspect-[4/3] flex items-end block hover:shadow-xl hover:shadow-navy/15 transition-all duration-300"
                   aria-label={`${industry.title} — ${industry.highlight}`}
                 >
-                  <Image src={imgData.image} alt={imgData.imageAlt} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" />
+                  <Image
+                    src={imgData.image}
+                    alt={imgData.imageAlt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/30 to-transparent" />
                   <div className="relative z-10 p-5 w-full">
                     <div className="flex items-center justify-between mb-2">
