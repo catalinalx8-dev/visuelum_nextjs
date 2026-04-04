@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle, ArrowRight, TrendingUp, Shield, Heart, Zap, Users, Star, Award, Clock } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { DespreValuesSection, DespreDifferentiatorsSection, DespreTrustSection } from '@/components/sections/DespreSections'
 import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
@@ -18,62 +19,6 @@ const stats = [
   { value: '8', label: 'Orașe Dobrogea' },
   { value: '30 zile', label: 'Garanție rezultate' },
   { value: '100%', label: 'Transparență prețuri' },
-]
-
-const values = [
-  {
-    icon: Shield,
-    title: 'Transparență totală',
-    desc: 'Prețuri clare afișate public, contracte simple, rapoarte lunare cu cifre reale. Fără costuri ascunse, fără surprize neplăcute la factură.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Rezultate măsurabile',
-    desc: 'Fiecare leu investit trebuie să aducă rezultate. Măsurăm trafic, apeluri, lead-uri, programări. Dacă nu livrăm, nu ne ascundem după "am postat".',
-  },
-  {
-    icon: Heart,
-    title: 'Brandul tău, nu al nostru',
-    desc: 'Suntem invizibili în spatele muncii noastre. Tot succesul online al afacerii tale aparține afacerii tale — nu nouă. Noi suntem motorul, tu ești fața.',
-  },
-  {
-    icon: Zap,
-    title: 'Viteză și proactivitate',
-    desc: 'Nu așteptăm să ne spui ce trebuie făcut. Venim cu idei, soluții și inițiative. Răspundem în maximum 24 ore — de cele mai multe ori în câteva ore.',
-  },
-  {
-    icon: Users,
-    title: 'Parteneriat real',
-    desc: 'Nu ești un număr de cont. Cunoaștem afacerea ta, echipa ta, valorile tale. Succesul tău este succesul nostru — asta ne motivează cu adevărat.',
-  },
-  {
-    icon: Award,
-    title: 'Expertiză locală',
-    desc: 'Suntem din Constanța și cunoaștem piața locală în profunzime. Știm ce funcționează în Dobrogea, nu aplicăm rețete generice din altă parte.',
-  },
-]
-
-const differentiators = [
-  {
-    title: 'Website gratuit',
-    desc: 'Nu plătești nimic pentru crearea site-ului. Îl construim, îl găzduim și îl administrăm noi. Tu plătești un singur abonament lunar accesibil.',
-    vs: 'Alte agenții: 2.000–5.000 RON pentru un website',
-  },
-  {
-    title: 'Totul într-un singur abonament',
-    desc: 'Website, social media, SEO, Google Ads, fotografii — toate într-un singur pachet lunar. Nu jonglezi cu 4 furnizori diferiți.',
-    vs: 'Alte agenții: plătești separat fiecare serviciu',
-  },
-  {
-    title: 'Rapoarte lunare cu cifre reale',
-    desc: 'Primești lunar un raport cu trafic, apeluri generate, leads din Google Ads, urmăritori câștigați. Știi exact pe ce îți cheltuiești banii.',
-    vs: 'Alte agenții: "am postat" — fără cifre clare',
-  },
-  {
-    title: 'Garanție de 30 de zile',
-    desc: 'Dacă în primele 30 de zile nu ești mulțumit de ce am livrat, oprim colaborarea fără penalități. Simplu și onest.',
-    vs: 'Alte agenții: contracte pe 12 luni fără ieșire',
-  },
 ]
 
 const process = [
@@ -140,33 +85,34 @@ export default function DesprePage() {
       />
 
       {/* Hero */}
-      <section className="bg-navy-deep relative overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 grid-overlay" aria-hidden="true" />
+      <section className="bg-white relative overflow-hidden pt-32 pb-16 border-b border-stone">
+        <div className="absolute inset-0 grid-overlay opacity-40" aria-hidden="true" />
+        <div className="absolute inset-0 gold-glow" aria-hidden="true" />
         <div className="absolute inset-0" aria-hidden="true">
           <Image
             src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80"
             alt=""
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-[0.06]"
             sizes="100vw"
             priority
           />
         </div>
-        <div className="container-site relative z-10 max-w-4xl mx-auto">
+        <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Despre Visuelum</p>
-          <h1 className="font-head font-extrabold text-h1 text-cream mb-6">
+          <h1 className="font-head font-extrabold text-h1 text-navy mb-6">
             Vizibilitate totală pentru
             <br />
             <span className="text-gold">afaceri invizibile.</span>
           </h1>
-          <p className="font-body italic text-muted-l text-xl max-w-2xl mb-12">
+          <p className="font-body italic text-muted text-xl max-w-2xl mx-auto mb-12">
             Există mii de afaceri bune în România care nu există online. Noi le facem vizibile — simplu, rapid, accesibil.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <div className="font-head font-extrabold text-3xl text-gold mb-1">{s.value}</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-l">{s.label}</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted">{s.label}</div>
               </div>
             ))}
           </div>
@@ -175,35 +121,50 @@ export default function DesprePage() {
 
       {/* Story */}
       <section className="bg-cream py-20">
-        <div className="container-site max-w-3xl mx-auto">
-          <p className="eyebrow mb-4 text-center">Povestea noastră</p>
-          <h2 className="font-head font-extrabold text-h2 text-navy text-center mb-10">
-            De ce am creat Visuelum?
-          </h2>
-          <div className="space-y-6 font-body text-ink leading-relaxed">
-            <p>
-              Am văzut prea multe restaurante bune, saloane talentate și clinici profesioniste care pierdeau clienți
-              față de competitori mai puțin buni dar mai vizibili online. Nu din cauza calității serviciilor —
-              ci din cauza <strong>absenței digitale</strong>.
-            </p>
-            <p>
-              Problema nu era că antreprenorii nu voiau prezență online. Era că nu aveau timp, nu știau cum, sau
-              serviciile erau prea scumpe pentru bugetul unui IMM local. O agenție de web design lua 2.000–5.000 RON
-              pentru un website. O agenție de social media lua 1.000–2.000 RON/lună. Un fotograf — 500–1.000 RON/ședință.
-            </p>
-            <p>
-              Și chiar dacă plăteai toți acești bani, nu aveai nicio garanție că investiția aducea clienți noi.
-              Primeai un website frumos, niște postări colorate și poate un raport cu "reach" și "impressions" pe care
-              nu știai cum să le interpretezi.
-            </p>
-            <p className="text-lg font-semibold text-navy">
-              Am creat un model diferit: website gratuit, totul administrat, un abonament lunar accesibil,
-              și rapoarte cu cifre care contează — nu cu vanity metrics.
-            </p>
-            <p>
-              <strong>Nu vindem servicii. Vindem clienți noi pentru afacerea ta.</strong> Asta este
-              singura metrică cu adevărat importantă.
-            </p>
+        <div className="container-site max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="eyebrow mb-4">Povestea noastră</p>
+              <h2 className="font-head font-extrabold text-h2 text-navy mb-8">
+                De ce am creat Visuelum?
+              </h2>
+              <div className="space-y-6 font-body text-ink leading-relaxed">
+                <p>
+                  Am văzut prea multe restaurante bune, saloane talentate și clinici profesioniste care pierdeau clienți
+                  față de competitori mai puțin buni dar mai vizibili online. Nu din cauza calității serviciilor —
+                  ci din cauza <strong>absenței digitale</strong>.
+                </p>
+                <p>
+                  Problema nu era că antreprenorii nu voiau prezență online. Era că nu aveau timp, nu știau cum, sau
+                  serviciile erau prea scumpe pentru bugetul unui IMM local. O agenție de web design lua 2.000–5.000 RON
+                  pentru un website. O agenție de social media lua 1.000–2.000 RON/lună. Un fotograf — 500–1.000 RON/ședință.
+                </p>
+                <p>
+                  Și chiar dacă plăteai toți acești bani, nu aveai nicio garanție că investiția aducea clienți noi.
+                  Primeai un website frumos, niște postări colorate și poate un raport cu "reach" și "impressions" pe care
+                  nu știai cum să le interpretezi.
+                </p>
+                <p className="text-lg font-semibold text-navy">
+                  Am creat un model diferit: website gratuit, totul administrat, un abonament lunar accesibil,
+                  și rapoarte cu cifre care contează — nu cu vanity metrics.
+                </p>
+                <p>
+                  <strong>Nu vindem servicii. Vindem clienți noi pentru afacerea ta.</strong> Asta este
+                  singura metrică cu adevărat importantă.
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
+              <Image
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=85"
+                alt="Echipă Visuelum discutând strategii de marketing digital"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+            </div>
           </div>
         </div>
       </section>
@@ -220,60 +181,9 @@ export default function DesprePage() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="bg-parchment py-20">
-        <div className="container-site">
-          <div className="text-center mb-12">
-            <p className="eyebrow mb-4">Valorile noastre</p>
-            <h2 className="font-head font-extrabold text-h2 text-navy mb-4">
-              Ce ne ghidează în fiecare zi
-            </h2>
-            <p className="font-body text-muted max-w-xl mx-auto">
-              Valorile nu sunt afișate pe perete — sunt reflectate în fiecare decizie pe care o luăm.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="bg-white border border-stone p-8 hover:border-gold/30 transition-colors">
-                <v.icon className="h-7 w-7 text-gold mb-5" />
-                <h3 className="font-head font-bold text-navy text-xl mb-3">{v.title}</h3>
-                <p className="font-body text-muted text-sm leading-relaxed">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DespreValuesSection />
 
-      {/* How we're different */}
-      <section className="bg-cream py-20">
-        <div className="container-site max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="eyebrow mb-4">De ce suntem diferiți</p>
-            <h2 className="font-head font-extrabold text-h2 text-navy mb-4">
-              Modelul Visuelum vs. piața
-            </h2>
-            <p className="font-body text-muted max-w-xl mx-auto">
-              Nu suntem o agenție tradițională. Am regândit tot modelul de la zero.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {differentiators.map((d) => (
-              <div key={d.title} className="bg-white border border-stone p-7">
-                <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle className="h-5 w-5 text-gold flex-shrink-0" />
-                  <h3 className="font-head font-bold text-navy">{d.title}</h3>
-                </div>
-                <p className="font-body text-muted text-sm leading-relaxed mb-4">{d.desc}</p>
-                <div className="bg-parchment border border-stone px-3 py-2 rounded">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted/70">
-                    {d.vs}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DespreDifferentiatorsSection />
 
       {/* Process */}
       <section className="bg-navy py-20">
@@ -314,33 +224,7 @@ export default function DesprePage() {
         </div>
       </section>
 
-      {/* Trust signals */}
-      <section className="bg-parchment py-20">
-        <div className="container-site max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="eyebrow mb-4">De ce să ai încredere</p>
-            <h2 className="font-head font-extrabold text-h2 text-navy">
-              Angajamentele noastre față de tine
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { icon: Star, title: 'Audit 100% gratuit', desc: 'Analizăm prezența ta online fără niciun cost și fără obligații. Primești raportul indiferent dacă colaborăm sau nu.' },
-              { icon: Clock, title: 'Răspuns în 24 ore', desc: 'Orice mesaj, email sau apel primește răspuns în maximum 24 ore. De obicei, mult mai rapid.' },
-              { icon: Shield, title: 'Garanție 30 de zile', desc: 'Dacă nu ești mulțumit în primele 30 de zile, oprim colaborarea fără penalități. Simplu.' },
-              { icon: TrendingUp, title: 'Rapoarte lunare clare', desc: 'Primești lunar un raport cu cifre reale: trafic, lead-uri, apeluri, engagament. Nu interpretăm vanity metrics.' },
-              { icon: Award, title: 'Fără contracte lungi', desc: 'Nu te legăm în contracte pe 12 luni. Colaborăm lună de lună — rămâi pentru că obții rezultate, nu pentru că ești obligat.' },
-              { icon: CheckCircle, title: 'Prețuri publice', desc: 'Prețurile noastre sunt afișate public pe site. Nu există surprize sau oferte diferite pentru clienți diferiți.' },
-            ].map((t) => (
-              <div key={t.title} className="bg-white border border-stone p-6">
-                <t.icon className="h-6 w-6 text-gold mb-3" aria-hidden="true" />
-                <h3 className="font-head font-bold text-navy mb-2">{t.title}</h3>
-                <p className="font-body text-muted text-xs leading-relaxed">{t.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DespreTrustSection />
 
       {/* FAQ */}
       <section className="bg-cream py-20">
