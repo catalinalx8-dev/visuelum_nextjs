@@ -8,9 +8,10 @@ import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Servicii de Marketing Digital — Website, SEO, Social Media, Foto | Visuelum',
-  description: 'Servicii complete de marketing digital pentru afaceri locale din Constanța: website profesional gratuit, social media management, SEO local, fotografie profesională, Google Ads și branding. Un singur abonament, o singură echipă.',
+  title: 'Servicii Marketing Digital Constanța — Website Gratuit, SEO, Social Media, Foto',
+  description: 'Servicii complete de marketing digital în Constanța: website profesional creat gratuit, SEO local, social media management, fotografie Sony A7 II, Google Ads și branding. Un singur abonament, de la 349 RON/lună.',
   alternates: { canonical: `${siteConfig.url}/servicii` },
+  keywords: 'servicii marketing digital Constanta, website profesional Constanta, SEO local Constanta, social media management Constanta, fotografie profesională Constanta, Google Ads Constanta',
 }
 
 const industryLabels = [
@@ -147,15 +148,15 @@ export default function ServiciiPage() {
           />
         </div>
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
-          <p className="eyebrow mb-5 sm:mb-6">Servicii complete</p>
+          <p className="eyebrow mb-5 sm:mb-6">Servicii marketing digital — Constanța</p>
           <h1 className="font-head font-extrabold text-h1 text-navy mb-5 sm:mb-6">
-            Tot ce are nevoie afacerea ta.
+            Toate serviciile de care ai nevoie.
             <br />
-            <span className="text-gold">Un singur abonament.</span>
+            <span className="text-gold">Un singur abonament accesibil.</span>
           </h1>
           <p className="font-body italic text-muted text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
-            De la website gratuit până la fotografie profesională și Google Ads — totul gestionat de o singură echipă,
-            pe o singură factură.
+            De la website profesional creat gratuit, până la fotografie Sony A7 II și Google Ads —
+            totul gestionat de o singură echipă din Constanța, pe o singură factură lunară.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pachete" className="btn-primary px-8 py-3.5 text-sm">
@@ -193,7 +194,7 @@ export default function ServiciiPage() {
           <div className="text-center mb-16">
             <p className="eyebrow mb-4">Ce facem</p>
             <h2 className="font-head font-extrabold text-h2 text-navy">
-              6 servicii. O singură echipă.
+              6 servicii integrate. O singură echipă locală.
             </h2>
             <p className="font-body italic text-muted mt-4 max-w-2xl mx-auto">
               Fiecare serviciu este construit să funcționeze independent și mai puternic împreună.
@@ -315,10 +316,10 @@ export default function ServiciiPage() {
         <div className="container-site max-w-3xl mx-auto text-center">
           <p className="eyebrow mb-4">Pachete & Prețuri</p>
           <h2 className="font-head font-extrabold text-h2 text-navy mb-6">
-            Toate serviciile, 3 pachete clare.
+            3 pachete clare. Prețuri corecte. Zero risc.
           </h2>
           <p className="font-body italic text-muted mb-8 max-w-2xl mx-auto">
-            De la 349 RON/lună cu website creat gratuit. Fără taxe de setup, fără contracte pe 1 an. Angajament minim 6 luni.
+            De la 349 RON/lună cu website creat gratuit. Fără taxe de setup. Garanție 30 zile. Angajament minim 6 luni.
           </p>
           <Link href="/pachete" className="btn-primary px-10 py-4">
             Vezi pachete & prețuri

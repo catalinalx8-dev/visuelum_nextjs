@@ -6,8 +6,8 @@ import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Contact — Solicită Audit Digital Gratuit',
-  description: 'Contactează Visuelum pentru un audit digital gratuit. Fără angajament, fără risc. Răspuns în 24 ore.',
+  title: 'Contact — Audit Digital Gratuit în 48h | Visuelum Constanța',
+  description: 'Contactează Visuelum pentru un audit digital gratuit al afacerii tale din Constanța. Răspuns în 24 ore. Fără angajament, fără risc. Website gratuit, SEO, social media, fotografie profesională.',
   alternates: { canonical: `${siteConfig.url}/contact` },
 }
 
@@ -41,12 +41,12 @@ export default function ContactPage() {
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Contact</p>
           <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
-            Hai să vorbim despre
+            Spune-ne despre
             <br />
             <span className="text-gold">afacerea ta.</span>
           </h1>
           <p className="font-body italic text-muted text-lg max-w-xl mx-auto">
-            Audit digital gratuit. Fără angajament. Fără risc.
+            Audit digital gratuit în 48h. Fără angajament. Fără risc. Fără cost inițial.
           </p>
         </div>
       </section>
@@ -137,10 +137,10 @@ export default function ContactPage() {
               {/* Trust points */}
               <div className="mt-10 pt-10 border-t border-stone space-y-3">
                 {[
-                  '✓ Audit gratuit fără obligații',
-                  '✓ Răspuns în maxim 24 ore',
-                  '✓ Garanție 30 zile sau bani înapoi',
-                  '✓ Nicio taxă inițială',
+                  '✓ Audit gratuit — răspuns în 48h',
+                  '✓ Website demo înainte de orice decizie',
+                  '✓ Garanție 30 zile sau colaborarea se oprește fără penalități',
+                  '✓ Zero cost inițial — plătești lunar, după ce ești online',
                 ].map((point) => (
                   <p key={point} className="font-mono text-xs uppercase tracking-widest text-muted">{point}</p>
                 ))}

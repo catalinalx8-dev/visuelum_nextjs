@@ -70,11 +70,11 @@ export function ServicesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Eyebrow className="mb-4">Servicii complete</Eyebrow>
+          <Eyebrow className="mb-4">Servicii marketing digital Constanța</Eyebrow>
           <h2 className="font-head font-extrabold text-h2 text-navy">
-            Tot ce ai nevoie.
+            Tot ce are nevoie afacerea ta.
             <br />
-            Un singur abonament.
+            Un singur abonament lunar.
           </h2>
         </motion.div>
 

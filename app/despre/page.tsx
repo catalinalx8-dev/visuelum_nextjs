@@ -8,10 +8,10 @@ import { siteConfig } from '@/lib/config'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Despre Visuelum — Agenție de Marketing Digital din Constanța | Misiune, Echipă & Valori',
-  description: 'Visuelum este agenția de marketing digital din Constanța care transformă afaceri locale invizibile în lideri online. Website gratuit, social media, SEO, Google Ads, fotografie — totul într-un singur abonament accesibil.',
+  title: 'Despre Visuelum — Agenție Marketing Digital Constanța | Misiune, Echipă & Valori',
+  description: 'Visuelum — agenția de marketing digital din Constanța care transformă afaceri locale în lideri online. Website gratuit, SEO local, social media, Google Ads, fotografie profesională. De la 349 RON/lună.',
   alternates: { canonical: `${siteConfig.url}/despre` },
-  keywords: 'agentie marketing digital Constanta, about Visuelum, prezentare agentie, echipa Visuelum',
+  keywords: 'agentie marketing digital Constanta, Visuelum despre, prezentare agentie marketing Constanta, echipa marketing digital Dobrogea',
 }
 
 const stats = [
@@ -101,12 +101,12 @@ export default function DesprePage() {
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Despre Visuelum</p>
           <h1 className="font-head font-extrabold text-h1 text-navy mb-6">
-            Vizibilitate totală pentru
+            Agenția de marketing digital
             <br />
-            <span className="text-gold">afaceri invizibile.</span>
+            <span className="text-gold">care livrează rezultate.</span>
           </h1>
           <p className="font-body italic text-muted text-xl max-w-2xl mx-auto mb-12">
-            Există mii de afaceri bune în România care nu există online. Noi le facem vizibile — simplu, rapid, accesibil.
+            Ajutăm afacerile locale din Constanța să fie vizibile online, să atragă clienți noi și să crească — simplu, rapid, cu rezultate măsurabile.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s) => (

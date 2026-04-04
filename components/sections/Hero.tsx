@@ -101,7 +101,7 @@ export function Hero() {
         >
           <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
             <Eyebrow color="gold" className="mb-8 text-gold-l">
-              — Agenție Digitală · Constanța, România
+              — Agenție Marketing Digital · Constanța, România
             </Eyebrow>
           </motion.div>
 
@@ -110,10 +110,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="font-head font-extrabold text-display text-white leading-none mb-6"
           >
-            Vizibilitate
+            Clienți Noi.
             <br />
-            <span className="gradient-text">Totală</span>
-            <span style={{ background: 'linear-gradient(135deg,#7c3aed,#06b6d4)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>.</span>
+            <span className="gradient-text">Zilnic.</span>
           </motion.h1>
 
           <motion.p
@@ -121,8 +120,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="font-body text-white/60 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mb-10 mx-auto sm:mx-0"
           >
-            Există mii de afaceri bune în România care nu există online. Noi le facem vizibile —
-            cu website gratuit, social media activ și Google optimizat, contra unui singur abonament lunar.
+            Afacerea ta merită să fie văzută. Website profesional creat <strong className="text-white/80">gratuit</strong>,
+            social media activ în fiecare zi și apari primul pe Google în Constanța —
+            contra unui singur abonament accesibil de la <strong className="text-white/80">349 RON/lună</strong>.
           </motion.p>
 
           <motion.div
@@ -131,10 +131,10 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-12"
           >
             <Link href="/contact" className="btn-primary w-full sm:w-auto justify-center">
-              Solicită Audit Gratuit
+              Audit Gratuit — Fără Angajament
             </Link>
             <Link href="/pachete" className="btn-cream-ghost w-full sm:w-auto justify-center">
-              Vezi Pachete & Prețuri
+              Pachete de la 349 RON/lună
             </Link>
           </motion.div>
 
@@ -145,7 +145,7 @@ export function Hero() {
           >
             {[
               'Website gratuit inclus',
-              'Domeniul rămâne al tău',
+              'Garanție 30 zile',
               'Răspuns în 24h',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">

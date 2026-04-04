@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: 'Visuelum',
-  tagline: 'Vizibilitate totală pentru afaceri invizibile.',
-  taglineShort: 'Website gratuit. Social media. Google. Un abonament.',
+  tagline: 'Clienți noi pentru afacerea ta — website gratuit, social media activ, Google pe primul loc.',
+  taglineShort: 'Agenție Marketing Digital Constanța — Website Gratuit, de la 349 RON/lună.',
   description:
-    'Agenție de marketing digital din Constanța. Construim gratuit website-ul afacerii tale și îl administrăm lunar. Social media, SEO, Google Ads și fotografie profesională — totul într-un singur abonament lunar.',
+    'Agenție de marketing digital din Constanța. Website profesional creat gratuit, SEO local, social media management, Google Ads și fotografie — totul într-un singur abonament lunar. Apari primul pe Google în Constanța.',
   url: 'https://visuelum.ro',
   email: 'contact@visuelum.ro',
   phone: '+40 743 371 899',
@@ -11,7 +11,7 @@ export const siteConfig = {
   whatsapp: 'https://wa.me/40743371899',
   address: 'Constanța, România',
   geo: { lat: 44.1598, lng: 28.6348 },
-  areaServed: ['Constanța', 'Mamaia', 'Năvodari', 'Mangalia', 'Tulcea', 'Dobrogea'],
+  areaServed: ['Constanța', 'Mamaia', 'Năvodari', 'Mangalia', 'Tulcea', 'Eforie', 'Techirghiol', 'Ovidiu', 'Dobrogea'],
   social: {
     instagram: 'https://instagram.com/visuelum',
     facebook: 'https://facebook.com/visuelum',
@@ -53,20 +53,43 @@ export const siteFeatures = {
  */
 export const seoConfig = {
   keywords: [
+    // Primary — high intent, local
     'marketing digital Constanța',
-    'agenție marketing digital',
+    'agenție marketing digital Constanța',
     'website profesional Constanța',
     'website gratuit Constanța',
-    'social media Constanța',
+    'creare website Constanța',
+    'SEO Constanța',
     'SEO local Constanța',
+    'optimizare Google Constanța',
     'Google Ads Constanța',
+    'social media Constanța',
+    'administrare social media Constanța',
     'fotografie profesionala Constanta',
+    'fotograf profesionist Constanta',
     'branding Constanța',
     'agenție publicitate Constanța',
+    // Secondary — broader local
     'marketing online Dobrogea',
-    'creare website Constanța',
-    'administrare social media',
-    'optimizare Google Business',
+    'agenție marketing Mamaia',
+    'website Mamaia',
+    'creare website Mamaia',
+    'SEO Mangalia',
+    'marketing digital Năvodari',
+    // Service keywords
+    'administrare site web',
+    'optimizare Google Business Profile',
+    'campanii Google Ads Romania',
+    'Meta Ads Facebook Instagram Romania',
+    'identitate vizuala logo Constanta',
+    'meniu digital restaurant Constanta',
+    'fotografie restaurant Constanta',
+    'fotografie AirBnb Constanta',
+    // Long-tail — AIO & voice search
+    'cum sa apari pe Google Constanta',
+    'abonament marketing digital lunar',
+    'website gratuit pentru afaceri mici Romania',
+    'agentie seo constanta',
   ],
   /** Open-Graph / Twitter card default image (1200×630) */
   ogImage: '/og-default.jpg',

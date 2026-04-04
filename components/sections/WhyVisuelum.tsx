@@ -8,20 +8,20 @@ import { Section } from '@/components/ui/Section'
 
 const reasons = [
   {
-    title: 'Brandul tău strălucește',
-    desc: 'Suntem invizibili. Tot conținutul creat este al afacerii tale. Tu primești lauda, noi facem munca.',
+    title: 'Primul pe Google în Constanța',
+    desc: 'SEO local optimizat din prima zi: Google Business activ, audit tehnic, conținut targetat — apari acolo unde caută clienții tăi.',
   },
   {
-    title: 'Fotografie reală',
-    desc: 'Sony A7 II, lumină naturală, editare Lightroom, 48h livrare. Nu stock photo.',
+    title: 'Conținut autentic, nu stock photo',
+    desc: 'Sony A7 II, lumină naturală, editare Lightroom, 48h livrare. Fotografii reale care construiesc credibilitate — nu imagini generice de internet.',
   },
   {
-    title: 'Un singur interlocutor',
-    desc: 'Nu 3 agenții diferite pentru site, social și foto. O persoană, o factură, zero confuzie.',
+    title: 'Un singur interlocutor, zero bătaie de cap',
+    desc: 'Site, social media, foto, Google Ads — totul la o singură agenție, o singură factură. Tu te concentrezi pe afacere, noi pe online.',
   },
   {
-    title: 'Raport lunar real',
-    desc: 'Cifre concrete, nu "am postat 15 stories". Trafic, apeluri, lead-uri verificabile.',
+    title: 'Raport lunar cu cifre care contează',
+    desc: 'Trafic, apeluri, rezervări, lead-uri verificabile — nu "reach" și "impressions" inutile. Știi exact ce obții pentru fiecare leu investit.',
   },
 ]
 
@@ -71,7 +71,8 @@ export function WhyVisuelum() {
             >
               <Eyebrow color="gold" className="mb-4">De ce Visuelum</Eyebrow>
               <h2 className="font-head font-extrabold text-h2 text-navy">
-                Nu suntem doar<br />o altă agenție.
+                Agenția care livrează
+                <br />rezultate măsurabile.
               </h2>
             </motion.div>
 
