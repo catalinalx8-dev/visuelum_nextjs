@@ -2,39 +2,64 @@
 @config "../tailwind.config.ts";
 
 /*
- * CSS custom properties — sourced from lib/theme.ts.
- * These mirror the Tailwind theme tokens so inline styles and
- * non-utility CSS can reference the same design system values.
+ * ─── CSS custom properties ───────────────────────────────────────────────────
+ * Mirror of lib/theme.ts — keep in sync.
+ * Inline styles and non-utility CSS reference these variables so the entire
+ * palette is controlled from a single source.
+ *
+ * RGB CHANNEL VARIABLES
+ * Every brand color also has a companion `--*-rgb` variable (space-separated
+ * R G B channels).  Use them for opacity variants without hard-coding hex:
+ *
+ *   rgba notation:  rgba(var(--gold-rgb), 0.35)  ← old approach, avoid
+ *   modern CSS:     rgb(var(--gold-rgb) / 0.35)  ← preferred
  */
 :root {
-  /* Colors — keep in sync with lib/theme.ts */
-  --navy:       #0f0f23;
-  --navy-deep:  #07071a;
-  --navy-mid:   #1a1a3e;
-  --gold:       #7c3aed;
-  --gold-l:     #a78bfa;
-  --gold-pale:  #ede9fe;
-  --cyan:       #06b6d4;
-  --cream:      #fafafa;
-  --parchment:  #f5f3ff;
-  --stone:      #e5e7eb;
-  --ink:        #0f0f23;
-  --muted:      #6b7280;
-  --muted-l:    #9ca3af;
-  --white:      #ffffff;
-  --green:      #10b981;
+  /* ── Dark backgrounds (navy family) ──────────────────────────── */
+  --navy:       #0B0D1A;
+  --navy-deep:  #060810;
+  --navy-mid:   #141929;
+  --navy-rgb:   11 13 26;     /* for opacity: rgb(var(--navy-rgb) / 0.x) */
 
-  /* Gradient accent — violet → cyan */
-  --accent-start: #7c3aed;
-  --accent-end:   #06b6d4;
-  --accent-mid:   #a855f7;
+  /* ── Primary brand accent (electric violet) ──────────────────── */
+  --gold:       #7C3AED;
+  --gold-l:     #A78BFA;
+  --gold-pale:  #EDE9FE;
+  --gold-rgb:   124 58 237;   /* for opacity: rgb(var(--gold-rgb) / 0.x) */
 
-  /* Typography — keep in sync with lib/theme.ts */
+  /* ── Secondary tech accent (electric sky-blue) ───────────────── */
+  --cyan:       #0EA5E9;
+  --cyan-rgb:   14 165 233;   /* for opacity: rgb(var(--cyan-rgb) / 0.x) */
+
+  /* ── Premium highlight (warm amber gold) ─────────────────────── */
+  --amber:      #F59E0B;
+  --amber-rgb:  245 158 11;   /* for opacity: rgb(var(--amber-rgb) / 0.x) */
+
+  /* ── Light backgrounds ───────────────────────────────────────── */
+  --cream:      #FAFAFA;
+  --parchment:  #F4F0FF;
+
+  /* ── Neutrals ────────────────────────────────────────────────── */
+  --stone:      #E2E8F0;
+  --ink:        #0B0D1A;
+  --muted:      #64748B;
+  --muted-l:    #94A3B8;
+  --white:      #FFFFFF;
+  --green:      #059669;
+
+  /* ── Gradient accent (violet → sky-blue) ─────────────────────── */
+  /* Edit lib/theme.ts > gradients.accent then mirror here.        */
+  --accent-start: #7C3AED;
+  --accent-mid:   #A855F7;
+  --accent-end:   #0EA5E9;
+
+  /* ── Typography ──────────────────────────────────────────────── */
+  /* To change fonts: update lib/theme.ts AND app/layout.tsx.      */
   --f-head: 'Plus Jakarta Sans', sans-serif;
   --f-body: 'DM Sans', sans-serif;
   --f-mono: 'JetBrains Mono', monospace;
 
-  /* Layout */
+  /* ── Layout ──────────────────────────────────────────────────── */
   --section-py: clamp(4rem, 8vw, 7rem);
   --container:  1280px;
 }
@@ -106,10 +131,10 @@
     background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
     background-size: 200% 200%;
     animation: gradientShift 4s ease infinite;
-    box-shadow: 0 4px 24px -4px rgba(124,58,237,0.35);
+    box-shadow: 0 4px 24px -4px rgb(var(--gold-rgb) / 0.35);
   }
   .btn-primary:hover {
-    box-shadow: 0 8px 32px -4px rgba(124,58,237,0.55);
+    box-shadow: 0 8px 32px -4px rgb(var(--gold-rgb) / 0.55);
   }
   .btn-primary:focus-visible {
     --tw-ring-color: var(--gold);
@@ -130,7 +155,7 @@
     background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
     border-color: transparent;
     color: white;
-    box-shadow: 0 6px 24px -4px rgba(124,58,237,0.4);
+    box-shadow: 0 6px 24px -4px rgb(var(--gold-rgb) / 0.4);
   }
 
   .btn-cream-ghost {
@@ -162,13 +187,13 @@
 
   /* ─── Decorative utilities ─── */
   .grid-overlay {
-    background-image: linear-gradient(rgba(124,58,237,.04) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(124,58,237,.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgb(var(--gold-rgb) / 0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgb(var(--gold-rgb) / 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
   .gold-glow {
-    background: radial-gradient(ellipse at 50% -20%, rgba(124,58,237,.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% -20%, rgb(var(--gold-rgb) / 0.12) 0%, transparent 70%);
   }
 
   /* ─── Glassmorphism ─── */
@@ -246,7 +271,7 @@
 
   /* ─── Social icon link hover ─── */
   .social-icon-link:hover {
-    border-color: rgba(124,58,237,0.5);
-    box-shadow: 0 0 12px rgba(124,58,237,0.2);
+    border-color: rgb(var(--gold-rgb) / 0.5);
+    box-shadow: 0 0 12px rgb(var(--gold-rgb) / 0.2);
   }
 }
