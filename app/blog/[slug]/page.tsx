@@ -129,6 +129,302 @@ Cu o strategie consistentă (minimum 4 postări/săptămână), primele rezultat
 Cheia este consecvența și autenticitatea. Clienții din Constanța vor să vadă oameni reali, nu conținut corporatist.
     `.trim(),
   },
+  {
+    slug: 'google-ads-afaceri-locale-constanta-2025',
+    title: 'Google Ads pentru afaceri locale din Constanța — cum funcționează în 2025',
+    excerpt: 'Ghid practic pentru rularea campaniilor Google Ads ca afacere locală. Cum setezi un buget realist, ce cuvinte-cheie alegi și cum eviți să arzi bani.',
+    date: '2025-02-10',
+    readTime: '9 min',
+    category: 'Google Ads',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80',
+    imageAlt: 'Google Ads campanii pentru afaceri locale din Constanța — reclame plătite Google',
+    content: `
+Google Ads este cel mai rapid mod de a apărea pe prima pagină Google — chiar și dacă ai deschis afacerea ieri. Dar fără o strategie clară, bugetul se epuizează rapid fără rezultate reale.
+
+**De ce Google Ads funcționează diferit față de social media?**
+
+Pe Instagram sau Facebook, întrerupi oamenii în timp ce se uită la conținut. Pe Google Ads, apari exact când cineva caută activ ceea ce vinzi. Diferența este uriașă: intenția de cumpărare este deja acolo.
+
+Un utilizator care caută "salon de înfrumusețare Constanța" este gata să rezerve. Nu trebuie să-l convingi — trebuie doar să fii vizibil.
+
+**Tipuri de campanii Google Ads potrivite pentru afaceri locale**
+
+- **Campanii de căutare (Search)** — Anunțuri text care apar la căutări specifice. Ideale pentru servicii (avocați, instalatori, saloane, restaurante).
+- **Campanii locale (Local campaigns)** — Promovează locația fizică pe Google Maps, YouTube și Display. Perfecte dacă ai un magazin sau restaurant.
+- **Campanii de remarketing** — Redirecționezi vizitatorii site-ului tău care nu au convertit. Cost mic, eficiență mare.
+
+**Cum alegi cuvintele-cheie potrivite pentru Constanța?**
+
+Greșeala nr. 1 a antreprenorilor locali: licitează pe termeni prea generali. "Restaurant" poate aduce trafic din toată România — și te costă o avere.
+
+1. **Folosește cuvinte-cheie cu localizare** — "restaurant cu terasă Constanța", "pizza delivery Mamaia", "salon manichiură Tomis Nord"
+2. **Adaugă cuvinte negative** — Exclude termeni irelevanți: "rețetă", "job", "angajări", "gratuit"
+3. **Prioritizează intenția de cumpărare** — "preț", "rezervare", "program", "ofertă" semnalează un client gata să acționeze
+4. **Folosește potrivirea de expresie** — Evită potrivirea largă la început. Controlează mai bine unde apar anunțurile.
+
+**Buget realist pentru Google Ads în Constanța**
+
+Nu ai nevoie de mii de euro pe lună. Un buget de 300–600 RON/lună poate genera rezultate vizibile pentru o afacere locală, dacă campaniile sunt bine configurate.
+
+Costul per click (CPC) pentru căutări locale în Constanța variază între 0,50 RON și 3 RON pentru majoritatea domeniilor. Calculează: cu 500 RON/lună și un CPC mediu de 1 RON, obții aproximativ 500 de vizitatori din căutări cu intenție ridicată.
+
+**Greșeli comune care ard bugetul**
+
+- Anunțuri care duc la pagina principală, nu la o pagină dedicată (landing page)
+- Fără extensii de anunț (număr de telefon, adresă, link-uri suplimentare)
+- Fără conversii configurate — nu știi ce funcționează
+- Campanii lăsate fără monitorizare săptămânală
+- Targetare geografică setată greșit (trafic din afara zonei)
+
+**Cât timp până la primele rezultate?**
+
+Google Ads oferă rezultate imediate — anunțurile pot apărea în câteva ore de la lansare. Dar optimizarea durează 2–4 săptămâni: testezi texte de anunț, ajustezi licitațiile, elimini cuvintele-cheie ineficiente.
+
+O campanie bine gestionată lunar îți aduce un cost per achiziție predictibil și scalabil — știi exact cât cheltuiești pentru fiecare client nou.
+    `.trim(),
+  },
+  {
+    slug: 'fotografie-profesionala-restaurant-constanta',
+    title: 'De ce fotografia profesională îți crește vânzările — ghid pentru afaceri din Constanța',
+    excerpt: 'Fotografiile de calitate nu sunt un lux. Sunt instrumentul de marketing cu cel mai rapid ROI pentru restaurante, pensiuni și saloane din Constanța.',
+    date: '2025-02-17',
+    readTime: '6 min',
+    category: 'Fotografie',
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80',
+    imageAlt: 'Fotografie profesională restaurant Constanța — meniu foto și galerie',
+    content: `
+Știai că restaurantele care folosesc fotografii profesionale pe Google Business și pe meniu primesc cu 35% mai multe rezervări decât cele cu fotografii de telefon? Vizualul vinde înainte ca clientul să citească un singur cuvânt.
+
+**De ce fotografiile slabe te costă clienți**
+
+Gândește-te cum alegi tu un restaurant sau o pensiune online. Primul lucru la care te uiți sunt fotografiile. Dacă sunt întunecate, neclare sau arate a "pus de urgență", închizi pagina și cauți altceva.
+
+Concurența ta din Constanța și din Mamaia investește deja în fotografie profesională. Dacă tu nu o faci, pierzi în comparație vizuală directă — pe Google Maps, pe TripAdvisor, pe Instagram.
+
+**Ce tipuri de fotografii contează cel mai mult?**
+
+- **Fotografii de meniu/produse** — Fiecare fel de mâncare sau serviciu fotografiat apetisant, cu lumină corectă și styling minimal. Acestea influențează direct decizia de cumpărare.
+- **Fotografii de ambient** — Interiorul și exteriorul localului, atmosfera, detalii de decor. Creează așteptări corecte și atrag clientul potrivit.
+- **Fotografii de echipă** — Oamenii din spatele afacerii tale. Construiesc încredere și umanizează brandul.
+- **Fotografii pentru AirBnb/cazare** — Apartamentele și camerele fotografiate profesional primesc cu 40% mai multe rezervări și pot fi listate la prețuri mai mari.
+
+**Fotografia profesională vs. fotografia cu telefonul**
+
+Telefoanele moderne fac fotografii bune — în condiții ideale. Dar un fotograf profesionist aduce echipament dedicat (obiective, lumini, reflectoare), cunoaștere tehnică și, cel mai important, **ochi pentru detalii**: unghiuri, culori, compoziție, post-procesare.
+
+O sesiune foto profesională durează 2–4 ore și livrează 50–100 de imagini editite. Acestea se folosesc luni întregi pe toate canalele: website, social media, Google Business, meniuri tipărite, prezentări pentru parteneri.
+
+**Când să investești în fotografie profesională?**
+
+- La lansarea afacerii sau redeschiderea după renovare
+- Când actualizezi meniul sezonier (primăvară/vară în Constanța)
+- Înainte de sezonul estival — turismul litoral aduce trafic masiv
+- Când lansezi un serviciu nou sau un produs de top
+- Dacă fotografiile actuale au mai mult de 2 ani
+
+**Calculul ROI simplu**
+
+O sesiune foto profesională costă între 400–900 RON. Dacă din 100 de vizitatori suplimentari pe lună care vin atrași de fotografii calitative, 10 devin clienți cu o valoare medie de 100 RON, recuperezi investiția în prima lună.
+
+Fotografia nu este un cost — este un activ de marketing care lucrează pentru tine 24/7, pe toate platformele, fără să plătești extra.
+    `.trim(),
+  },
+  {
+    slug: 'branding-identitate-vizuala-afaceri-mici-constanta',
+    title: 'Branding și identitate vizuală pentru afaceri mici din Constanța — de unde începi',
+    excerpt: 'Logo, culori, fonturi — cum construiești o identitate vizuală coerentă care face afacerea ta să pară profesională, chiar și cu un buget mic.',
+    date: '2025-02-24',
+    readTime: '7 min',
+    category: 'Branding',
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1400&q=80',
+    imageAlt: 'Branding și identitate vizuală pentru afaceri mici din Constanța — logo și design',
+    content: `
+Brandul tău nu este doar logo-ul. Este totalitatea impresiei pe care o lasă afacerea ta — de la cum arată semnul de la intrare, la cum răspunzi la mesaje pe Instagram, la culoarea meniului. Consistența este totul.
+
+**Ce înseamnă identitate vizuală, concret?**
+
+Identitatea vizuală este sistemul vizual complet al afacerii tale:
+
+- **Logo** — simbolul sau tipografia care identifică afacerea
+- **Paleta de culori** — 2–4 culori principale folosite consistent pe toate materialele
+- **Fonturile** — 1–2 tipografii care reflectă personalitatea brandului
+- **Stilul fotografic** — tonul și atmosfera vizuală a imaginilor
+- **Elementele grafice** — pattern-uri, linii, forme care susțin comunicarea
+
+**De ce contează mai ales pentru afaceri mici locale**
+
+Marile branduri câștigă prin buget. Afacerile mici câștigă prin consistență și autenticitate. Un mic restaurant din Constanța cu un branding coerent pare mai profesionist decât un lanț de restaurante cu materiale haotice.
+
+Clienții asociază inconsistența vizuală cu lipsa de profesionalism. Dacă logo-ul de pe firmă diferă de cel de pe Facebook, iar culorile de pe website nu se regăsesc pe meniu, creezi confuzie inconștientă — și confuzia nu vinde.
+
+**Pașii pentru a construi o identitate vizuală de la zero**
+
+1. **Definește personalitatea brandului** — Cum vrei să te simtă clientul? Elegant și rafinat? Prietenos și accesibil? Energic și tânăr? Răspunsul determină toate alegerile vizuale.
+
+2. **Alege culorile cu intenție** — Culorile transmit emoții. Albastru = încredere. Verde = sănătate, natural. Roșu = urgență, energie. Auriu = calitate, premium. Alege o culoare principală și 1–2 culori complementare.
+
+3. **Selectează fonturile potrivite** — Un font serif (cu mici "picioare") comunică tradiție și eleganță. Un font sans-serif comunică modernitate și claritate. Nu combina mai mult de 2 fonturi diferite.
+
+4. **Creează un logo versatil** — Logo-ul trebuie să arate bine în negru-alb, pe fundal alb și pe fundal închis. Trebuie să fie lizibil la dimensiuni mici (favicon) și la dimensiuni mari (banner).
+
+5. **Documentează totul într-un brand guide** — Un simplu document de 2–3 pagini cu culorile (coduri HEX), fonturile, regulile de utilizare a logo-ului. Îl dai designerilor, tipografiei, persoanei care gestionează social media.
+
+**Greșeli de branding care costă**
+
+- Logo creat pe Canva cu font generic, fără unicitate
+- Culori diferite pe fiecare material (50 de nuanțe de albastru)
+- Logo prea complex care nu se vede pe mobil sau pe produse mici
+- Schimbarea frecventă a identității vizuale (nu dai timp brandului să se sedimenteze)
+
+**Cât costă un branding profesional?**
+
+- **Identitate vizuală completă (logo + culori + fonturi + brand guide):** 800–2.500 RON
+- **Logo simplu fără brand guide:** 300–800 RON
+- **Rebranding complet (inclusiv materiale):** 2.000–6.000 RON
+
+Investiția în branding se face o singură dată și durează ani. Un logo profesional din 2025 va reprezenta afacerea ta în 2030. Calculat pe 5 ani, costul zilnic al unui branding de calitate este sub 1 RON.
+    `.trim(),
+  },
+  {
+    slug: 'seo-local-constanta-ghid-complet-2025',
+    title: 'SEO local pentru Constanța în 2025 — cum apari primul pe Google',
+    excerpt: 'Strategie completă de SEO local: optimizare Google Business, cuvinte-cheie locale, link building și conținut care te urcă în topul rezultatelor Google.',
+    date: '2025-03-05',
+    readTime: '11 min',
+    category: 'SEO Local',
+    image: 'https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?w=1400&q=80',
+    imageAlt: 'SEO local Constanța — optimizare Google pentru afaceri din Dobrogea',
+    content: `
+SEO local este disciplina care face ca afacerea ta să apară pe Google când cineva din Constanța sau din împrejurimi caută serviciile tale. Nu este magie — este o metodă sistematică pe care orice afacere o poate implementa.
+
+**Ce este SEO local și de ce diferă de SEO clasic?**
+
+SEO clasic urmărește să apari în rezultatele Google la nivel național sau global. SEO local urmărește să apari în "Local Pack" — caseta cu hartă și cele 3 afaceri care apare în fruntea rezultatelor pentru căutări cu intenție locală.
+
+Când cineva caută "dentist Constanța" sau "hotel lângă Mamaia", Google afișează mai întâi acest Local Pack — înainte de orice site web organic. Dacă nu ești acolo, ești invizibil pentru cei mai valoroși clienți potențiali.
+
+**Pilonul 1: Google Business Profile optimizat**
+
+Este fundația SEO local. Fără un profil complet și activ, șansele să apari în Local Pack sunt minime.
+
+- Completează 100% din informații: adresă exactă, orar, telefon, website, categorie principală
+- Adaugă minimum 3 categorii secundare relevante
+- Încarcă fotografii săptămânal — Google favorizează profilurile active
+- Răspunde la toate recenziile în maximum 48 de ore
+- Postează actualizări de minimum 2 ori pe săptămână
+
+**Pilonul 2: Consistența NAP (Name, Address, Phone)**
+
+Google verifică dacă informațiile despre afacerea ta sunt identice pe toate platformele online. Orice inconsistență (o adresă scrisă diferit, un număr de telefon vechi) reduce autoritatea locală.
+
+Verifică și actualizează: Google Business, Facebook, Instagram, TripAdvisor, booking platforms, directoare locale (Pagini Aurii, afacerilocale.ro), website-ul propriu.
+
+**Pilonul 3: Cuvinte-cheie locale pe website**
+
+Website-ul tău trebuie să conțină cuvintele-cheie pe care le caută clienții tăi — incluzând localizarea geografică.
+
+1. Creează o pagină dedicată pentru fiecare serviciu major
+2. Include "Constanța", "Mamaia", "Dobrogea" natural în texte, titluri și meta-descrieri
+3. Adaugă o pagina "Zonele deservite" dacă lucrezi în mai multe localități
+4. Integrează testimoniale cu mențiuni ale orașului
+
+**Pilonul 4: Recenzii — cantitate și calitate**
+
+Numărul și calitatea recenziilor este unul dintre cei mai puternici factori de ranking local. Google vrea să afișeze afacerile de încredere.
+
+- Cere recenzii imediat după o experiență pozitivă (trimite SMS sau email cu link direct)
+- Vizează minimum 1–2 recenzii noi pe săptămână
+- Răspunde la recenzii negative cu calm și soluție concretă — Google și clienții văd cum gestionezi criticile
+- Nu cumpăra recenzii false — Google detectează pattern-uri anormale și penalizează
+
+**Pilonul 5: Conținut local relevant**
+
+Un blog cu articole care răspund la întrebările clienților locali este un avantaj competitiv enorm. Majoritatea afacerilor locale nu îl au.
+
+- Articole despre evenimentele sezoniere din Constanța (sezon estival, festivaluri)
+- Ghiduri locale ("Cele mai bune restaurante din zona Peninsulei")
+- Răspunsuri la întrebări frecvente specifice zonei
+- Studii de caz cu clienți locali (cu acordul lor)
+
+**Pilonul 6: Link building local**
+
+Linkuri de pe site-uri locale relevante cresc autoritatea ta în ochii Google.
+
+- Parteneriate cu afaceri complementare (restaurant + hotel + atracție turistică)
+- Sponsorizări locale cu mențiune online
+- Listare în directoare locale și de branșă
+- Articole de presă locală (ziare și bloguri din Constanța)
+
+**Cât durează SEO local să dea rezultate?**
+
+SEO local este un maraton, nu un sprint. Primele îmbunătățiri în ranking apar în 2–3 luni cu o strategie consistentă. Rezultate solide și predictibile — în 6–12 luni.
+
+Dar efectul este cumulativ și durabil. Spre deosebire de Google Ads (care se opresc când oprești bugetul), SEO local continuă să aducă trafic organic luni și ani după ce ai investit în el.
+    `.trim(),
+  },
+  {
+    slug: 'abonament-marketing-digital-constanta-cum-alegi',
+    title: 'Abonament de marketing digital — cum alegi pachetul potrivit pentru afacerea ta',
+    excerpt: 'Ce include un abonament de marketing digital, cum compari ofertele și ce rezultate realiste să aștepți. Ghid pentru antreprenori din Constanța.',
+    date: '2025-03-12',
+    readTime: '8 min',
+    category: 'Marketing Digital',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80',
+    imageAlt: 'Abonament marketing digital Constanța — pachet lunar administrare online',
+    content: `
+Tot mai multe agenții de marketing din Constanța și din România oferă servicii prin abonament lunar. Este modelul corect — marketingul digital nu este un proiect cu punct final, este un proces continuu. Dar cum alegi abonamentul potrivit?
+
+**De ce abonamentul lunar bate proiectele punctuale**
+
+Marketingul digital funcționează pe termen lung. Un website lansat și abandonat, o campanie de social media ținută o lună, un SEO făcut o singură dată — toate sunt bani aruncați.
+
+Abonamentul lunar asigură continuitate: campaniile sunt monitorizate și optimizate săptămânal, conținutul este publicat constant, algoritmii platformelor sunt urmăriți și adaptați. Rezultatele cresc progresiv, nu stagnează.
+
+**Ce ar trebui să includă un abonament complet de marketing digital?**
+
+Un pachet solid pentru o afacere locală din Constanța include de obicei:
+
+- **Website administrat** — actualizări de conținut, securitate, backup, optimizare viteză
+- **SEO lunar** — optimizare tehnică, conținut nou, monitorizare ranking
+- **Social media** — crearea și publicarea de conținut pe 2–3 platforme
+- **Google Business** — actualizări, postări, gestionare recenzii
+- **Raportare lunară** — ce s-a făcut, ce rezultate au adus acțiunile
+
+Serviciile opționale, adăugate la cerere: Google Ads, Meta Ads (Facebook/Instagram), fotografie profesională, email marketing.
+
+**Cum compari ofertele — 5 întrebări esențiale**
+
+1. **Cine face munca efectiv?** — Agenția are echipă internă sau subcontractează totul? Subcontractarea nu este neapărat greșită, dar trebuie să știi.
+
+2. **Cum arată raportarea?** — Primești rapoarte lunare cu date reale (trafic, poziții Google, engagement)? Sau doar o listă de activități efectuate?
+
+3. **Care este perioada minimă de contract?** — Evită abonamentele cu contract pe 12 luni fără clauze de ieșire. Un minim de 3 luni este rezonabil — sub 3 luni nu ai timp să vezi rezultate reale.
+
+4. **Ce se întâmplă cu conținutul la reziliere?** — Postările de pe social media, articolele de blog, fotografiile — rămân ale tale? Clarifica în contract.
+
+5. **Au experiență cu afaceri similare din zonă?** — Un portofoliu cu restaurante, saloane sau pensiuni din Constanța este un indicator bun că înțeleg specificul pieței locale.
+
+**Prețuri realiste pentru Constanța în 2025**
+
+- **Pachet de bază (social media + Google Business):** 350–500 RON/lună
+- **Pachet mediu (+ website + SEO de bază):** 650–900 RON/lună
+- **Pachet complet (+ Google Ads sau Meta Ads):** 1.000–1.500 RON/lună
+
+Atenție la prețurile foarte mici (sub 200 RON/lună): fie serviciile sunt superficiale, fie calitatea conținutului este scăzută. Marketingul digital de calitate necesită timp uman real.
+
+**Ce rezultate realiste să aștepți**
+
+- **Luna 1–2:** Organizare, audit, lansare. Nu există rezultate spectaculoase — este faza de fundație.
+- **Luna 3–4:** Primele îmbunătățiri vizibile: urmăritori noi, trafic ușor crescut pe site, câteva poziții mai sus pe Google.
+- **Luna 6+:** Rezultate consistente: trafic organic stabil, rezervări sau comenzi din online, recunoaștere locală crescută.
+
+**Modelul Visuelum: website gratuit + abonament lunar**
+
+La Visuelum, construim website-ul gratuit și gestionăm toată prezența online prin abonament lunar. Fără investiție inițială mare, fără contracte lungi blocante. Plătești lunar pentru rezultate reale, nu pentru promisiuni.
+
+Înainte de a semna orice contract cu o agenție, cere un audit gratuit al prezenței tale online actuale. O agenție serioasă îți arată exact unde ești acum și ce îmbunătățiri concrete poate aduce.
+    `.trim(),
+  },
 ]
 
 interface Props {
