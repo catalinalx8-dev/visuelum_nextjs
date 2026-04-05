@@ -255,7 +255,7 @@ Identitatea vizuală este sistemul vizual complet al afacerii tale:
 
 Marile branduri câștigă prin buget. Afacerile mici câștigă prin consistență și autenticitate. Un mic restaurant din Constanța cu un branding coerent pare mai profesionist decât un lanț de restaurante cu materiale haotice.
 
-Clienții asociază inconsistența vizuală cu lipsa de profesionalism. Dacă logo-ul de pe firmă diferă de cel de pe Facebook, iar culorile de pe website nu se regăsesc pe meniu, creezi confuzie inconsciența — și confuzia nu vinde.
+Clienții asociază inconsistența vizuală cu lipsa de profesionalism. Dacă logo-ul de pe firmă diferă de cel de pe Facebook, iar culorile de pe website nu se regăsesc pe meniu, creezi confuzie inconștientă — și confuzia nu vinde.
 
 **Pașii pentru a construi o identitate vizuală de la zero**
 
