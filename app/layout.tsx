@@ -36,7 +36,7 @@ const fontJetbrains = JetBrains_Mono({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#ffffff',
+  themeColor: '#0B0D1A', // navy — matches dark header/hero for mobile browser chrome
 }
 
 export const metadata: Metadata = {
