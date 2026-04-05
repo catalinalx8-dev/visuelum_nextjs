@@ -8,6 +8,307 @@ import { formatDate } from '@/lib/utils'
 
 const posts = [
   {
+    slug: 'email-marketing-afaceri-locale-constanta-2025',
+    title: 'Email marketing pentru afaceri locale din Constanța — ghid complet 2025',
+    excerpt: 'Email marketing-ul are cel mai mare ROI dintre toate canalele digitale: 42 RON pentru fiecare 1 RON investit. Cum îl aplici concret ca afacere locală din Constanța.',
+    date: '2025-04-16',
+    readTime: '8 min',
+    category: 'Email Marketing',
+    image: 'https://images.unsplash.com/photo-1596526131083-e8c633064bb5?w=1400&q=80',
+    imageAlt: 'Email marketing pentru afaceri locale din Constanța — newsletter și campanii email',
+    content: `
+Email marketing-ul generează în medie 42 RON pentru fiecare 1 RON investit — cel mai mare ROI din toate canalele de marketing digital. Cu toate acestea, majoritatea afacerilor locale din Constanța nu îl folosesc deloc sau îl folosesc greșit.
+
+**De ce email marketing-ul funcționează diferit față de social media**
+
+Pe Instagram sau TikTok, postările tale sunt văzute de 5–15% dintre urmăritori — dacă algoritmul decide asta. Un email ajunge direct în inbox-ul persoanei care ți-a dat acordul să îi scrii. Rata medie de deschidere pentru email-urile de business local este 25–40%, față de 5% reach organic pe social media.
+
+Lista de email este un activ al afacerii tale. Urmăritorii de pe Instagram pot dispărea dacă platforma schimbă algoritmul sau dacă contul tău este restricționat. Lista de email rămâne a ta, indiferent de schimbările din social media.
+
+**Cum construiești o listă de email de la zero**
+
+1. **Formularul pe website** — Plasează un formular de abonare vizibil: în footer, în pop-up la exit-intent sau în bara de sus. Oferă ceva în schimb: un voucher de 10%, un ghid gratuit, acces la oferte exclusive.
+
+2. **La punctul de vânzare** — Dacă ai un restaurant sau salon, cere email-ul la plată: "Vrei să primești ofertele noastre săptămânale?" cu un simplu câmp pe tabletă sau pe chitanță.
+
+3. **Pe social media** — Promovează abonarea la newsletter cu un beneficiu concret. "Abonează-te și primești oferta de bun-venit de 15% la prima vizită."
+
+4. **Prin QR code** — Pune un QR code pe meniu, la recepție sau pe packaging care duce direct la formularul de abonare.
+
+**Tipuri de email-uri care funcționează pentru afaceri locale**
+
+- **Email de bun-venit** — Trimis automat la abonare. Prezintă afacerea, oferă beneficiul promis și setează așteptările: "Vei primi de la noi câte un email pe săptămână cu..."
+- **Newsletter săptămânal sau bilunar** — Noutăți, oferte, articole de blog, evenimente. Conținut util, nu spam publicitar.
+- **Email de ofertă sezonieră** — Înainte de sezonul estival, de Crăciun, de Valentine's Day. Afacerile din Constanța pot capitaliza enorm pe turismul litoral.
+- **Email de reactivare** — Pentru clienții care nu au mai venit de 60–90 de zile: "Ne-e dor de tine. Iată un motiv să revii."
+- **Email tranzacțional** — Confirmări de rezervare, facturi, remindere. Au ratele cele mai mari de deschidere (60–80%).
+
+**Cât de des trimiți email-uri**
+
+Frecvența ideală pentru afaceri locale: 1–2 email-uri pe săptămână. Mai mult și riști dezabonări; mai puțin și ești uitat. Consistența bate frecvența: un email pe săptămână, trimis mereu marțea dimineața, performează mai bine decât 5 email-uri trimise haotic.
+
+**Instrumente recomandate pentru afaceri mici**
+
+- **Mailchimp** — plan gratuit până la 500 contacte, ușor de folosit
+- **Brevo (fost Sendinblue)** — plan gratuit generos, cu automatizări incluse
+- **Klaviyo** — ideal pentru e-commerce și restaurante cu comenzi online
+
+Toate aceste instrumente oferă template-uri vizuale, programare automată și rapoarte clare: câte email-uri s-au deschis, câte clickuri, câte dezabonări.
+
+**Greșeli de evitat în email marketing**
+
+- Cumpărarea de liste de email — primești spam complaints, contul se suspendă, reputația se deteriorează
+- Subiect generic ("Newsletter nr. 5") versus specific ("3 preparate noi pe meniu săptămâna aceasta")
+- Trimitere fără segmentare — un client care a venit o dată nu are aceleași interese cu un client fidel de 2 ani
+- Ignorarea dezabonărilor — fiecare dezabonare este feedback: conținutul nu este relevant sau frecvența e prea mare
+
+Email marketing-ul nu este depășit — este mai eficient ca niciodată pentru afacerile locale care știu să îl folosească cu cap.
+    `.trim(),
+  },
+  {
+    slug: 'tiktok-restaurante-saloane-constanta-2025',
+    title: 'TikTok pentru restaurante și saloane din Constanța — strategie 2025',
+    excerpt: 'TikTok nu este doar pentru tineri. Este cel mai puternic motor de descoperire locală din 2025. Cum folosești videoclipuri scurte să aduci clienți noi în Constanța.',
+    date: '2025-04-09',
+    readTime: '7 min',
+    category: 'Social Media',
+    image: 'https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?w=1400&q=80',
+    imageAlt: 'TikTok marketing pentru restaurante și saloane din Constanța — videoclipuri scurte',
+    content: `
+TikTok a depășit Google ca motor de căutare pentru generația Z. Când un tânăr de 22 de ani vrea să găsească un restaurant bun în Constanța, caută pe TikTok — nu pe Google. Dacă afacerea ta nu este acolo, ești invizibil pentru un segment masiv de clienți potențiali.
+
+**De ce TikTok funcționează diferit față de Instagram și Facebook**
+
+TikTok distribuie conținut pe baza relevanței și interesului, nu pe baza numărului de urmăritori. Un cont cu 50 de urmăritori poate obține 100.000 de vizualizări dacă videoclipul este relevant și captivant. Aceasta este oportunitatea uriașă pentru afacerile locale care abia încep.
+
+Instagram și Facebook au algoritmul saturat — reach organic a scăzut dramatic. TikTok este încă în expansiune în România, ceea ce înseamnă că avantajul primilor care acționează este real și măsurabil.
+
+**Ce tip de conținut performează pentru restaurante pe TikTok**
+
+- **"Food reveal"** — Arăți prepararea unui fel de mâncare de la ingrediente brute la prezentarea finală pe farfurie. Sonete ASMR (sunetul cărnii pe grătar, al gheții în pahar) generează milioane de vizualizări.
+- **"Day in the life"** — O zi din perspectiva bucătarului sau a ospătarului. Autentic, uman, memorabil.
+- **Reacții la recenzii** — Citești o recenzie pozitivă cu entuziasm real. Simplu și extrem de distribuit.
+- **Înainte și după** — Transformarea unui platou gol în prezentare de restaurant fine dining. Vizual puternic.
+- **Oferte secrete** — "Spune că ai văzut pe TikTok și primești desert gratuit." Măsoară direct câți clienți vin din TikTok.
+
+**Ce tip de conținut performează pentru saloane pe TikTok**
+
+- **Transformări** — Înainte/după o coafură, manichiură sau tratament. Este cel mai distribuit tip de conținut în nișa beauty.
+- **Tutorial rapid** — 30 de secunde de sfaturi de îngrijire acasă. Adaugă valoare și construiește autoritate.
+- **"Client fericit"** — Cu acordul clientului, filmezi reacția la rezultatul final. Emoție autentică = distribuiri.
+- **Produse folosite** — Prezinți produsele profesionale pe care le folosești. Afiliații și brandurile apreciază — poți genera parteneriate.
+- **Răspuns la întrebări frecvente** — "Ce se întâmplă dacă..." răspuns în 60 de secunde. Poziționare ca expert local.
+
+**Cum optimizezi TikTok pentru căutare locală**
+
+TikTok are o funcție de căutare puternică. Optimizarea pentru ea este simplă:
+
+1. Menționează oral "Constanța", "Mamaia", "Tomis" în videoclip — TikTok transcrie audio și indexează cuvintele cheie
+2. Adaugă în descriere: #constanta #restaurantconstanta #salonConstanta
+3. Activează funcția "Adaugă locație" la fiecare videoclip publicat
+4. Folosește hashtag-uri de nișă + hashtag-uri locale: #foodie + #mâncareconstanța
+
+**Frecvență și program de postare**
+
+Pentru rezultate vizibile, postează minimum 3–4 videoclipuri pe săptămână la început. Momentele optime pentru Constanța: marți–joi, 18:00–21:00. Weekend-ul performează bine pentru conținut de sezon (oferte, evenimente).
+
+Nu ai nevoie de echipament scump. Un telefon cu cameră bună, lumină naturală de la fereastră și un stabilizator ieftin (100–200 RON) sunt suficiente pentru conținut profesional.
+
+**Cât durează să vezi rezultate**
+
+Primele videoclipuri virale pot apărea în prima săptămână — sau în a douăzecea. TikTok este impredictibil. Dar cu o strategie consistentă de 3 luni, orice afacere locală din Constanța poate construi o audiență locală de 1.000–5.000 de urmăritori — suficient pentru a genera trafic real în locație.
+    `.trim(),
+  },
+  {
+    slug: 'recenzii-google-cum-obtii-mai-multe-2025',
+    title: 'Recenzii Google — cum obții mai multe recenzii pozitive în 2025',
+    excerpt: 'Recenziile Google sunt valuta credibilității online. 88% din consumatori au la fel de multă încredere în recenziile online ca în recomandările personale. Ghid practic pentru afaceri din Constanța.',
+    date: '2025-04-02',
+    readTime: '7 min',
+    category: 'SEO Local',
+    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1400&q=80',
+    imageAlt: 'Recenzii Google pentru afaceri locale din Constanța — cum obții mai multe recenzii pozitive',
+    content: `
+Recenziile Google sunt cel mai influent factor de decizie pentru clienții locali. 88% dintre consumatori citesc recenzii online înainte să viziteze o afacere locală — iar 73% formează o opinie după citirea a maximum 6 recenzii. Dacă nu gestionezi activ recenziile, pierzi clienți zi de zi.
+
+**De ce recenziile contează atât de mult pentru afacerile din Constanța**
+
+Google Maps afișează în "Local Pack" (primele 3 rezultate) afacerile cu cele mai multe și mai bune recenzii. O afacere cu 4,7 stele și 120 recenzii va depăși o afacere cu 5 stele și 8 recenzii — atât în ranking Google, cât și în decizia clientului.
+
+Constanța are o concurență ridicată în sectoarele HoReCa, beauty și servicii — mai ales în sezonul estival. Recenziile sunt avantajul diferențiator pe care îl poți construi sistematic, fără buget publicitar.
+
+**Sistemul simplu pentru a obține recenzii constant**
+
+Cel mai mare obstacol nu este că clienții nu vor să lase recenzii — ci că nu li se cere. Studiile arată că 68% dintre clienții mulțumiți lasă o recenzie dacă li se cere direct.
+
+1. **Crează un link scurt de recenzii** — Din Google Business Profile poți genera un link direct care duce clientul exact la formularul de recenzie. Scurtează-l cu bit.ly sau creează un link de tip "afacerea.ro/recenzie".
+
+2. **Cere recenzia în momentul potrivit** — Cel mai bun moment este imediat după o experiență pozitivă: la finalul mesei, după o coafură reușită, la livrarea unui produs. Nu a doua zi, nu după o săptămână.
+
+3. **Trimite un SMS sau WhatsApp** — "Bună ziua, sperăm că v-a plăcut experiența la [Numele afacerii]. Dacă aveți 1 minut, o recenzie pe Google ne-ar ajuta enorm: [link]." Rata de conversie: 25–35%.
+
+4. **Adaugă un QR code vizibil** — Pe masă, la casă, pe chitanță, pe ușa de ieșire: "Lasă-ne o recenzie pe Google — durează 1 minut." Un QR code scanat duce direct la formularul de recenzie.
+
+5. **Instruiește echipa** — Angajații sunt prima linie. Un ospătar care spune "Dacă v-a plăcut, o recenzie pe Google ne ajută mult" la finalul mesei generează mai multe recenzii decât orice automatizare.
+
+**Cum răspunzi la recenzii — pozitive și negative**
+
+Răspunsul la recenzii este la fel de important ca obținerea lor. Google monitorizează activitatea și premiază profilurile active.
+
+La **recenzii pozitive**: Răspunde personalizat, nu cu template-uri. Menționează ceva specific din recenzia clientului. "Îți mulțumim, Maria! Ne bucurăm că terasa ți-a plăcut — te așteptăm și la editia de vară a meniului nostru."
+
+La **recenzii negative**: Nu te apăra și nu ataca. Recunoaște problema, scuze-te sincer, oferă o soluție concretă și invită clientul să revină pentru o experiență mai bună. Clienții potențiali citesc răspunsurile tale — un răspuns matur la o recenzie negativă creează mai multă încredere decât 10 recenzii de 5 stele.
+
+**Ce nu trebuie să faci niciodată**
+
+- Nu cumpăra recenzii false — Google detectează pattern-urile anormale (recenzii de la conturi noi, recenzii în rafale, recenzii din afara geografiei) și penalizează afacerea, inclusiv cu eliminarea din rezultate
+- Nu cere recenzii în schimbul unui discount sau cadou — încalcă termenii Google și poate duce la suspendarea profilului
+- Nu șterge sau ignora recenziile negative — ele vor rămâne acolo, iar lipsa răspunsului arată dezinteres
+
+**Câte recenzii ai nevoie**
+
+Nu există un număr magic, dar pentru Constanța în 2025, o afacere locală are nevoie de minimum 50 recenzii pentru a fi competitivă în Local Pack. Sub 20 recenzii, ești practic invizibil față de concurența activă.
+
+Obiectivul realist: 2–4 recenzii noi pe lună. La acest ritm, în 12 luni adaugi 24–48 recenzii — suficient să construiești autoritatea locală necesară pentru a apărea constant pe prima pagină Google.
+    `.trim(),
+  },
+  {
+    slug: 'viteza-website-seo-afaceri-constanta',
+    title: 'Viteza website-ului afectează SEO — ce trebuie să știe orice afacere din Constanța',
+    excerpt: 'Un website lent pierde clienți înainte ca aceștia să vadă ce oferi. 53% din vizitatori abandonează un site care se încarcă în mai mult de 3 secunde. Ce faci concret.',
+    date: '2025-03-26',
+    readTime: '8 min',
+    category: 'Website',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&q=80',
+    imageAlt: 'Viteza website-ului și SEO — Core Web Vitals pentru afaceri din Constanța',
+    content: `
+Google a confirmat oficial: viteza de încărcare este un factor de ranking. Un website lent nu doar că frustrează vizitatorii — îl coboară activ în rezultatele de căutare. Dacă site-ul tău se încarcă în mai mult de 3 secunde pe mobil, pierzi clienți și poziții Google simultan.
+
+**Cât de repede se încarcă site-ul tău?**
+
+Testează acum: deschide Google PageSpeed Insights (pagespeed.web.dev) și introdu URL-ul site-ului tău. Vei primi un scor de la 0 la 100 pentru mobil și desktop. Scor sub 50 = problemă gravă. Scor 50–89 = nevoie de optimizări. Scor 90+ = excelent.
+
+Cel mai important: testează pe mobil, nu pe desktop. 65–70% din traficul site-urilor de afaceri locale vine de pe telefon. Google folosește indexarea "mobile-first" — scorul tău de pe mobil este cel care contează pentru SEO.
+
+**Ce sunt Core Web Vitals și de ce contează**
+
+Core Web Vitals sunt 3 metrici pe care Google le măsoară pentru a evalua experiența utilizatorului pe site-ul tău:
+
+- **LCP (Largest Contentful Paint)** — Cât durează să apară conținutul principal pe ecran. Ideal: sub 2,5 secunde. Dacă imaginea hero sau textul principal apare greu, LCP este slab.
+- **INP (Interaction to Next Paint)** — Cât de repede răspunde site-ul când utilizatorul apasă un buton sau link. Ideal: sub 200 milisecunde.
+- **CLS (Cumulative Layout Shift)** — Cât de mult "sare" conținutul pe ecran în timp ce se încarcă. Ideal: sub 0,1. Dacă ai apăsat vreodată pe un buton greșit pentru că conținutul s-a mutat în ultimul moment, ai experimentat un CLS rău.
+
+**Cele mai frecvente cauze ale site-urilor lente în Constanța**
+
+1. **Imagini neoptimizate** — Fotografii de 5–10 MB încărcate direct de pe telefon sau cameră. Soluție: comprimă imaginile la WebP sau JPEG optimizat, redimensionează la dimensiunile afișate (o imagine de 300×200 px nu necesită un fișier de 4000×3000 px).
+
+2. **Hosting ieftin și supraaglomerat** — Hosting-ul shared de 20 RON/an pune zeci de site-uri pe același server. Când traficul crește, viteza scade. Soluție: hosting de calitate sau hosting cloud (SSD, localizat în Europa).
+
+3. **Teme WordPress grele** — Teme "all-in-one" cu 50 de funcții pe care nu le folosești adaugă sute de KB de CSS și JavaScript. Soluție: temă lightweight sau website construit pe tehnologie modernă (Next.js, Gatsby).
+
+4. **Plugin-uri în exces** — Fiecare plugin WordPress adaugă cod care se încarcă la fiecare vizită. 30 de plugin-uri active = site lent garantat.
+
+5. **Fără CDN (Content Delivery Network)** — Dacă serverul tău este în București, un vizitator din Constanța primește datele cu o ușoară întârziere. Un CDN (Cloudflare gratuit) servește conținut static din locații mai apropiate de utilizator.
+
+**Ce poți face concret astăzi**
+
+- Instalează Cloudflare gratuit — reduce timpii de încărcare cu 20–40% fără modificări de cod
+- Comprimă toate imaginile cu un tool gratuit (Squoosh.app sau TinyPNG)
+- Dacă ai WordPress, instalează un plugin de caching (WP Super Cache sau W3 Total Cache)
+- Dezactivează plugin-urile pe care nu le folosești activ
+
+**Impactul vitezei asupra conversiilor**
+
+Viteza nu afectează doar SEO — afectează direct câți vizitatori devin clienți:
+
+- Fiecare secundă în plus de încărcare reduce rata de conversie cu 7%
+- Un site care trece de la 5 secunde la 1 secundă poate tripla rata de conversie
+- Amazon a calculat că o secundă de delay îi costă 1,6 miliarde USD anual
+
+Pentru o afacere locală din Constanța, diferența poate fi de zeci de rezervări sau comenzi pierdute lunar din cauza unui site lent.
+
+**Concluzie**
+
+Viteza site-ului este o investiție cu ROI imediat și dublu: mai mulți vizitatori (SEO mai bun) și mai mulți clienți din aceiași vizitatori (conversie mai mare). Nu necesită buget mare — necesită atenție și acțiune.
+    `.trim(),
+  },
+  {
+    slug: 'marketing-sezon-litoral-marea-neagra-constanta',
+    title: 'Marketing de sezon pentru afaceri de pe litoralul Mării Negre — strategie completă',
+    excerpt: 'Sezonul estival aduce milioane de turiști pe litoralul românesc. Cum îți pregătești prezența online să captezi maximum de clienți în lunile mai–septembrie.',
+    date: '2025-03-19',
+    readTime: '9 min',
+    category: 'Marketing Digital',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80',
+    imageAlt: 'Marketing de sezon pentru litoralul Mării Negre — strategie estivală Constanța Mamaia',
+    content: `
+Litoralul Mării Negre atrage 3–4 milioane de turiști în fiecare sezon estival. Constanța, Mamaia, Eforie, Neptun, Venus, Mangalia — toate devin pentru 4–5 luni cele mai căutate destinații din România. Întrebarea nu este dacă vor veni clienți — ci dacă te vor găsi pe tine sau pe concurența ta.
+
+**Pregătire înainte de sezon — martie-aprilie**
+
+Greșeala numărul 1 a afacerilor de pe litoral: se gândesc la marketing abia în mai–iunie, când sezonul a început deja. Pregătirea corectă începe cu 2–3 luni înainte.
+
+**Google Business — actualizare completă:**
+- Actualizează programul de funcționare pentru sezon (poate diferi față de iarnă)
+- Adaugă fotografii noi — turiștii caută imagini actuale, nu poze de acum 3 ani
+- Creează postări cu ofertele de sezon
+- Activează funcția de rezervări dacă ești restaurant sau pensiune
+
+**Website — optimizare pentru căutări sezoniere:**
+Creează sau actualizează pagini cu cuvinte-cheie sezoniere: "restaurant Mamaia 2025", "cazare litoral Marea Neagră iulie-august", "pensiune cu piscină Neptun". Aceste pagini trebuie să existe și să fie indexate înainte de sezon — Google are nevoie de săptămâni să le indexeze.
+
+**Strategia de conținut pe platforme**
+
+**Instagram și TikTok — conținut vizual de sezon:**
+
+Fotografiile și videoclipurile cu plaja, soarele, mâncarea pe terasă și cocktail-urile colorate sunt cele mai distribuite tipuri de conținut din România în lunile de vară. Investește în sesiune foto profesională în mai sau la începutul lui iunie — înainte ca sezonul să devină haotic.
+
+Calendarul de conținut recomandat:
+- **Mai:** "Deschidem sezonul" — pregătiri, renovări, angajări (conținut de anticipare)
+- **Iunie:** Introducere oferte, prezentare echipă, primii turiști (conținut de lansare)
+- **Iulie-august:** Atmosferă, oferte speciale, user-generated content (conținut de vârf)
+- **Septembrie:** "Ultimele zile de sezon" — urgență, oferte de final de vară (conținut de closing)
+
+**Google Ads și Meta Ads — targetare pe turiști**
+
+Sezonul estival justifică investiția în publicitate plătită — ROI-ul este rapid și cuantificabil.
+
+- **Google Ads:** Campanii de căutare pe termeni sezonieri cu localizare geografică largă (toată România + țările vecine). Turiștii planifică vacanța din orașe ca București, Cluj, Timișoara.
+- **Meta Ads:** Targetare pe interese "vacanță", "plajă", "litoral românesc" + targetare geografică pe orașele mari. Reclame cu fotografii de sezon, cu oferte clare și CTA direct (rezervă acum, sună acum).
+
+**Rezervări online — sistem funcțional înainte de sezon**
+
+Dacă ai un restaurant, pensiune sau salon fără sistem de rezervări online în 2025, pierzi 30–40% din clienții potențiali. Aceștia caută, văd că nu pot rezerva online și merg la concurența care are această opțiune.
+
+Soluții simple pentru rezervări online:
+- **Restaurante:** Google Reserve (integrat direct în Google Business), TheFork, sau un simplu formular pe site
+- **Cazare:** Booking.com, Airbnb, dar și rezervare directă prin website (evită comisionul de 15–20%)
+- **Saloane:** Fresha (gratuit), Booksy, sau un formular de programare pe site
+
+**Gestionarea recenziilor în sezon**
+
+Sezonul estival aduce un volum mare de clienți — și un volum mare de recenzii. Bune și rele. Răspunde la toate, în maximum 24 de ore. Un răspuns rapid la o recenzie negativă primită duminică seara poate salva rezervări de luni dimineață.
+
+**Oferte speciale care funcționează pe litoral**
+
+- **Early bird** — Reducere 10–15% pentru rezervări cu 30+ zile înainte (aplatizează booking-ul)
+- **Weekend package** — Pachet vineri-duminică cu mic dejun inclus sau activitate extra
+- **Last minute** — Umple locurile goale cu oferte de 48 ore pe social media sau email
+- **Fidelizare** — Carnet de client fidel: la a 5-a vizită, o masă sau un tratament gratuit
+
+**Buget recomandat pentru marketing de sezon**
+
+- **Fotografie profesională (1 sesiune):** 500–900 RON — investiție cu ROI pe tot sezonul
+- **Publicitate Meta Ads (3 luni):** 300–500 RON/lună — targeting pe turiști
+- **Google Ads (3 luni):** 400–700 RON/lună — căutări cu intenție directă
+- **Abonament management social media:** 400–700 RON/lună — conținut constant fără stres
+
+Total investiție marketing sezon: 3.000–5.500 RON pentru 4 luni. Cu un singur turist în plus pe zi timp de sezon (120 de zile), ROI-ul se recuperează de 10 ori.
+
+Sezonul estival este cel mai bun moment al anului pentru afacerile de pe litoral. Pregătire digitală de calitate transformă un sezon bun în cel mai bun sezon al afacerii tale.
+    `.trim(),
+  },
+  {
     slug: 'cum-optimizezi-google-business-2025',
     title: 'Cum optimizezi Google Business Profile în 2025',
     excerpt: 'Ghid complet pentru optimizarea Google Business Profile. Apariție în Google Maps, recenzii, postări săptămânale — tot ce trebuie să știi.',
