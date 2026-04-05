@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Ce se întâmplă cu website-ul dacă nu continuăm colaborarea?',
-    a: 'Website-ul se închide de pe serverele noastre. Domeniul (.ro sau .com) rămâne întotdeauna 100% al tău — îl poți transfera oricând. Detalii complete în Termeni și Condiții.',
+    a: 'Depinde de momentul rezilierii. Dacă înainte de 6 luni: website-ul este suspendat, dar domeniu rămâne 100% al tău — poți colabora cu altcineva sau îl administrezi cum dorești, fără codul sursă. Dacă după 6 luni: primești integral codul sursă al website-ului și îl poți găzdui și administra unde dorești. Detalii complete în Termeni și Condiții.',
   },
   {
     q: 'Trebuie să am cunoștințe tehnice sau să mă implic?',

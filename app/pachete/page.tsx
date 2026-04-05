@@ -145,7 +145,9 @@ export default function PachetePage() {
               Este o investiție corectă pentru ambele părți.
             </p>
             <p className="font-body text-ink leading-relaxed mt-4">
-              <strong>Domeniu rămâne mereu al tău.</strong> Indiferent de decizie, domeniul (.ro sau .com) este 100% proprietatea ta.
+              <strong>Hosting gratuit pe toată durata colaborării.</strong> Hosting-ul este inclus atât timp cât abonamentul este activ — nu doar 6 luni.
+              Dacă reziliezi înainte de 6 luni, website-ul este suspendat, dar domeniu rămâne 100% al tău (poți colabora cu altcineva, dar nu primești codul sursă).
+              Dacă după 6 luni nu mai dorești să continui, primești integral codul sursă al website-ului.
               {' '}
               <a href="/termeni-si-conditii" className="text-gold hover:text-gold-l underline underline-offset-2 transition-colors">
                 Vezi toate detaliile contractuale în Termeni și Condiții →
@@ -213,7 +215,7 @@ export default function PachetePage() {
             {[
               { title: 'Fotografie profesională', desc: 'Ședință foto la locația ta. Livrare în 48h, drepturi incluse.' },
               { title: 'Video Reels / TikTok', desc: 'Conținut video faceless (fără influencer), adaptat platformei.' },
-              { title: 'Branding & Identitate', desc: 'Logo, culori, fonturi, carte de vizită — tot ce definește brandul tău.' },
+              { title: 'Branding & Design grafic', desc: 'Flyere, postere, calendare personalizate, materiale print — tot ce promovează vizual afacerea ta.' },
               { title: 'Meniu digital restaurant', desc: 'Meniu QR interactiv, actualizabil oricând. Găzduit 6 luni gratuit cu administrare lunară.' },
               { title: 'Fotografii AirBnb', desc: 'Poze profesionale la locație pentru listingul tău AirBnb. Fără servicii de administrare.' },
               { title: 'Google / Meta Ads', desc: 'Configurare și lansare campanie publicitară. Bugetul de reclamă este al tău, separat.' },
@@ -231,18 +233,18 @@ export default function PachetePage() {
       <section className="bg-navy py-14">
         <div className="container-site max-w-3xl mx-auto text-center">
           <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">Ofertă personalizată</p>
-          <h2 className="font-head font-extrabold text-h2 text-white mb-5">Pachet personalizat</h2>
+          <h2 className="font-head font-extrabold text-h2 text-white mb-5">Fiecare afacere este unică.</h2>
           <p className="font-body text-cream/80 leading-relaxed max-w-2xl mx-auto mb-8">
-            Alegi exact serviciile de care ai nevoie — website, fotografie, video, social media, SEO sau orice combinație.
-            Stabilim împreună prețul și pot exista discounturi în funcție de pachetul ales.
-            Totul transparent, fără costuri ascunse.
+            Nu ești obligat să alegi un pachet standard. În urma auditului gratuit, construim împreună o ofertă
+            personalizată exact pe nevoile și bugetul afacerii tale — website, fotografie, video, social media, SEO
+            sau orice combinație. Stabilim prețul împreună, transparent, fără costuri ascunse.
           </p>
           <a
             href="/contact"
             className="inline-block font-mono text-xs uppercase tracking-widest py-3.5 px-8 text-white hover:-translate-y-0.5 transition-all duration-300"
             style={{ background: 'linear-gradient(135deg,#7c3aed,#06b6d4)', boxShadow: '0 4px 20px -4px rgba(124,58,237,0.4)' }}
           >
-            Solicită ofertă personalizată
+            Solicită audit gratuit & ofertă personalizată
           </a>
         </div>
       </section>

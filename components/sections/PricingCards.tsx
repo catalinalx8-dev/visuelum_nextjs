@@ -37,7 +37,7 @@ const plans: PricingCardData[] = [
     target: 'Afaceri la început sau fără prezență digitală, care vor să apară credibil online fără investiție inițială.',
     features: [
       { text: 'Website până la 5 pagini — gratuit, live în 14 zile', included: true },
-      { text: 'Hosting + SSL pe serverele noastre, inclus 6 luni', included: true },
+      { text: 'Hosting + SSL oferit gratuit de Visuelum pe toată durata colaborării', included: true },
       { text: 'Administrare web lunară: mentenanță, backup, uptime', included: true },
       { text: 'Google Business Profile optimizat — apari pe Maps', included: true },
       { text: 'Calendar lunar social media + texte și hashtag-uri', included: true },
