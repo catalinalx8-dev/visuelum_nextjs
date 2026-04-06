@@ -275,3 +275,18 @@
     box-shadow: 0 0 12px rgb(var(--gold-rgb) / 0.2);
   }
 }
+
+/* ─── Reduced-motion support ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer,
+  .animate-float,
+  .animate-pulse-glow {
+    animation: none;
+  }
+
+  .btn-primary,
+  .gradient-border::before {
+    animation: none;
+    background-position: 0% 50%;
+  }
+}
