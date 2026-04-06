@@ -726,6 +726,396 @@ La Visuelum, construim website-ul gratuit și gestionăm toată prezența online
 Înainte de a semna orice contract cu o agenție, cere un audit gratuit al prezenței tale online actuale. O agenție serioasă îți arată exact unde ești acum și ce îmbunătățiri concrete poate aduce.
     `.trim(),
   },
+  {
+    slug: 'instagram-reels-afaceri-locale-constanta-2025',
+    title: 'Instagram Reels pentru afaceri locale din Constanța — cum atragi clienți noi în 2025',
+    excerpt: 'Instagram Reels generează de 2× mai mult reach organic față de postările clasice. Cum folosești videoclipurile scurte să aduci clienți noi la restaurantul, salonul sau clinica ta din Constanța.',
+    date: '2025-04-23',
+    readTime: '7 min',
+    category: 'Social Media',
+    image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1400&q=80',
+    imageAlt: 'Instagram Reels pentru afaceri locale din Constanța — strategie video social media',
+    content: `
+Instagram a schimbat complet modul în care distribuie conținut: Reels primesc de 2–3 ori mai mult reach organic față de postările foto clasice. Dacă afacerea ta din Constanța nu publică Reels, pierzi zi de zi clienți care ar putea deveni fideli.
+
+**Ce sunt Instagram Reels și de ce contează pentru afacerile locale**
+
+Reels sunt videoclipuri scurte de 15–90 de secunde, distribuite nu doar urmăritorilor tăi, ci și utilizatorilor care nu te cunosc încă. Algoritmul Instagram promovează activ Reels în secțiunea Explore și în feed-ul utilizatorilor cu interese similare. Aceasta înseamnă că un restaurant din Constanța poate ajunge la turiști care sunt în vacanță pe litoral și caută unde să mănânce — fără niciun buget publicitar.
+
+**Idei de Reels care funcționează pentru restaurante din Constanța**
+
+- **"Behind the scenes"** — Arăți bucătăria în acțiune: tocatul, gătitul, platingul. Autenticitatea vinde mai bine decât orice reclamă.
+- **"Menu spotlight"** — 30 de secunde despre un preparat special al zilei, cu text overlay cu prețul și cum se comandă.
+- **"Dimineața la restaurant"** — Pregătirile înainte de deschidere: aranjatul meselor, cafeaua proaspătă, pâinea scoasă din cuptor.
+- **"Recenzie în direct"** — Filmezi un client mulțumit (cu acordul lui) care spune câteva cuvinte. Social proof autentic.
+- **"Oferta săptămânii"** — Animație simplă sau text pe ecran cu oferta specială. Postat luni dimineața, generează rezervări pentru weekend.
+
+**Idei de Reels care funcționează pentru saloane și clinici din Constanța**
+
+- **Transformări înainte/după** — Cel mai viral tip de conținut în nișa beauty. Filmezi părul sau unghiile înainte, apoi rezultatul final. Muzică trendy, tranziție rapidă.
+- **"Cum faci acasă"** — Tutorial de 30 de secunde pentru o coafură simplă sau un ritual de îngrijire. Construiești autoritate și atragi clienți care văd că ești expert.
+- **Prezentare salon** — Un tur de 60 de secunde prin salon. Clinicile și saloanele noi câștigă enorm din această transparență.
+- **Produse recomandate** — Prezinți 3 produse pe care le folosești și de ce. Util, educațional, shareabil.
+- **FAQ rapid** — "Cât durează o ședință de manichiură?" răspuns în 20 de secunde. Elimini obiecțiile înainte ca potențialul client să întrebe.
+
+**Cum filmezi Reels fără echipament profesional**
+
+Nu ai nevoie de o cameră scumpă. Telefonul tău este suficient dacă respecți câteva reguli:
+
+1. **Lumina naturală** — Filmează lângă fereastră sau afară. Lumina moale din exterior este mai flatantă decât orice ring light.
+2. **Stabilizare** — Ține telefonul cu ambele mâini sau folosește un trepied. Un Reel tremurat pierde 60% din vizualizări în primele 3 secunde.
+3. **Audio curat** — Folosește muzica din biblioteca Instagram (drepturi incluse) sau vorbește clar și aproape de microfon. Sunetul slab distrage.
+4. **Format vertical 9:16** — Filmează mereu vertical, nu orizontal. Reels sunt optimizate pentru ecranul telefonului ținut vertical.
+
+**Cum optimizezi Reels pentru căutare locală**
+
+Instagram a introdus funcția de căutare care indexează textul din descriere și hashtag-uri. Optimizarea este simplă:
+
+- Adaugă locația "Constanța" sau "Mamaia" la fiecare Reel publicat
+- Folosește în descriere cuvinte cheie locale: "restaurant Constanța", "salon Constanța", "servicii Constanța"
+- Combină hashtag-uri largi cu hashtag-uri locale: #foodie + #restaurantconstanta, #beauty + #salonConstanta
+- Primele 3 rânduri din descriere sunt cruciale — scrie beneficiul direct: "Cea mai bună pizza din Constanța — acum și cu livrare"
+
+**Frecvența optimă de postare Reels**
+
+Pentru a vedea creștere organică reală, postează minimum 3–4 Reels pe săptămână. Calitatea contează mai mult decât cantitatea, dar consistența bate ambele. Un Reel pe zi timp de 30 de zile va transforma radical vizibilitatea oricărei afaceri locale din Constanța.
+
+Primele 48 de ore după publicare sunt cele mai importante. Răspunde la toate comentariile, distribuie Reel-ul în Stories și cere echipei sau prietenilor să dea Share. Algoritmul Instagram amplifică conținutul care generează engagement rapid.
+
+**Integrarea Reels în strategia completă de marketing**
+
+Reels nu funcționează izolat. Cel mai bun rezultat îl obții când le combini cu:
+
+- Google Business Profile actualizat cu poze și postări săptămânale
+- Website profesional unde traficul din Reels poate converti (rezervări, contacte, meniu online)
+- Email marketing pentru a transforma urmăritorii Instagram în clienți fideli cu date de contact reale
+
+La Visuelum, integrăm toate aceste canale în abonamentul lunar — astfel că fiecare Reel publicat face parte dintr-o strategie coerentă, nu dintr-un efort izolat fără direcție.
+    `.trim(),
+  },
+  {
+    slug: 'meta-ads-facebook-instagram-afaceri-locale-constanta',
+    title: 'Meta Ads pentru afaceri locale — reclame eficiente pe Facebook și Instagram în Constanța',
+    excerpt: 'Buget mic, rezultate mari: cum rulezi reclame Meta Ads care aduc clienți reali, nu doar aprecieri. Ghid practic de targeting, bugete și creativi pentru afaceri din Constanța.',
+    date: '2025-04-30',
+    readTime: '9 min',
+    category: 'Publicitate Plătită',
+    image: 'https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=1400&q=80',
+    imageAlt: 'Meta Ads Facebook Instagram reclame afaceri locale Constanța — campanii plătite',
+    content: `
+Meta Ads — reclamele pe Facebook și Instagram — reprezintă cel mai precis instrument de targetare locală disponibil astăzi pentru afacerile mici. Poți afișa un anunț exact persoanelor din Constanța, cu vârsta 25–45 de ani, interesate de restaurante fine dining, în raza de 5 km față de locația ta. Nicio altă platformă nu oferă această precizie.
+
+**De ce Meta Ads funcționează diferit față de Google Ads**
+
+Google Ads captează cererea existentă: oamenii care caută deja "restaurant Constanța" sau "salon coafură Mamaia". Meta Ads creează cerere: afișezi reclama ta persoanelor care nu te caută activ, dar care corespund profilului clientului ideal. Ambele sunt necesare — dar Meta Ads este mai accesibil financiar la început.
+
+Un buget de 300–500 RON/lună pe Meta Ads, gestionat corect, poate genera 20–40 de clienți noi pe lună pentru o afacere locală din Constanța. Cu aceiași bani investiți în panouri publicitare tradiționale, rezultatele ar fi imposibil de măsurat.
+
+**Tipuri de campanii Meta Ads pentru afaceri locale**
+
+1. **Campanie de trafic local (Store Traffic)** — Arată reclama persoanelor din raza ta geografică cu obiectivul de a le aduce fizic în locație. Ideal pentru restaurante, saloane, magazine.
+
+2. **Campanie de generare de lead-uri** — Formularul se completează direct pe Facebook/Instagram, fără ca utilizatorul să părăsească platforma. Rata de conversie este cu 40% mai mare față de redirecționarea spre website. Ideal pentru clinici, pensiuni, servicii.
+
+3. **Campanie de conversii pe website** — Direcționezi traficul spre pagina de rezervare sau de contact de pe website. Necesită pixelul Meta instalat pe site. Ideal dacă ai un website cu rezervări online.
+
+4. **Campanie de remarketing** — Afișezi reclame persoanelor care ți-au vizitat website-ul sau pagina de Instagram în ultimele 30–90 de zile. Acești oameni sunt deja familiarizați cu afacerea ta — costul de conversie este cu 60–70% mai mic.
+
+**Cum setezi targetarea locală pentru Constanța**
+
+Precizia targetării este avantajul numărul 1 al Meta Ads. Iată cum o folosești:
+
+- **Locație:** Constanța + raza 15 km (acoperă Mamaia, Ovidiu, Năvodari) sau specific centrul orașului
+- **Vârstă:** Adaptată serviciului — 20–35 pentru saloane beauty, 30–55 pentru restaurante fine dining, 25–50 pentru clinici
+- **Interese:** Restaurant, Fine Dining, Beauty, Wellness, Fitness — combinate cu "Dobrogea", "litoral românesc", "vacanță la mare"
+- **Comportament:** Persoane care călătoresc frecvent (util pentru afacerile din Mamaia în sezonul estival)
+- **Public similar (Lookalike):** Încarci lista cu numerele de telefon ale clienților actuali — Meta găsește automat persoane cu profil similar din Constanța
+
+**Cum creezi un creativ publicitar care convertește**
+
+Creativul (imaginea sau videoclipul din reclamă) determină 70% din succesul campaniei. Regulile de bază:
+
+- **Prima secundă contează** — Pe mobil, utilizatorii scrollează rapid. Primul frame trebuie să fie vizual impactant: un preparat apetisant, un rezultat înainte/după, un titlu mare cu beneficiul principal.
+- **Text scurt și clar** — "Prinde oferta de weekend: meniu complet la 79 RON" vinde mai bine decât un paragraf lung.
+- **Call-to-action explicit** — "Rezervă acum", "Sună acum", "Vezi meniul" — butonul de acțiune trebuie să fie evident.
+- **Video vs. imagine** — Videoclipurile de 10–15 secunde au un cost-pe-click cu 30–50% mai mic față de imaginile statice. Chiar și un slideshow simplu din 3 fotografii funcționează excelent.
+
+**Buget recomandat pentru afaceri locale din Constanța**
+
+- **Start (testare):** 200–400 RON/lună — suficient pentru a testa 2–3 audiențe și 2 creativi
+- **Creștere:** 500–1.000 RON/lună — campanii multiple, remarketing activ, sezonalitate
+- **Dominare locală:** 1.500+ RON/lună — prezență continuă pe toate segmentele de audiență relevante
+
+Meta recomandă minimum 50 de conversii pe săptămână pentru ca algoritmul să optimizeze eficient. La bugete mici, folosește obiective mai simple (trafic, reach) în loc de conversii directe.
+
+**Greșeli frecvente care risipesc bugetul**
+
+- Audiență prea largă ("toate persoanele din România") — targetează întotdeauna local și specific
+- Reclame fără imagine de calitate — o fotografie blur sau cu text prea mic generează CTR sub 0,5%
+- Lipsa pixelului Meta pe website — fără pixel nu poți face remarketing sau optimizare pentru conversii
+- Rularea unei singure reclame fără testare — testează întotdeauna minimum 2 variante de creativ și 2 audiențe
+- Oprirea campaniei după 3 zile — algoritmul Meta are nevoie de 7–14 zile de "learning phase" înainte să optimizeze
+
+**Cum măsori rezultatele campaniilor Meta Ads**
+
+Indicatorii cheie de urmărit:
+
+- **CPM (cost per 1.000 afișări):** Sub 30–50 RON înseamnă că targetarea este eficientă
+- **CTR (click-through rate):** Minimum 1,5–2% pentru reclame locale bune
+- **CPC (cost per click):** Sub 1,5–3 RON pentru afaceri locale
+- **ROAS (return on ad spend):** Câți RON câștigați pentru fiecare RON cheltuit — minimum 3× pentru a considera campania profitabilă
+
+La Visuelum, gestionăm campanii Meta Ads ca parte a pachetelor de marketing digital — cu raportare transparentă lunară, testare continuă și optimizare bazată pe date reale, nu pe presupuneri.
+    `.trim(),
+  },
+  {
+    slug: 'whatsapp-business-restaurante-saloane-constanta-2025',
+    title: 'WhatsApp Business pentru restaurante și saloane din Constanța — ghid complet 2025',
+    excerpt: 'WhatsApp are o rată de deschidere de 98%. Cum folosești WhatsApp Business să confirmi rezervări, să trimiți oferte și să fidelizezi clienții afacerii tale din Constanța.',
+    date: '2025-05-07',
+    readTime: '6 min',
+    category: 'Marketing Digital',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80',
+    imageAlt: 'WhatsApp Business pentru restaurante și saloane Constanța — comunicare clienți',
+    content: `
+WhatsApp este aplicația de mesagerie cu cea mai mare rată de deschidere din lume: 98% față de 20–25% pentru email. În România, WhatsApp este canalul principal de comunicare pentru generațiile 20–55 de ani — tocmai segmentul care reprezintă clienții principali ai restaurantelor, saloanelor și clinicilor din Constanța.
+
+**Ce este WhatsApp Business și cum diferă de WhatsApp obișnuit**
+
+WhatsApp Business este o aplicație gratuită, special creată pentru afaceri. Față de WhatsApp personal, oferă:
+
+- **Profil de afacere** cu adresă, orar, website și descriere servicii
+- **Mesaje automate** de bun-venit și de absență
+- **Răspunsuri rapide** pentru întrebările frecvente (prețuri, program, locație)
+- **Etichete** pentru organizarea conversațiilor (Rezervări noi, Confirmate, Clienți fideli)
+- **Catalog de produse/servicii** cu fotografii și prețuri direct în aplicație
+- **Statistici** de bază: mesaje trimise, livrate, citite
+
+**Cum folosești WhatsApp Business pentru rezervări**
+
+Rezervările prin WhatsApp au o rată de confirmare cu 35% mai mare față de cele prin telefon, deoarece clientul poate răspunde când îi este convenabil. Iată fluxul simplu:
+
+1. Adaugă numărul de WhatsApp Business vizibil pe website, Google Business Profile și Instagram
+2. Setează un mesaj automat de bun-venit: "Bună ziua! Bine ați venit la [Numele Afacerii]. Cum vă putem ajuta? Pentru rezervări, vă rugăm să specificați data, ora și numărul de persoane."
+3. Când primești o cerere de rezervare, confirmă în maximum 30 de minute — viteza de răspuns determină dacă clientul rămâne al tău sau merge la concurență
+4. Cu 2 ore înainte de rezervare, trimite un reminder simplu: "Vă așteptăm astăzi la ora 19:00! Dacă aveți modificări, sunați la [telefon]. Ne vedem curând!"
+
+**Cum trimiți oferte și promoții prin WhatsApp**
+
+WhatsApp Business permite crearea de liste de difuzare — trimiți același mesaj la maximum 256 de contacte simultan, iar destinatarii îl primesc ca pe un mesaj personal (nu ca într-un grup). Rata de citire: 90–95%.
+
+Reguli pentru mesaje de oferte care funcționează:
+
+- **Personalizare:** Folosește prenumele clientului — "Bună ziua, Maria!" crește rata de răspuns cu 30%
+- **Urgență autentică:** "Oferta valabilă până sâmbătă seara" funcționează; "Ofertă specială" fără deadline nu
+- **Valoare clară:** "Meniu de două persoane la 119 RON (economisești 40 RON)" — nu "promoție mare"
+- **Frecvență:** Maximum 2–3 mesaje pe lună. Frecvența mai mare duce la blocări și scăderea credibilității
+- **Opt-in explicit:** Trimite mesaje doar persoanelor care și-au dat acordul — poți colecta acordul la rezervare sau vizită
+
+**Catalog WhatsApp — meniul digital al afacerii tale**
+
+Restaurantele și saloanele pot crea un catalog direct în WhatsApp Business cu fotografii, descrieri și prețuri ale preparatelor sau serviciilor. Avantajul: clientul vede meniul sau lista de servicii fără să iasă din aplicație.
+
+Cum setezi catalogul:
+
+1. În aplicația WhatsApp Business, mergi la Setări → Instrumente afacere → Catalog
+2. Adaugă produsele/serviciile cu fotografie, nume, preț și descriere scurtă
+3. Distribuie catalogul direct în conversații: "Iată meniul nostru complet — [link catalog]"
+4. Adaugă linkul catalogului pe website și în bio-ul de Instagram
+
+**Integrarea WhatsApp cu restul prezenței online**
+
+WhatsApp Business funcționează cel mai bine ca parte a unui ecosistem digital integrat:
+
+- **Pe website:** Buton "Trimite mesaj pe WhatsApp" vizibil în header sau pe pagina de contact
+- **Pe Google Business:** Numărul de WhatsApp ca număr de contact principal
+- **Pe Instagram/Facebook:** Link în bio + stories cu CTA "Rezervă pe WhatsApp"
+- **Pe chitanță sau meniu:** QR code care deschide direct o conversație WhatsApp cu afacerea
+
+Clienții din Constanța, în special turiștii în sezonul estival, preferă să comunice rapid prin WhatsApp. O afacere care răspunde în sub 10 minute pe WhatsApp câștigă o reputație de seriozitate care se reflectă direct în recenzii și recomandări.
+
+**Ce nu trebuie să faci pe WhatsApp Business**
+
+- Nu trimite mesaje nesolicitate la numere obținute din liste — este spam și poate duce la blocarea contului
+- Nu ignora mesajele mai mult de 24 de ore — clienții neanswered merg direct la concurență
+- Nu folosi WhatsApp personal pentru afacere — amestecul vieții personale cu business-ul creează confuzie și scade profesionalismul
+- Nu trimite mesaje de grup unde toți participanții se văd reciproc — folosește întotdeauna listele de difuzare
+
+WhatsApp Business este unul dintre cele mai subutilizate instrumente de marketing pentru afacerile locale din Constanța. Implementat corect, poate deveni canalul cu cel mai mare ROI din întreaga ta strategie digitală.
+    `.trim(),
+  },
+  {
+    slug: 'google-maps-vanzari-afaceri-locale-constanta',
+    title: 'Google Maps pentru afaceri locale din Constanța — cum apari în primele rezultate',
+    excerpt: '76% dintre persoanele care caută o afacere locală pe Google Maps vizitează locația în aceeași zi. Cum optimizezi prezența pe Google Maps să captezi acești clienți gata să cumpere.',
+    date: '2025-05-14',
+    readTime: '8 min',
+    category: 'SEO Local',
+    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1400&q=80',
+    imageAlt: 'Google Maps optimizare afaceri locale Constanța — Local Pack și SEO Maps',
+    content: `
+Google Maps este cel mai puternic canal de descoperire pentru afacerile locale din România. 76% dintre utilizatorii care caută o afacere locală pe Maps vizitează acea afacere în aceeași zi — iar 28% finalizează o achiziție imediat. Dacă afacerea ta din Constanța nu apare în primele 3 rezultate din "Local Pack" (harta Google), pierzi zilnic clienți care sunt gata să cumpere.
+
+**Cum funcționează algoritmul Google Maps**
+
+Google Maps clasifică afacerile locale după trei criterii principale:
+
+1. **Relevanță** — Cât de bine se potrivește profilul afacerii tale cu ceea ce caută utilizatorul
+2. **Distanță** — Cât de aproape ești de locația de unde se face căutarea
+3. **Proeminență** — Cât de cunoscută și credibilă este afacerea ta online (recenzii, linkuri, activitate pe profil)
+
+Nu poți controla distanța față de utilizator, dar poți optimiza dramatic relevanța și proeminența. Exact pe acestea se concentrează strategia de Google Maps SEO.
+
+**Optimizarea completă a profilului Google Business**
+
+Profilul Google Business (fostul Google My Business) este fundația prezenței tale pe Maps. Completitudinea profilului influențează direct poziționarea în rezultate.
+
+Lista de verificare pentru un profil complet:
+
+- **Numele afacerii** — Exact cum apare și pe firmă, fără cuvinte-cheie adăugate artificial (ex: "Restaurant Constanța XYZ" în loc de "Restaurant XYZ")
+- **Categoria principală** — Alege categoria cea mai specifică: "Restaurant de pește" în loc de "Restaurant". Adaugă 2–3 categorii secundare relevante.
+- **Adresă și pin pe hartă** — Verifică că pinul este exact pe ușa afacerii, nu la 50m distanță
+- **Număr de telefon local** — Preferabil cu prefix județean (0241 pentru Constanța), nu număr de mobil
+- **Website** — Linkul spre pagina principală sau spre pagina de contact
+- **Program de funcționare** — Actualizat inclusiv pentru sărbători și sezon estival
+- **Descrierea afacerii** — 250 de cuvinte care includ serviciile principale și locația: "Restaurant cu specific de pește și fructe de mare în centrul Constanței, la 200m de Piața Ovidiu"
+- **Atribute** — Birocrații Google: "Prânz", "Loc de parcare", "WiFi", "Terasă", "Acceptă carduri" — fiecare atribut adaugă relevanță
+
+**Fotografiile — factorul surpriză care te pune înaintea concurenței**
+
+Profilurile Google Business cu peste 100 de fotografii primesc de 6,4 ori mai multe vizualizări decât cele cu sub 10. Fotografiile trimise de proprietar (nu de clienți) sunt afișate cu prioritate.
+
+Ce fotografii trebuie să adaugi:
+
+- **Exteriorul** — Cel puțin 3 fotografii din zi și din noapte cu semnul afacerii vizibil
+- **Interiorul** — 5–10 fotografii cu atmosfera, mesele, decorațiunile, bucătăria (dacă e aplicabil)
+- **Produsele/serviciile** — Fotografii profesionale ale preparatelor, serviciilor sau produselor
+- **Echipa** — 2–3 fotografii cu angajații. Umanizează afacerea și crește încrederea
+- **360°** — Google oferă posibilitatea unui tur virtual 360°. Afacerile cu tur virtual primesc cu 40% mai multe clicuri
+
+Adaugă minimum 5 fotografii noi pe lună pentru a semnala activitate constantă algoritmului Google.
+
+**Postările Google Business — instrumentul ignorat de 90% din afacerile locale**
+
+Google Business permite publicarea de postări săptămânale — oferte, noutăți, evenimente, produse. Aceste postări apar direct în panoul afacerii tale din Google Maps și Search. Afacerile care postează săptămânal au un engagement cu 30% mai mare față de cele care nu postează.
+
+Tipuri de postări care funcționează:
+
+- **Ofertă** — "Meniu de prânz la 39 RON, luni–vineri 12:00–15:00. Rezervă acum: [număr telefon]"
+- **Noutate** — "Am adăugat preparate noi în meniu! Vino să le descoperi sau comandă online."
+- **Eveniment** — "Seară de muzică live, sâmbătă 20 iulie, ora 20:00. Locuri limitate."
+- **Produs** — Evidențiezi un produs sau serviciu specific cu fotografie și descriere
+
+**Recenziile — moneda de aur a Google Maps**
+
+Nu poți vorbi despre Google Maps fără recenzii. Numărul și calitatea recenziilor influențează mai mult decât orice altă variabilă pozitionarea în Maps.
+
+Strategia eficientă:
+
+1. Cere recenzia în momentul de vârf al satisfacției clientului — la finalul mesei sau al serviciului
+2. Trimite un SMS cu linkul direct de recenzie în maximum 2 ore după vizită
+3. Răspunde la TOATE recenziile — pozitive și negative — în maximum 24 de ore
+4. La recenzii negative, răspunde calm și profesional: arăți celorlalți potențiali clienți că îți pasă de experiența lor
+
+**Cuvintele cheie locale în descrierea și postările tale**
+
+Google indexează textul din profilul tău. Folosirea naturală a cuvintelor cheie locale crește relevanța pentru căutări specifice:
+
+- "restaurant pește Constanța" → menționează în descriere și postări
+- "salon coafură Mamaia" → include în categoria și descriere
+- "clinică stomatologică Tomis" → specifică zona/cartierul
+
+Nu forța cuvintele cheie — scrie natural, pentru oameni, nu pentru algoritm. Google este suficient de inteligent să înțeleagă contextul.
+
+**Cât durează să apari în top 3 pe Google Maps**
+
+Cu un profil complet optimizat, fotografii actualizate și 10+ recenzii recente:
+
+- **Primele 2–4 săptămâni:** Profilul devine eligibil pentru Local Pack
+- **Luna 1–3:** Apariții consistente pentru căutări cu volum mic-mediu (ex: "restaurant pește Constanța")
+- **Luna 3–6:** Poziționare stabilă în top 3 pentru 5–10 cuvinte cheie locale principale
+
+Constanța are un peisaj competitiv în HoReCa și beauty, mai ales în sezonul estival. Dar majoritatea afacerilor nu au profiluri optimizate — ceea ce înseamnă că avantajul primilor care acționează este enorm și disponibil chiar acum.
+    `.trim(),
+  },
+  {
+    slug: 'content-marketing-afaceri-mici-constanta-2025',
+    title: 'Content marketing pentru afaceri mici din Constanța — cum atragi clienți prin conținut util',
+    excerpt: 'Conținutul util atrage clienți fără să plătești pentru reclame. Cum construiești o strategie de content marketing care generează trafic organic și clienți noi pentru afacerea ta locală.',
+    date: '2025-05-21',
+    readTime: '8 min',
+    category: 'Marketing Digital',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80',
+    imageAlt: 'Content marketing pentru afaceri mici Constanța — blog, video, social media',
+    content: `
+Content marketing-ul este strategia prin care atragi clienți oferind conținut valoros — articole, videoclipuri, tutoriale, sfaturi — înainte ca aceștia să fie gata să cumpere. Este opusul publicității tradiționale: în loc să întrerupi oamenii cu mesaje de vânzare, le oferi ceva util și câștigă încrederea lor treptat.
+
+Rezultatul? Clienți care vin la tine deja convinși, fără să mai fie nevoie să-i convingi. Costul de achiziție al unui client prin content marketing este cu 62% mai mic față de publicitatea tradițională.
+
+**De ce content marketing-ul funcționează pentru afacerile mici din Constanța**
+
+Constanța are o piață locală cu nevoi foarte specifice: turiști care caută experiențe autentice, localnici care vor servicii de calitate aproape de casă, antreprenori care caută furnizori de încredere. Conținutul local, relevant și util răspunde exact acestor nevoi.
+
+Un restaurant care publică articole despre "cele mai bune preparate de pește din Constanța" sau "cum se prepară saramura dobrogeană" atrage oameni care caută tocmai asta — și îi transformă în clienți. Același principiu se aplică pentru orice tip de afacere locală.
+
+**Tipuri de conținut care funcționează pentru afaceri locale**
+
+**Blog pe website:**
+
+- **Articole "Cum să"** — "Cum alegi cel mai bun salon de coafură din Constanța", "Cum recunoști peștele proaspăt la pescărie", "Cum îți îngrijești părul vara la mare". Răspund la întrebările pe care le caută clienții tăi pe Google.
+- **Ghiduri locale** — "Cele mai bune restaurante cu terasă în Constanța 2025", "Ce să vizitezi în Dobrogea într-un weekend". Atrag turiști și localnici deopotrivă.
+- **Studii de caz** — "Cum am ajutat [tip de client] să [rezultat concret]". Demonstrează competența fără a te lăuda direct.
+- **FAQ** — Articole care răspund la întrebările frecvente ale clienților. Excelent pentru SEO local.
+
+**Video pe YouTube și Instagram:**
+
+- **Tutoriale** — Un coafor care explică "cum îți faci un coc elegant acasă în 5 minute" va fi găsit de sute de femei din Constanța care caută exact asta
+- **"Zi din viața"** — O zi tipică la afacerea ta. Construiește transparență și legătură emoțională cu audiența
+- **Răspunsuri la comentarii** — Video-uri scurte care răspund la întrebările primite de la clienți pe social media
+
+**Conținut pe social media:**
+
+- **Sfaturi rapide** — "3 lucruri pe care nu le știai despre X" (X = domeniul tău de activitate)
+- **Culise** — Cum se face un preparat, cum se pregătește salonul, cum funcționează procesul de lucru
+- **Mituri demontate** — "5 mituri despre curățarea dinților" (pentru clinici stomatologice), "3 greșeli comune în îngrijirea pielii" (pentru saloane)
+
+**Cum construiești o strategie de content marketing în 5 pași**
+
+1. **Definește publicul țintă** — Cine sunt clienții ideali ai afacerii tale? Ce vârstă, ce interese, ce probleme vor să rezolve? Cu cât cunoști mai bine cine citește, cu atât conținutul este mai relevant și mai eficient.
+
+2. **Identifică întrebările pe care le caută clienții tăi** — Folosește Google Search (tastezi un cuvânt cheie și vezi sugestiile automate), secțiunea "People also ask" din rezultatele Google, sau pur și simplu întreabă clienții actuali ce i-ar interesa să citească.
+
+3. **Creează un calendar editorial** — Minimum 4 articole de blog pe lună și 3 postări pe social media pe săptămână. Consistența este mai importantă decât cantitatea.
+
+4. **Optimizează pentru SEO local** — Fiecare articol de blog trebuie să conțină cuvinte cheie locale: "Constanța", "Mamaia", "Dobrogea", "litoral". Titlul, primul paragraf și meta descrierea sunt cele mai importante locuri.
+
+5. **Promovează conținutul** — Un articol publicat și ignorat nu aduce clienți. Distribuie fiecare articol pe Facebook, Instagram, în newsletter și pe WhatsApp Business. Linkul spre articol în Google Business Profile.
+
+**Cât durează să vezi rezultate din content marketing**
+
+Content marketing-ul este o investiție pe termen lung. Primele rezultate organice apar la 3–6 luni după publicarea primelor articole. Dar, spre deosebire de reclamele plătite care dispar când oprești bugetul, conținutul rămâne pe internet și continuă să atragă clienți luni și ani.
+
+Un restaurant care publică 30 de articole de blog în 6 luni va fi dificil de depășit de concurența care nu a publicat nimic. Este un avantaj competitiv care se construiește treptat și devine tot mai greu de egalat în timp.
+
+**Greșeli frecvente în content marketing pentru afaceri locale**
+
+- **Conținut prea generic** — "Importanța marketingului digital" nu atrage clienți din Constanța. "Cum obții 50 de clienți noi pe lună cu marketingul digital în Constanța" — da.
+- **Publicare fără promovare** — Publici un articol și aștepți să apară pe Google. Fără distribuire activă, articolul nu ajunge la nimeni.
+- **Abandonul după 2 luni** — Content marketing-ul cere răbdare. Majoritatea afacerilor abandonate înainte de a vedea primele rezultate pierd exact avantajul acumulat.
+- **Conținut de vânzare direct** — Fiecare articol nu trebuie să fie o reclamă. 80% conținut util, 20% promoțional.
+
+**Cum integrezi content marketing-ul cu restul strategiei digitale**
+
+Content marketing-ul devine exponențial mai eficient când este integrat cu:
+
+- **SEO** — Articolele de blog sunt pagini noi indexate de Google, care atrag trafic organic suplimentar
+- **Social media** — Fiecare articol devine material pentru 5–10 postări pe Instagram și Facebook
+- **Email marketing** — Newsletter-ul săptămânal include linkuri spre ultimele articole, crescând traficul pe site și fidelizând abonații
+- **Google Business** — Postările Google pot trimite spre articolele de blog, generând trafic calificat
+
+La Visuelum, content marketing-ul este parte integrantă din toate pachetele noastre de marketing digital. Producem articole de blog, descrieri SEO, postări social media și texte pentru website — tot ce are nevoie afacerea ta să fie găsită online de clienții potriviți.
+    `.trim(),
+  },
 ]
 
 interface Props {
