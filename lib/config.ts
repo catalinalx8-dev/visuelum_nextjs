@@ -29,6 +29,19 @@ export const siteConfig = {
 } as const
 
 /**
+ * Maintenance mode — set MAINTENANCE_MODE=1 in your environment variables to
+ * redirect every public route to /mentenanta.  Set to "0" (or leave unset) to
+ * disable and serve the site normally.
+ *
+ * Checked at the edge in middleware.ts so no rebuild is required on hosts
+ * that support runtime environment variables (Vercel, Railway, etc.).
+ */
+export const maintenanceConfig = {
+  /** "1" = maintenance active, "0" (or anything else) = site live */
+  enabled: process.env.MAINTENANCE_MODE === '1',
+} as const
+
+/**
  * Feature flags — toggle site-wide functionality from one place.
  * Set to `false` to disable without touching component code.
  */
