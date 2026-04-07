@@ -58,6 +58,32 @@ export const siteFeatures = {
   backToTop: true,
   /** Vercel Analytics + Speed Insights */
   analytics: true,
+  /** Promotional offer popup */
+  offerPopup: true,
+} as const
+
+/**
+ * Offer Popup configuration — manage the promotional popup from here.
+ * Toggle `enabled` to show/hide the popup across the site.
+ * Set `pages` to restrict display to specific routes, or leave empty to show on all pages.
+ */
+export const offerPopupConfig = {
+  /** Whether the popup is currently active */
+  enabled: true,
+  /** Title displayed in the popup */
+  title: '🎉 Ofertă Specială!',
+  /** Main message / description */
+  message: 'Website gratuit + abonament de la 349 RON/lună. Profită acum de oferta noastră limitată!',
+  /** Label for the CTA button */
+  buttonText: 'Află mai mult',
+  /** Link the CTA button navigates to */
+  buttonHref: '/pachete',
+  /** Optional secondary (dismiss) button label */
+  dismissText: 'Poate mai târziu',
+  /** Delay in milliseconds before the popup appears (0 = immediate) */
+  delayMs: 3000,
+  /** Pages where the popup should appear (empty array = all pages) */
+  pages: [] as string[],
 } as const
 
 /**
