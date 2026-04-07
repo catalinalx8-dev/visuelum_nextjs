@@ -68,9 +68,9 @@ export function OfferPopup() {
           {/* Popup card */}
           <motion.div
             className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl"
-            initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.92, y: 24 }}
+            initial={{ opacity: 0, ...(prefersReducedMotion ? {} : { scale: 0.92, y: 24 }) }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.92, y: 24 }}
+            exit={{ opacity: 0, ...(prefersReducedMotion ? {} : { scale: 0.92, y: 24 }) }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
             role="dialog"
             aria-modal="true"
