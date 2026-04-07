@@ -8,6 +8,7 @@ import { CookieBanner } from '@/components/layout/CookieBanner'
 import { WhatsAppButton } from '@/components/contact/WhatsAppButton'
 import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { BackToTop } from '@/components/ui/BackToTop'
+import { OfferPopup } from '@/components/ui/OfferPopup'
 import { siteConfig, siteFeatures, seoConfig } from '@/lib/config'
 import { localBusinessSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
@@ -113,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {siteFeatures.cookieBanner && <CookieBanner />}
         {siteFeatures.whatsappButton && <WhatsAppButton />}
         {siteFeatures.backToTop && <BackToTop />}
+        {siteFeatures.offerPopup && <OfferPopup />}
         {siteFeatures.analytics && (
           <>
             <Analytics />

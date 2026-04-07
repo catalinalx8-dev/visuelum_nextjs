@@ -7,16 +7,7 @@ import {
   Phone,
   Instagram,
   Facebook,
-  Home,
-  Briefcase,
-  Package,
-  Building2,
-  Info,
-  BookOpen,
-  Mail,
   X,
-  Sparkles,
-  ArrowRight,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
@@ -39,18 +30,17 @@ function TikTokIcon({ className }: { className?: string }) {
 type NavLinkItem = {
   href: string
   label: string
-  icon: LucideIcon
   badge?: string
 }
 
 const navLinks: NavLinkItem[] = [
-  { href: '/', label: 'Acasă', icon: Home },
-  { href: '/servicii', label: 'Servicii', icon: Briefcase },
-  { href: '/pachete', label: 'Pachete', icon: Package },
-  { href: '/industrii', label: 'Industrii', icon: Building2 },
-  { href: '/despre', label: 'Despre', icon: Info },
-  { href: '/blog', label: 'Blog', icon: BookOpen, badge: 'NOU' },
-  { href: '/contact', label: 'Contact', icon: Mail },
+  { href: '/', label: 'Acasă' },
+  { href: '/servicii', label: 'Servicii' },
+  { href: '/pachete', label: 'Pachete' },
+  { href: '/industrii', label: 'Industrii' },
+  { href: '/despre', label: 'Despre' },
+  { href: '/blog', label: 'Blog', badge: 'NOU' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 type SocialLinkItem = {
@@ -105,7 +95,6 @@ function HamburgerButton({
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [showTopBar, setShowTopBar] = useState(true)
   const pathname = usePathname()
   const prefersReducedMotion = useReducedMotion()
 
@@ -143,63 +132,6 @@ export function Header() {
     <>
       {/* ── Fixed header wrapper ── */}
       <header className="fixed top-0 left-0 right-0 z-40">
-
-        {/* Top promotional bar — hidden on scroll */}
-        <AnimatePresence>
-          {showTopBar && !scrolled && (
-            <motion.div
-              key="top-bar"
-              initial={prefersReducedMotion ? { opacity: 0 } : { height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={prefersReducedMotion ? { opacity: 0 } : { height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="relative overflow-hidden border-b border-white/10"
-              style={{
-                background:
-                  'linear-gradient(90deg, #060810 0%, #140c2e 50%, #060810 100%)',
-              }}
-            >
-              {/* Shimmer overlay */}
-              <span
-                className={cn(
-                  'absolute inset-0 pointer-events-none opacity-50',
-                  !prefersReducedMotion && 'animate-shimmer',
-                )}
-                aria-hidden="true"
-              />
-              <div className="container-site">
-                <div className="flex items-center justify-between h-9 gap-3">
-                  <div className="flex items-center gap-2 min-w-0 text-xs font-body">
-                    <Sparkles
-                      className="h-3.5 w-3.5 text-amber flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                    <p className="text-white/65 truncate">
-                      Website gratuit —{' '}
-                      <span className="text-white font-medium">
-                        abonament de la 349 RON/lună
-                      </span>
-                      <Link
-                        href="/pachete"
-                        className="hidden sm:inline-flex items-center gap-0.5 ml-2 text-cyan hover:text-white transition-colors duration-200 font-medium"
-                      >
-                        Află mai mult
-                        <ArrowRight className="h-3 w-3 ml-0.5" aria-hidden="true" />
-                      </Link>
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => setShowTopBar(false)}
-                    aria-label="Închide bara promoțională"
-                    className="flex-shrink-0 text-white/40 hover:text-white/80 transition-colors p-1 rounded"
-                  >
-                    <X className="h-3.5 w-3.5" aria-hidden="true" />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* ── Main navigation bar ── */}
         <div
@@ -240,10 +172,6 @@ export function Header() {
                 className="flex items-center gap-1.5 font-head font-extrabold text-2xl text-white tracking-tight flex-shrink-0 hover:opacity-90 transition-opacity duration-200 group"
                 aria-label={siteConfig.name}
               >
-                <Sparkles
-                  className="w-[18px] h-[18px] text-gold flex-shrink-0 transition-transform duration-300 group-hover:rotate-12"
-                  aria-hidden="true"
-                />
                 Visuelum
                 <motion.span
                   className="gradient-text"
@@ -437,7 +365,6 @@ export function Header() {
                 className="flex items-center gap-1.5 font-head font-extrabold text-2xl text-white tracking-tight hover:opacity-80 transition-opacity"
                 onClick={() => setMobileOpen(false)}
               >
-                <Sparkles className="w-[18px] h-[18px] text-gold" aria-hidden="true" />
                 Visuelum<span className="gradient-text">.</span>
               </Link>
               <button
@@ -457,7 +384,6 @@ export function Header() {
               <ul className="flex flex-col gap-1 w-full max-w-sm mx-auto">
                 {navLinks.map((link, i) => {
                   const active = isActive(link)
-                  const Icon = link.icon
                   return (
                     <motion.li
                       key={link.href}
@@ -475,7 +401,7 @@ export function Header() {
                       <Link
                         href={link.href}
                         className={cn(
-                          'flex items-center justify-between w-full py-3 px-3.5 rounded-2xl transition-all duration-200 group',
+                          'flex items-center justify-center w-full py-3 px-3.5 rounded-2xl transition-all duration-200 group',
                           active
                             ? 'text-white'
                             : 'text-white/60 hover:text-white hover:bg-white/5',
@@ -492,53 +418,19 @@ export function Header() {
                         onClick={() => setMobileOpen(false)}
                         aria-current={pathname === link.href ? 'page' : undefined}
                       >
-                        <div className="flex items-center gap-3">
+                        <span className="font-head font-bold text-xl tracking-tight">
+                          {link.label}
+                        </span>
+                        {link.badge && (
                           <span
-                            className={cn(
-                              'flex items-center justify-center w-9 h-9 rounded-xl flex-shrink-0 transition-all duration-200',
-                              active ? '' : 'bg-white/5 group-hover:bg-white/10',
-                            )}
-                            style={
-                              active
-                                ? {
-                                    background:
-                                      'linear-gradient(135deg, rgba(124,58,237,0.3), rgba(14,165,233,0.2))',
-                                  }
-                                : undefined
-                            }
-                          >
-                            <Icon
-                              className={cn(
-                                'h-4 w-4 transition-colors',
-                                active
-                                  ? 'text-white'
-                                  : 'text-white/50 group-hover:text-white/80',
-                              )}
-                            />
-                          </span>
-                          <span className="font-head font-bold text-xl tracking-tight">
-                            {link.label}
-                          </span>
-                          {link.badge && (
-                            <span
-                              className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full leading-none"
-                              style={{
-                                background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
-                                color: 'white',
-                              }}
-                            >
-                              {link.badge}
-                            </span>
-                          )}
-                        </div>
-                        {active && (
-                          <span
-                            className="w-2 h-2 rounded-full flex-shrink-0"
+                            className="ml-2 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-full leading-none"
                             style={{
                               background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
+                              color: 'white',
                             }}
-                            aria-hidden="true"
-                          />
+                          >
+                            {link.badge}
+                          </span>
                         )}
                       </Link>
                     </motion.li>
