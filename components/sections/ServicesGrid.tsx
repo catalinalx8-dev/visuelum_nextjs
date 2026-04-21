@@ -3,59 +3,35 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Globe, Smartphone, Search, Camera, Target, Palette, ArrowRight } from 'lucide-react'
+import { Globe, Smartphone, Search, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { Section } from '@/components/ui/Section'
 
 const services = [
   {
-    icon: Globe,
-    title: 'Website Profesional',
-    desc: 'Creat gratuit, live în 14 zile, mobil-optimizat',
-    href: '/servicii/website',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
-    imageAlt: 'Design website profesional pe laptop — interfață modernă pentru afaceri locale',
-  },
-  {
     icon: Smartphone,
-    title: 'Social Media Complet',
-    desc: 'Postări, stories, copywriting, publicare zilnică',
+    title: 'Clienti din Facebook si Instagram',
+    desc: 'Cream continut care aduce mesaje si cereri de oferta, nu doar vizualizari.',
     href: '/servicii/social-media',
     image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80',
-    imageAlt: 'Gestionare social media — Instagram, Facebook și TikTok pentru afaceri',
+    imageAlt: 'Gestionare social media pentru afaceri locale',
   },
   {
     icon: Search,
-    title: 'Google & SEO Local',
-    desc: 'Google Business activ, SEO tehnic, poziții Maps',
+    title: 'Te gasim clientii pe Google',
+    desc: 'Te pozitionam in Google Search si Maps fix cand oamenii cauta serviciul tau in Constanta.',
     href: '/servicii/seo',
     image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07d?w=600&q=80',
-    imageAlt: 'Optimizare SEO local Google — creștere poziții în căutările locale din Constanța',
+    imageAlt: 'Optimizare Google si SEO local',
   },
   {
-    icon: Camera,
-    title: 'Fotografie Profesională',
-    desc: 'Sony A7 II, lumină naturală, editare Lightroom',
-    href: '/servicii/foto-video',
-    image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80',
-    imageAlt: 'Fotografie profesională de produs și locație — Sony A7 II, editare Lightroom',
-  },
-  {
-    icon: Target,
-    title: 'Google Ads & Meta Ads',
-    desc: 'Campanii cu buget client, gestionare completă',
-    href: '/servicii/google-ads',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-    imageAlt: 'Campanii Google Ads și Meta Ads — publicitate plătită cu rezultate măsurabile',
-  },
-  {
-    icon: Palette,
-    title: 'Branding & Design',
-    desc: 'Identitate vizuală, materiale grafice, consecvență',
-    href: '/servicii/branding',
-    image: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&q=80',
-    imageAlt: 'Branding și design grafic — identitate vizuală pentru afaceri locale din Constanța',
+    icon: Globe,
+    title: 'Website care transforma vizite in clienti',
+    desc: 'Construim site-uri clare, rapide si orientate pe apeluri, mesaje si programari.',
+    href: '/servicii/website',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
+    imageAlt: 'Website modern pentru conversii',
   },
 ]
 
@@ -70,11 +46,10 @@ export function ServicesGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Eyebrow className="mb-4">Servicii marketing digital Constanța</Eyebrow>
+          <Eyebrow className="mb-4">Servicii pentru rezultate locale</Eyebrow>
           <h2 className="font-head font-extrabold text-h2 text-navy">
-            Tot ce are nevoie afacerea ta.
-            <br />
-            Un singur abonament lunar.
+            Ce facem pentru tine:
+            <br className="hidden sm:block" /> mai multi clienti.
           </h2>
         </motion.div>
 

@@ -35,12 +35,12 @@ export function CtaSection() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="font-head font-extrabold text-h1 text-white mb-4">
-            Clienții tăi te caută pe Google.
+            Clientii tai te cauta deja pe Google.
             <br />
-            <span className="opacity-80">Ești acolo?</span>
+            <span className="opacity-80">Te gasesc pe tine sau concurenta?</span>
           </h2>
           <p className="font-body text-white/80 text-lg mb-10">
-            Audit digital gratuit în 48h. Fără angajament. Fără risc. Zero RON investiție inițială.
+            Primesti audit gratuit, simplu si clar. Incepi fara cost initial si ai rezultate masurabile.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -50,10 +50,18 @@ export function CtaSection() {
               Vreau Audit Gratuit <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 active:translate-y-0"
+            >
+              WhatsApp
+            </a>
+            <a
               href={`tel:${siteConfig.phone}`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-head font-bold text-sm tracking-wide uppercase rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 active:translate-y-0"
             >
-              Sună acum
+              Suna acum
             </a>
           </div>
         </motion.div>

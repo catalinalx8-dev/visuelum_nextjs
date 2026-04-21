@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowDown, Check } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
+import { siteConfig } from '@/lib/config'
 
 const fadeUp = {
   initial: { opacity: 0, y: 32 },
@@ -110,9 +111,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="font-head font-extrabold text-display text-white leading-none mb-6"
           >
-            Clienți Noi.
+            Aducem clienți,
             <br />
-            <span className="gradient-text">Zilnic.</span>
+            <span className="gradient-text">nu doar like-uri.</span>
           </motion.h1>
 
           <motion.p
@@ -120,9 +121,8 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="font-body text-white/60 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mb-10 mx-auto sm:mx-0"
           >
-            Afacerea ta merită să fie văzută. Website profesional creat <strong className="text-white/80">gratuit</strong>,
-            social media activ în fiecare zi și apari primul pe Google în Constanța —
-            contra unui singur abonament accesibil de la <strong className="text-white/80">349 RON/lună</strong>.
+            Ajutam afacerile locale din Constanta sa fie gasite pe Google, sa primeasca mesaje pe
+            WhatsApp si sa transforme vizitatorii in clienti. Noi ne ocupam de tot, tu te ocupi de afacere.
           </motion.p>
 
           <motion.div
@@ -131,11 +131,19 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-12"
           >
             <Link href="/contact" className="btn-primary w-full sm:w-auto justify-center">
-              Audit Gratuit — Fără Angajament
+              Audit Gratuit
             </Link>
-            <Link href="/pachete" className="btn-cream-ghost w-full sm:w-auto justify-center">
-              Pachete de la 349 RON/lună
-            </Link>
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cream-ghost w-full sm:w-auto justify-center"
+            >
+              WhatsApp Rapid
+            </a>
+            <a href={`tel:${siteConfig.phone}`} className="btn-cream-ghost w-full sm:w-auto justify-center">
+              Suna Acum
+            </a>
           </motion.div>
 
           <motion.div
@@ -144,9 +152,9 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-8"
           >
             {[
-              'Website gratuit inclus',
-              'Garanție 30 zile',
-              'Răspuns în 24h',
+              'Rezultate locale, nu promisiuni goale',
+              'Audit gratuit in 48h',
+              'Raspuns in max 24h',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <span

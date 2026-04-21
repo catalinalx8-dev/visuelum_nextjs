@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FileSignature, Globe, Megaphone, BarChart2 } from 'lucide-react'
+import { FileSignature, Megaphone, BarChart2 } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { Section } from '@/components/ui/Section'
@@ -10,26 +10,20 @@ const steps = [
   {
     nr: '01',
     icon: FileSignature,
-    title: 'Audit gratuit în 48h',
-    desc: 'Analizăm prezența ta online și îți prezentăm clar ce poți câștiga. Zero cost, zero obligații.',
+    title: 'Audit gratuit',
+    desc: 'Ne spui ce vinzi si unde vrei sa cresti. Primesti un plan clar in 48h.',
   },
   {
     nr: '02',
-    icon: Globe,
-    title: 'Website live în 14 zile',
-    desc: 'Design profesional, mobil-optimizat, SEO din fundație — livrat fără niciun cost inițial.',
+    icon: Megaphone,
+    title: 'Implementam pentru tine',
+    desc: 'Lansam website-ul, social media si prezenta in Google. Tu nu pierzi timp cu partea tehnica.',
   },
   {
     nr: '03',
-    icon: Megaphone,
-    title: 'Servicii active de luna 1',
-    desc: 'Social media, Google, fotografie la locație. Noi facem totul, tu primești clienți.',
-  },
-  {
-    nr: '04',
     icon: BarChart2,
-    title: 'Raport lunar cu rezultate reale',
-    desc: 'Trafic, apeluri, lead-uri, poziții Google. Transparență totală, cifre verificabile.',
+    title: 'Masuram rezultatele',
+    desc: 'Vezi lunar cifre simple: apeluri, mesaje, cereri si clienti noi.',
   },
 ]
 
@@ -47,7 +41,7 @@ export function ProcessSteps() {
         >
           <Eyebrow color="gold" className="mb-4">Cum funcționează</Eyebrow>
           <h2 className="font-head font-extrabold text-h2 text-navy">
-            De la zero la clienți noi în 14 zile
+            Cum aducem clienti in 3 pasi
           </h2>
         </motion.div>
 

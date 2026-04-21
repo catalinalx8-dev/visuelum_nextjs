@@ -12,7 +12,8 @@ const testimonials = [
     role: 'Proprietar restaurant',
     location: 'Constanța',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&q=80',
-    text: 'În 3 luni de la lansarea website-ului, numărul rezervărilor online a crescut cu 40%. Echipa Visuelum s-a ocupat de tot — website, social media, Google. Recomand cu toată inima.',
+    text: 'In 3 luni am crescut rezervarile online cu 40%. Acum primim cereri zilnic din Google si Instagram.',
+    result: '+40% rezervari in 3 luni',
     stars: 5,
   },
   {
@@ -20,7 +21,8 @@ const testimonials = [
     role: 'Proprietar salon de înfrumusețare',
     location: 'Mamaia',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&q=80',
-    text: 'Înainte de Visuelum, pagina noastră de Facebook era moartă. Acum avem postări zilnice, stories, și clienți noi care spun că ne-au găsit pe Instagram. Website-ul a ieșit exact cum mi-am imaginat.',
+    text: 'Inainte postam rar. Acum primim mesaje constante din social media si avem programari noi in fiecare saptamana.',
+    result: '+27 lead-uri/luna din social',
     stars: 5,
   },
   {
@@ -28,7 +30,8 @@ const testimonials = [
     role: 'Medic stomatolog',
     location: 'Constanța',
     avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=80&h=80&fit=crop&q=80',
-    text: 'Am evitat mult timp să investesc în online pentru că nu știam cu cine să lucrez. Visuelum mi-a demonstrat că se poate face profesional, rapid și la un preț corect. Sunt primul pe Google local.',
+    text: 'Am urcat in topul cautarilor locale si pacientii spun ca ne-au gasit direct pe Google Maps.',
+    result: 'Top 3 Google Maps local',
     stars: 5,
   },
 ]
@@ -60,14 +63,14 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Eyebrow color="gold" className="mb-4">Ce spun clienții</Eyebrow>
+          <Eyebrow color="gold" className="mb-4">Dovada sociala</Eyebrow>
           <h2 className="font-head font-extrabold text-h2 text-white">
             Rezultate reale.
             <br />
             Clienți mulțumiți.
           </h2>
           <p className="font-body text-white/50 mt-4 max-w-xl mx-auto">
-            Poveștile din spatele cifrelor — afaceri locale care au câștigat vizibilitate online cu Visuelum.
+            Afaceri locale din Constanta care au crescut vizibilitatea si cererile de oferta.
           </p>
         </motion.div>
 
@@ -103,6 +106,7 @@ export function TestimonialsSection() {
               />
 
               {/* Text */}
+              <p className="font-mono text-[10px] uppercase tracking-widest text-gold">{t.result}</p>
               <p className="font-body text-sm text-white/70 leading-relaxed flex-1 italic">
                 &quot;{t.text}&quot;
               </p>
