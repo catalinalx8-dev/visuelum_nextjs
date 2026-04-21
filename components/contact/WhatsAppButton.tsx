@@ -23,7 +23,7 @@ export function WhatsAppButton() {
       aria-label="Contactează-ne pe WhatsApp"
       title="Contactează-ne pe WhatsApp"
       className={cn(
-        'fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/25 transition-all duration-500',
+        'fixed bottom-6 right-6 z-50 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/25 transition-all duration-500',
         'hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 focus-visible:scale-110',
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       )}
