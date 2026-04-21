@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { CookieBanner } from '@/components/layout/CookieBanner'
 import { WhatsAppButton } from '@/components/contact/WhatsAppButton'
+import { StickyLeadBar } from '@/components/contact/StickyLeadBar'
 import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { BackToTop } from '@/components/ui/BackToTop'
 import { OfferPopup } from '@/components/ui/OfferPopup'
@@ -113,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         {siteFeatures.cookieBanner && <CookieBanner />}
         {siteFeatures.whatsappButton && <WhatsAppButton />}
+        <StickyLeadBar />
         {siteFeatures.backToTop && <BackToTop />}
         {siteFeatures.offerPopup && <OfferPopup />}
         {siteFeatures.analytics && (
