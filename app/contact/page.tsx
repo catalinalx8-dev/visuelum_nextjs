@@ -41,12 +41,12 @@ export default function ContactPage() {
         <div className="container-site relative z-10 text-center max-w-4xl mx-auto">
           <p className="eyebrow mb-6">Contact</p>
           <h1 className="font-head font-extrabold text-h1 text-navy mb-4">
-            Spune-ne despre
+            Vrei mai multi clienti?
             <br />
-            <span className="text-gold">afacerea ta.</span>
+            <span className="text-gold">Hai sa vorbim 10 minute.</span>
           </h1>
           <p className="font-body italic text-muted text-lg max-w-xl mx-auto">
-            Audit digital gratuit în 48h. Fără angajament. Fără risc. Fără cost inițial.
+            Completezi formularul in 1 minut sau ne scrii direct pe WhatsApp. Raspundem rapid.
           </p>
         </div>
       </section>
@@ -144,6 +144,16 @@ export default function ContactPage() {
                 ].map((point) => (
                   <p key={point} className="font-mono text-xs uppercase tracking-widest text-muted">{point}</p>
                 ))}
+              </div>
+
+              <div className="mt-10 rounded-2xl overflow-hidden border border-stone">
+                <iframe
+                  title="Visuelum Constanta pe harta"
+                  src="https://www.google.com/maps?q=Constanta,Romania&output=embed"
+                  className="h-64 w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
 
