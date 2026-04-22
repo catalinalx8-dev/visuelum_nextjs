@@ -25,6 +25,7 @@ export const siteConfig = {
   resend: {
     from: 'Visuelum <noreply@visuelum.ro>',
     to: 'contact@visuelum.ro',
+    cc: 'alexandru.ctl@gmail.com',
   },
 } as const
 
