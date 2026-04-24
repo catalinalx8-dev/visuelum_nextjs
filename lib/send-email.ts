@@ -3,6 +3,7 @@
 import { z } from 'zod'
 import { contactSchema } from './schemas'
 import { siteConfig } from './config'
+import { sendEmailWithDefaultCc } from './email'
 
 type ContactFormData = z.infer<typeof contactSchema>
 
@@ -12,9 +13,6 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
     if (!apiKey) {
       return { success: false, error: 'Configurare email lipsă. Contactați-ne direct.' }
     }
-
-    const { Resend } = await import('resend')
-    const resend = new Resend(apiKey)
 
     const businessTypeMap: Record<string, string> = {
       restaurant: 'Restaurant/Cafenea',
@@ -34,7 +32,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
       'nu-stiu': 'Nu știu încă',
     }
 
-    await resend.emails.send({
+    await sendEmailWithDefaultCc({
       from: siteConfig.resend.from,
       to: siteConfig.resend.to,
       subject: `Cerere nouă: ${data.businessName} — ${packageMap[data.packageInterest]}`,
@@ -64,10 +62,7 @@ export async function sendNewsletterSignup(email: string): Promise<{ success: bo
     // Without an API key the signup cannot be persisted; treat as no-op in development
     if (!apiKey) return { success: true }
 
-    const { Resend } = await import('resend')
-    const resend = new Resend(apiKey)
-
-    await resend.emails.send({
+    await sendEmailWithDefaultCc({
       from: siteConfig.resend.from,
       to: siteConfig.resend.to,
       subject: `Newsletter signup: ${email}`,
