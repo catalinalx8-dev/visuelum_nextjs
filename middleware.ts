@@ -4,35 +4,34 @@ import type { NextRequest } from 'next/server'
 /**
  * Maintenance-mode middleware.
  *
- * When the environment variable MAINTENANCE_MODE is set to "1", every
+ * When NEXT_PUBLIC_MAINTENANCE_MODE is set to "1", every
  * incoming request (except the paths listed below) is redirected to
  * /mentenanta so visitors see the maintenance page.
  *
  * Paths that are always allowed through:
  *   /mentenanta  — the maintenance page itself
- *   /raport/*    — confidential client report pages (clients can still view)
  *   /api/*       — internal API routes (email, etc.)
  *
- * To activate:   set MAINTENANCE_MODE=1 in your .env.local or hosting env vars.
- * To deactivate: set MAINTENANCE_MODE=0 (or remove the variable entirely).
+ * To activate:   set NEXT_PUBLIC_MAINTENANCE_MODE=1 in your .env.local.
+ * To deactivate: set NEXT_PUBLIC_MAINTENANCE_MODE=0 (or remove the variable).
  */
 export function middleware(request: NextRequest) {
-  const maintenanceMode = process.env.MAINTENANCE_MODE === '1'
+  const maintenanceMode =
+    process.env.NEXT_PUBLIC_MAINTENANCE_MODE === '1' ||
+    process.env.MAINTENANCE_MODE === '1'
 
-  if (maintenanceMode) {
-    const { pathname } = request.nextUrl
-
-    const isAllowed =
-      pathname === '/mentenanta' ||
-      pathname.startsWith('/raport/') ||
-      pathname.startsWith('/api/')
-
-    if (!isAllowed) {
-      return NextResponse.redirect(new URL('/mentenanta', request.url))
-    }
+  if (!maintenanceMode) {
+    return NextResponse.next()
   }
 
-  return NextResponse.next()
+  const { pathname } = request.nextUrl
+
+  // Avoid redirect loops for the maintenance page itself.
+  if (pathname === '/mentenanta') {
+    return NextResponse.next()
+  }
+
+  return NextResponse.redirect(new URL('/mentenanta', request.url))
 }
 
 export const config = {
@@ -41,6 +40,6 @@ export const config = {
    * interfere with image optimisation, fonts, or public files.
    */
   matcher: [
-    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml)$).*)',
+    '/((?!api|_next/static|_next/image|_next/data|favicon\\.ico|.*\\..*).*)',
   ],
 }
