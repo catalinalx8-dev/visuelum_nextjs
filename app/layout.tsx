@@ -6,7 +6,6 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { CookieBanner } from '@/components/layout/CookieBanner'
 import { WhatsAppButton } from '@/components/contact/WhatsAppButton'
-import { StickyLeadBar } from '@/components/contact/StickyLeadBar'
 import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { BackToTop } from '@/components/ui/BackToTop'
 import { OfferPopup } from '@/components/ui/OfferPopup'
@@ -92,6 +91,9 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const maintenanceMode =
+    process.env.NEXT_PUBLIC_MAINTENANCE_MODE === '1' || process.env.MAINTENANCE_MODE === '1'
+
   return (
     <html
       lang="ro"
@@ -108,16 +110,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-cream antialiased">
-        {siteFeatures.scrollProgress && <ScrollProgress />}
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        {siteFeatures.cookieBanner && <CookieBanner />}
-        {siteFeatures.whatsappButton && <WhatsAppButton />}
-        <StickyLeadBar />
-        {siteFeatures.backToTop && <BackToTop />}
-        {siteFeatures.offerPopup && <OfferPopup />}
-        {siteFeatures.analytics && (
+        {maintenanceMode ? (
+          <main>{children}</main>
+        ) : (
+          <>
+            {siteFeatures.scrollProgress && <ScrollProgress />}
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            {siteFeatures.cookieBanner && <CookieBanner />}
+            {siteFeatures.whatsappButton && <WhatsAppButton />}
+            {siteFeatures.backToTop && <BackToTop />}
+            {siteFeatures.offerPopup && <OfferPopup />}
+          </>
+        )}
+        {!maintenanceMode && siteFeatures.analytics && (
           <>
             <Analytics />
             <SpeedInsights />
