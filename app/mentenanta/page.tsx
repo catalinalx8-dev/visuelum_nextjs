@@ -4,7 +4,7 @@ import { Settings, Mail, Phone, Instagram, Facebook } from 'lucide-react'
 import { siteConfig } from '@/lib/config'
 
 /**
- * Maintenance page — served to all visitors when MAINTENANCE_MODE=1.
+ * Maintenance page — served to all visitors when NEXT_PUBLIC_MAINTENANCE_MODE=1.
  * Not indexed by search engines (noindex / nofollow).
  */
 export const metadata: Metadata = {
