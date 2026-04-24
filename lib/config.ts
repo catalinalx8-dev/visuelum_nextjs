@@ -25,12 +25,11 @@ export const siteConfig = {
   resend: {
     from: 'Visuelum <noreply@visuelum.ro>',
     to: 'contact@visuelum.ro',
-    cc: 'alexandru.ctl@gmail.com',
   },
 } as const
 
 /**
- * Maintenance mode — set MAINTENANCE_MODE=1 in your environment variables to
+ * Maintenance mode — set NEXT_PUBLIC_MAINTENANCE_MODE=1 in your environment to
  * redirect every public route to /mentenanta.  Set to "0" (or leave unset) to
  * disable and serve the site normally.
  *
@@ -39,7 +38,9 @@ export const siteConfig = {
  */
 export const maintenanceConfig = {
   /** "1" = maintenance active, "0" (or anything else) = site live */
-  enabled: process.env.MAINTENANCE_MODE === '1',
+  enabled:
+    process.env.NEXT_PUBLIC_MAINTENANCE_MODE === '1' ||
+    process.env.MAINTENANCE_MODE === '1',
 } as const
 
 /**
