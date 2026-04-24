@@ -161,7 +161,7 @@ export function Header() {
           <div
             className={cn(
               'container-site transition-all duration-300',
-              scrolled ? 'h-16' : 'h-[72px]',
+              scrolled ? 'h-16 xl:h-[60px]' : 'h-[72px] xl:h-[68px]',
             )}
           >
             <div className="flex items-center justify-between h-full">
@@ -169,7 +169,7 @@ export function Header() {
               {/* Logo */}
               <Link
                 href="/"
-                className="flex items-center gap-1.5 font-head font-extrabold text-2xl text-white tracking-tight flex-shrink-0 hover:opacity-90 transition-opacity duration-200 group"
+                className="flex items-center gap-1.5 font-head font-extrabold text-2xl xl:text-[1.35rem] text-white tracking-tight flex-shrink-0 hover:opacity-90 transition-opacity duration-200 group"
                 aria-label={siteConfig.name}
               >
                 Visuelum
@@ -193,7 +193,7 @@ export function Header() {
 
               {/* Desktop Nav */}
               <nav
-                className="hidden xl:flex items-center gap-0.5"
+                className="hidden xl:flex items-center gap-0"
                 aria-label="Navigare principală"
               >
                 {navLinks.map((link) => {
@@ -203,7 +203,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       className={cn(
-                        'relative px-3.5 py-2 rounded-full font-body text-sm font-medium transition-all duration-200 group flex items-center gap-1.5',
+                        'relative px-3 py-1.5 rounded-full font-body text-[13px] font-medium transition-all duration-200 group flex items-center gap-1',
                         active
                           ? 'text-white'
                           : 'text-white/60 hover:text-white hover:scale-105',
@@ -238,7 +238,7 @@ export function Header() {
                       {/* Active indicator — glowing bar */}
                       {active && (
                         <span
-                          className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-5 rounded-full pointer-events-none"
+                          className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-0.5 w-4 rounded-full pointer-events-none"
                           style={{
                             background: 'linear-gradient(90deg, #7c3aed, #0ea5e9)',
                             boxShadow:
@@ -253,23 +253,23 @@ export function Header() {
               </nav>
 
               {/* Desktop right side */}
-              <div className="hidden xl:flex items-center gap-3 flex-shrink-0">
+              <div className="hidden xl:flex items-center gap-2.5 flex-shrink-0">
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="flex items-center gap-2 text-sm font-body font-medium text-white/50 hover:text-white transition-colors duration-200"
+                  className="flex items-center gap-1.5 text-[13px] font-body font-medium text-white/50 hover:text-white transition-colors duration-200"
                 >
                   <span
-                    className="flex items-center justify-center w-7 h-7 rounded-full flex-shrink-0"
+                    className="flex items-center justify-center w-6 h-6 rounded-full flex-shrink-0"
                     style={{ background: 'rgba(124,58,237,0.2)' }}
                   >
-                    <Phone className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
+                    <Phone className="h-3 w-3 text-gold" aria-hidden="true" />
                   </span>
                   {siteConfig.phoneDisplay}
                 </a>
                 {/* CTA with shimmer + border glow */}
                 <Link
                   href="/contact"
-                  className="relative inline-flex items-center gap-2 px-5 py-2.5 text-white font-head font-bold text-sm rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                  className="relative inline-flex items-center gap-2 px-4 py-2 text-white font-head font-bold text-[13px] rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                   style={{
                     background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
                     boxShadow:
