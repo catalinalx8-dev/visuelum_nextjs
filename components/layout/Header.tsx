@@ -22,7 +22,7 @@ function TikTokIcon({ className }: { className?: string }) {
       className={cn('h-5 w-5', className)}
       aria-hidden="true"
     >
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z" />
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 [...]
     </svg>
   )
 }
@@ -64,7 +64,7 @@ function HamburgerButton({
 }) {
   return (
     <button
-      className="xl:hidden relative flex flex-col items-center justify-center w-10 h-10 gap-[6px] rounded-xl hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+      className="xl:hidden relative flex flex-col items-center justify-center w-10 h-10 gap-[6px] rounded-xl hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-gold focus-[...]"
       onClick={onClick}
       aria-label={isOpen ? 'Închide meniu' : 'Deschide meniu'}
       aria-expanded={isOpen}
@@ -161,7 +161,7 @@ export function Header() {
           <div
             className={cn(
               'container-site transition-all duration-300',
-              scrolled ? 'h-16 xl:h-[60px]' : 'h-[72px] xl:h-[68px]',
+              scrolled ? 'h-16 xl:h-14' : 'h-[72px] xl:h-16',
             )}
           >
             <div className="flex items-center justify-between h-full">
@@ -269,7 +269,7 @@ export function Header() {
                 {/* CTA with shimmer + border glow */}
                 <Link
                   href="/contact"
-                  className="relative inline-flex items-center gap-2 px-4 py-2 text-white font-head font-bold text-[13px] rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                  className="relative inline-flex items-center gap-2 px-4 py-2 text-white font-head font-bold text-[13px] rounded-full overflow-hidden transition-all duration-300 hover:-translate[...]"
                   style={{
                     background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
                     boxShadow:
@@ -368,7 +368,7 @@ export function Header() {
                 Visuelum<span className="gradient-text">.</span>
               </Link>
               <button
-                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-gold"
+                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200 focus-visi[...]"
                 onClick={() => setMobileOpen(false)}
                 aria-label="Închide meniu"
               >
@@ -463,7 +463,7 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="relative flex items-center justify-center w-full py-3.5 text-white font-head font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
+                className="relative flex items-center justify-center w-full py-3.5 text-white font-head font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h[...]"
                 style={{
                   background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
                   boxShadow: '0 4px 20px -4px rgba(124,58,237,0.45)',
