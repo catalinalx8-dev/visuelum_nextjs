@@ -269,7 +269,7 @@ export function Header() {
                 {/* CTA with shimmer + border glow */}
                 <Link
                   href="/contact"
-                  className="relative inline-flex items-center gap-2 px-4 py-2 text-white font-head font-bold text-[13px] rounded-full overflow-hidden transition-all duration-300 hover:-translate[...]"
+                  className="relative inline-flex items-center gap-2 px-4 py-2 text-white font-head font-bold text-[13px] rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
                   style={{
                     background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
                     boxShadow:
@@ -368,7 +368,7 @@ export function Header() {
                 Visuelum<span className="gradient-text">.</span>
               </Link>
               <button
-                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200 focus-visi[...]"
+                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-gold"
                 onClick={() => setMobileOpen(false)}
                 aria-label="Închide meniu"
               >
@@ -463,7 +463,7 @@ export function Header() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className="relative flex items-center justify-center w-full py-3.5 text-white font-head font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h[...]"
+                className="relative flex items-center justify-center w-full py-3.5 text-white font-head font-bold text-sm rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl"
                 style={{
                   background: 'linear-gradient(135deg, #7c3aed, #0ea5e9)',
                   boxShadow: '0 4px 20px -4px rgba(124,58,237,0.45)',
